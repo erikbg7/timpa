@@ -1,1 +1,28 @@
+HOW TO
+
+https://dev.to/kvetoslavnovak/supabase-ssr-auth-48j4
+
+
+
 https://github.com/CriticalMoments/CMSaasStarter/tree/main/src/routes/(admin)/account
+
+https://github.com/jmagrippis/svelte-kritic/blob/main/src/hooks.server.ts
+
+http://localhost:5173/#access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6Ik8rN01INWZXWVJpTkc0RFgiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzA0OTA3MzIyLCJpYXQiOjE3MDQ5MDM3MjIsImlzcyI6Imh0dHBzOi8veG1saHlkd2V5YWl0Znhta3J3YWcuc3VwYWJhc2UuY28vYXV0aC92MSIsInN1YiI6IjQ3Y2I2M2UwLTZiYzgtNDY4My1hYjU2LWI4OTdiZTg3OGYyNCIsImVtYWlsIjoiZXJpay5iZzdAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoib3RwIiwidGltZXN0YW1wIjoxNzA0OTAzNzIyfV0sInNlc3Npb25faWQiOiJmNWE0YTFmZS1iZThlLTQ5NWYtODdhNC0xYjMyNmQ2OWZjMjcifQ.qeZPOWX2STac9DiKtdbRmhw2VXBLcR1I5wAgSj7vykk&expires_at=1704907322&expires_in=3600&refresh_token=6wZ0FjhzwksU7QgZnIk_fg&token_type=bearer&type=signup
+
+A RESTful endpoint for querying and managing your database.
+
+https://xmlhydweyaitfxmkrwag.supabase.co
+
+
+
+
+Used to decode your JWTs. You can also use this to mint your own JWTs.
+
+s9/FraSM9HuX/l34Y3sB0che4IDB6R1+0v7eR8/CtfqN6YPqscCmbLz6uV6Lb9kq38RItzbE3Rjt6lYKt+X79w==
+
+
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    user-select: none;
