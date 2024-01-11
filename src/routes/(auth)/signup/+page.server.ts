@@ -23,13 +23,13 @@ export const actions: Actions = {
 			options: {
 				// set this to false if you do not want the user to be automatically signed up
 				shouldCreateUser: true,
-				emailRedirectTo: 'http://localhost:5173/auth/callback',
+				emailRedirectTo: 'http://localhost:5173/',
 			},
 		});
 
 		console.log({ data, error });
 
-		throw redirect(303, `/check_email/${email}`);
+		throw redirect(303, `/confirm-session?email=${encodeURIComponent(email)}`);
 	},
 	logout: async ({ locals }) => {
 		const { error } = await locals.supabase.auth.signOut();

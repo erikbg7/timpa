@@ -2,20 +2,35 @@
 	import { enhance } from '$app/forms';
 	import '../app.css';
 	export let data;
+
+	// import { invalidate } from '$app/navigation';
+
+	// export let data;
+	// let { supabase, session } = data;
+	// $: ({ supabase, session } = data);
+
+	// onMount(() => {
+	// 	const { data } = supabase.auth.onAuthStateChange((event, _session) => {
+	// 		console.log({ _session });
+	// 		if (_session?.expires_at !== session?.expires_at) {
+	// 			invalidate('supabase:auth');
+	// 		}
+	// 	});
+
+	// 	return () => data.subscription.unsubscribe();
+	// });
 </script>
 
-<a href="/">Home</a>
-
-<span id="auth_header">
+<!-- <span id="auth_header">
 	{#if !data.session}
-		<a href="/login_logout">login</a> / <a href="/register">signup</a>
+		<a href="/login">login</a> / <a href="/signup">signup</a>
 	{:else}
 		<a href="/user_profile">User profile</a>
 		<form action="/signup?/logout" method="POST" use:enhance>
 			<button type="submit">Logout</button>
 		</form>
 	{/if}
-</span>
+</span> -->
 <slot />
 
 <!-- <script lang="ts">

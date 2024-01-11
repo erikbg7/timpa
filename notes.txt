@@ -3,6 +3,8 @@ HOW TO
 https://dev.to/kvetoslavnovak/supabase-ssr-auth-48j4
 
 
+https://www.youtube.com/watch?v=SWYqPpbdOfg
+
 
 https://github.com/CriticalMoments/CMSaasStarter/tree/main/src/routes/(admin)/account
 
