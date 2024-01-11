@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import SocialButton from '$lib/components/SocialButton.svelte';
 	import config from '$lib/config';
 </script>
 
@@ -12,7 +13,7 @@
 			{config.login.description}
 		</p>
 		<form method="post" action="signup?/login" use:enhance>
-			<label class=" text-lg font-semibold" for="email">Email Address</label>
+			<label class="text-lg font-semibold" for="email">Email Address</label>
 			<div class="mb-16 mt-2 flex items-center gap-2">
 				<input
 					name="email"
@@ -34,60 +35,8 @@
 			Or use your social login accounts
 		</h4>
 		<div class="mb-4 mt-8">
-			<button
-				class="mb-4 flex w-full justify-center rounded-md border border-zinc-400 p-3 text-lg font-semibold text-zinc-800"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="24px"
-					height="24px"
-					fill="none"
-					viewBox="0 0 30 30"
-					style="margin-right: 16px;"
-					><g clip-path="url(#a)"
-						><path
-							fill="#4285F4"
-							d="M29.681 15.338c0-.988-.087-1.925-.237-2.838H15.319v5.637h8.087c-.362 1.85-1.425 3.413-3 4.476v3.75h4.825c2.825-2.613 4.45-6.463 4.45-11.025Z"
-						></path><path
-							fill="#34A853"
-							d="M15.319 30c4.05 0 7.437-1.35 9.912-3.638l-4.825-3.75c-1.35.9-3.062 1.45-5.087 1.45-3.913 0-7.225-2.637-8.413-6.2H1.931v3.863C4.394 26.625 9.456 30 15.32 30Z"
-						></path><path
-							fill="#FBBC05"
-							d="M6.906 17.863A8.704 8.704 0 0 1 6.431 15c0-1 .175-1.962.475-2.862V8.275H1.931a14.826 14.826 0 0 0 0 13.45l4.975-3.862Z"
-						></path><path
-							fill="#EA4335"
-							d="M15.319 5.938c2.212 0 4.187.762 5.75 2.25l4.275-4.276C22.756 1.487 19.369 0 15.319 0 9.456 0 4.394 3.375 1.93 8.275l4.975 3.862c1.188-3.562 4.5-6.2 8.413-6.2Z"
-						></path></g
-					><defs><clipPath id="a"><path fill="#fff" d="M0 0h30v30H0z"></path></clipPath></defs></svg
-				>Sign up with Google
-			</button>
-			<button
-				class="mb-4 flex w-full justify-center rounded-md border border-zinc-400 p-3 text-lg font-semibold text-zinc-800"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="24px"
-					height="24px"
-					fill="none"
-					viewBox="0 0 30 30"
-					style="margin-right: 16px;"
-					><g clip-path="url(#a)"
-						><path
-							fill="#4285F4"
-							d="M29.681 15.338c0-.988-.087-1.925-.237-2.838H15.319v5.637h8.087c-.362 1.85-1.425 3.413-3 4.476v3.75h4.825c2.825-2.613 4.45-6.463 4.45-11.025Z"
-						></path><path
-							fill="#34A853"
-							d="M15.319 30c4.05 0 7.437-1.35 9.912-3.638l-4.825-3.75c-1.35.9-3.062 1.45-5.087 1.45-3.913 0-7.225-2.637-8.413-6.2H1.931v3.863C4.394 26.625 9.456 30 15.32 30Z"
-						></path><path
-							fill="#FBBC05"
-							d="M6.906 17.863A8.704 8.704 0 0 1 6.431 15c0-1 .175-1.962.475-2.862V8.275H1.931a14.826 14.826 0 0 0 0 13.45l4.975-3.862Z"
-						></path><path
-							fill="#EA4335"
-							d="M15.319 5.938c2.212 0 4.187.762 5.75 2.25l4.275-4.276C22.756 1.487 19.369 0 15.319 0 9.456 0 4.394 3.375 1.93 8.275l4.975 3.862c1.188-3.562 4.5-6.2 8.413-6.2Z"
-						></path></g
-					><defs><clipPath id="a"><path fill="#fff" d="M0 0h30v30H0z"></path></clipPath></defs></svg
-				>Sign up with Google
-			</button>
+			<SocialButton value="Sign up with Google" provider="Google" />
+			<SocialButton value="Sign up with Google" provider="Google" />
 		</div>
 	</div>
 </div>

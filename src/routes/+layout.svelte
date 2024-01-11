@@ -1,7 +1,7 @@
 <script>
 	import { enhance } from '$app/forms';
 	import '../app.css';
-	export let data;
+	// export let data;
 
 	// import { invalidate } from '$app/navigation';
 
@@ -25,7 +25,7 @@
 	{#if !data.session}
 		<a href="/login">login</a> / <a href="/signup">signup</a>
 	{:else}
-		<a href="/user_profile">User profile</a>
+		<a href="/profile">User profile</a>
 		<form action="/signup?/logout" method="POST" use:enhance>
 			<button type="submit">Logout</button>
 		</form>

@@ -36,6 +36,8 @@
 	"type": "module",
 	"dependencies": {
 		"@supabase/ssr": "^0.0.10",
-		"@supabase/supabase-js": "^2.39.2"
+		"@supabase/supabase-js": "^2.39.2",
+		"clsx": "^2.1.0",
+		"zod": "^3.22.4"
 	}
 }
