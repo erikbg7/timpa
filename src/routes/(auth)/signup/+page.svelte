@@ -5,6 +5,10 @@
 	import InputText from '$lib/components/InputText.svelte';
 	import ListBullet from '$lib/components/ListBullet.svelte';
 	import SocialButton from '$lib/components/SocialButton.svelte';
+	import H6 from '$lib/components/H6.svelte';
+	import Paragraph from '$lib/components/Paragraph.svelte';
+	import H1 from '$lib/components/H1.svelte';
+	import H2 from '$lib/components/H2.svelte';
 
 	export let form: ActionData;
 
@@ -13,19 +17,13 @@
 
 <div class="relative flex flex-col-reverse py-12 md:flex-row md:justify-between">
 	<div class="md:max-w-[30rem]">
-		<h6 class="mb-6 text-sm font-semibold uppercase text-blue-500">
-			Try {config.appName} for free
-		</h6>
-		<h1 class="signup-title mb-8 text-7xl font-semibold leading-tight text-zinc-700">
+		<H6 title="Try {config.appName} for free" />
+		<H1 size="xl">
 			{@html config.signup.title}
-		</h1>
-		<p class="mb-8 text-lg leading-relaxed tracking-wide text-zinc-500">
-			{config.signup.description}
-		</p>
+		</H1>
+		<Paragraph title={config.signup.description} />
 		<div>
-			<h2 class="mb-6 text-2xl font-semibold text-zinc-800">
-				This Teams trial includes upgrades like:
-			</h2>
+			<H2 title="This Teams trial includes upgrades like:" />
 			<ol>
 				{#each config.signup.features as feature}
 					<li class="mb-4 flex items-start text-lg text-zinc-500">
@@ -46,7 +44,7 @@
 		<div class="mt-8">
 			<form method="post" action="?/login" use:enhance>
 				<InputText name="email" placeholder="Enter your email" error={form?.errors?.email} />
-				<button class="mb-4 mt-8 w-full rounded-md bg-blue-500 p-3 text-lg text-white">
+				<button class="btn btn-primary btn-block mb-4 mt-8 text-lg font-normal text-white">
 					Sign up
 				</button>
 			</form>
@@ -58,11 +56,11 @@
 				<span class="h-[1px] flex-grow rounded bg-zinc-300"></span>
 			</h3>
 		</div>
-		<div class="mb-4">
+		<div class="mb-4 flex flex-col gap-4">
 			<SocialButton value="Sign up with Google" provider="Google" />
 			<SocialButton value="Sign up with Google" provider="Google" />
 		</div>
-		<a class="hover:cursor text-center font-semibold text-blue-500" href="/login">Log In</a>
+		<a class="hover:cursor text-primary text-center font-semibold" href="/login">Log In</a>
 	</div>
 </div>
 

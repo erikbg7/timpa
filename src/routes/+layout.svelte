@@ -31,6 +31,8 @@
 		</form>
 	{/if}
 </span> -->
+<button class="btn btn-primary">Hello daisyUI</button>
+
 <slot />
 
 <!-- <script lang="ts">

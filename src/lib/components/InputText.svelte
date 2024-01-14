@@ -10,9 +10,8 @@
 	{name}
 	{placeholder}
 	type="text"
-	class={clsx('w-full rounded-md border  p-3 text-lg', {
-		'border-red-500': error,
-		'border-zinc-200': !error,
+	class={clsx('input input-bordered w-full', {
+		'input-error': error,
 	})}
 />
 {#if error}

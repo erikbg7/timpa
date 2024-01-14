@@ -5,3 +5,11 @@
 body {
 	@apply bg-zinc-50;
 }
+
+.btn {
+	@apply rounded-lg;
+}
+
+.input {
+	@apply rounded-lg;
+}
