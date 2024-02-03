@@ -26,7 +26,7 @@
 </script>
 
 <button
-	class="btn btn-primary group flex w-full items-center justify-center gap-3 rounded-xl py-3 text-white"
+	class="group btn btn-primary flex w-full items-center justify-center gap-3 rounded-xl py-3 text-white"
 	on:click={() => handlePayment()}
 >
 	{#if isLoading}
@@ -43,5 +43,5 @@
 			/>
 		</svg>
 	{/if}
-	Get ShipFast
+	Get Calendly
 </button>

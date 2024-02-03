@@ -1,5 +1,7 @@
 <script>
 	import { enhance } from '$app/forms';
+	import Footer from '$lib/components/Footer.svelte';
+	import NavBar from '$lib/components/NavBar.svelte';
 	import '../app.css';
 	// export let data;
 
@@ -31,9 +33,10 @@
 		</form>
 	{/if}
 </span> -->
-<button class="btn btn-primary">Hello daisyUI</button>
 
+<NavBar />
 <slot />
+<Footer />
 
 <!-- <script lang="ts">
 	import '../app.css';

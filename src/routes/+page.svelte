@@ -6,6 +6,7 @@
 	import Paragraph from '$lib/components/Paragraph.svelte';
 	import config from '$lib/config';
 	import clsx from 'clsx';
+	import FAQs from '$lib/components/FAQs.svelte';
 
 	const FEATURES = [
 		{
@@ -35,7 +36,7 @@
 <main
 	class="relative mx-auto flex min-h-screen max-w-screen-xl flex-col justify-center overflow-hidden px-8 py-16"
 >
-	<Pricing />
+	<FAQs />
 
 	<div class="mx-auto max-w-2xl text-center">
 		<H6 title={`${config.appName} for enterprise`} />

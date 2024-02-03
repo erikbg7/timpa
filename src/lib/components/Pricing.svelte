@@ -24,26 +24,26 @@
 					{#if plan.isFeatured}
 						<div class="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-1/2">
 							<span
-								class={`bg-primary rounded-full border-0 px-2 py-1 text-xs font-semibold text-white`}
+								class={`rounded-full border-0 bg-primary px-2 py-1 text-xs font-semibold text-white`}
 							>
 								POPULAR
 							</span>
 						</div>
 
-						<div class={`bg-primary absolute -inset-[1px] z-10 rounded-[9px]`}></div>
+						<div class={`absolute -inset-[1px] z-10 rounded-[9px] bg-primary`}></div>
 					{/if}
 
 					<div
 						class={clsx(
 							'relative z-10 flex h-full flex-col gap-5 rounded-lg bg-white p-8 lg:gap-8',
-							plan.isFeatured ? 'border-primary border-2' : 'border border-zinc-500',
+							plan.isFeatured ? 'border-2 border-primary' : 'border border-zinc-500',
 						)}
 					>
 						<div class="flex items-center justify-between gap-4">
 							<div>
 								<p class="text-lg font-bold lg:text-xl">{plan.name}</p>
 								{#if plan.description}
-									<p class="text-base-content/80 mt-2">
+									<p class="mt-2 text-base-content/80">
 										{plan.description}
 									</p>
 								{/if}
@@ -52,8 +52,10 @@
 						<div class="flex gap-2">
 							{#if plan.priceAnchor}
 								<div class="mb-[4px] flex flex-col justify-end text-lg">
-									<p class="text-base-content/80 line-through">
-										${plan.priceAnchor}
+									<p class="text-base-content/80">
+										<s>
+											${plan.priceAnchor}
+										</s>
 									</p>
 								</div>
 							{/if}
@@ -61,7 +63,7 @@
 								${plan.price}
 							</p>
 							<div class="mb-[4px] flex flex-col justify-end">
-								<p class="text-base-content/60 text-xs font-semibold uppercase">USD</p>
+								<p class="text-xs font-semibold uppercase text-base-content/60">USD</p>
 							</div>
 						</div>
 						{#if plan.features}
@@ -90,7 +92,7 @@
 							<ButtonCheckout priceId={plan.priceId} />
 
 							<p
-								class="text-base-content/80 relative flex items-center justify-center gap-2 text-center text-sm font-medium"
+								class="relative flex items-center justify-center gap-2 text-center text-sm font-medium text-base-content/80"
 							>
 								Pay once. Access forever.
 							</p>
