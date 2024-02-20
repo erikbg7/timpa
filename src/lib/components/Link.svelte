@@ -4,7 +4,7 @@
 	export let innerLink: boolean = false;
 </script>
 
-<a class="hover:cursor text-primary group w-fit font-semibold" {href}
+<a class="hover:cursor group w-fit text-accent" {href}
 	>{title}
 	{#if innerLink}
 		<svg
@@ -13,7 +13,7 @@
 			viewBox="0 0 24 24"
 			stroke-width="1.5"
 			stroke="currentColor"
-			class="text-primary mb-1 inline-block h-5 w-5 transition-all duration-200 ease-in-out group-hover:ml-2"
+			class="mb-1 inline-block h-5 w-5 text-primary transition-all duration-200 ease-in-out group-hover:ml-2"
 		>
 			<path
 				stroke-linecap="round"

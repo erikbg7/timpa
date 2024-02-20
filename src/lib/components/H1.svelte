@@ -6,7 +6,7 @@
 </script>
 
 <h1
-	class={clsx('signup-title mb-8 text-7xl font-semibold leading-tight text-neutral-700', {
+	class={clsx('header-effect mb-8 text-7xl font-semibold leading-tight', {
 		'text-lg': size === 'sm',
 		'text-2xl': size === 'md',
 		'text-4xl': size === 'lg',

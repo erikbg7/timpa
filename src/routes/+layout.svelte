@@ -34,9 +34,10 @@
 	{/if}
 </span> -->
 
-<NavBar />
+<!-- <NavBar /> -->
 <slot />
-<Footer />
+
+<!-- <Footer /> -->
 
 <!-- <script lang="ts">
 	import '../app.css';

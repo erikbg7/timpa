@@ -2,6 +2,7 @@ const appName = 'Calendly';
 
 const config = {
 	appName: appName,
+
 	signup: {
 		title: 'Create your <span>free</span> account',
 		description:

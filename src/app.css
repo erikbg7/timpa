@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-	@apply bg-zinc-50;
+	background-color: #0f0c1b;
 }
 
 .btn {
@@ -12,4 +12,11 @@ body {
 
 .input {
 	@apply rounded-lg;
+}
+
+.header-effect {
+	background: radial-gradient(circle, #fbfaff, #a7a5af);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
 }

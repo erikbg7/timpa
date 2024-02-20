@@ -5,12 +5,12 @@
 	export let size: 'sm' | 'md' | 'lg' | 'xl' = 'md';
 </script>
 
-<h2
-	class={clsx('header-effect mb-6 font-semibold', {
+<h3
+	class={clsx('mb-4 font-semibold', {
 		'text-lg': size === 'sm',
 		'text-2xl': size === 'md',
-		'text-4xl': size === 'lg',
-		'text-5xl': size === 'xl',
+		'text-3xl': size === 'lg',
+		'text-4xl': size === 'xl',
 	})}
 >
 	{#if title}
@@ -18,4 +18,4 @@
 	{:else}
 		<slot />
 	{/if}
-</h2>
+</h3>
