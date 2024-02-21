@@ -1,7 +1,7 @@
 <script lang="ts">
-	import H1 from '$lib/components/H1.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import Paragraph from '$lib/components/Paragraph.svelte';
+	import H1 from '$lib/atoms/H1.svelte';
+	import Link from '$lib/atoms/Link.svelte';
+	import Paragraph from '$lib/atoms/Paragraph.svelte';
 	import config from '$lib/config';
 </script>
 

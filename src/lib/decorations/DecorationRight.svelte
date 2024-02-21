@@ -1,7 +1,19 @@
+<script lang="ts">
+	import clsx from 'clsx';
+	export let className: string = '';
+	export let top: string = 'top-40';
+	export let width: string = 'w-[350px]';
+</script>
+
 <svg
 	viewBox="0 0 401 800"
 	focusable="false"
-	class="absolute right-0 top-40 w-[350px] fill-none"
+	class={clsx(
+		'absolute right-0 top-40 w-[350px] fill-none text-neutral-100',
+		className,
+		top,
+		width,
+	)}
 	stroke-width="1"
 	stroke-opacity="0.15"
 	><path

@@ -1,17 +1,18 @@
 <script lang="ts">
 	import config from '$lib/config';
-	import H6 from './H6.svelte';
-	import H2 from './H2.svelte';
-	import Paragraph from './Paragraph.svelte';
+	import Paragraph from '../atoms/Paragraph.svelte';
 	import clsx from 'clsx';
 	import ButtonCheckout from './ButtonCheckout.svelte';
+	import H6 from '$lib/atoms/H6.svelte';
+	import H2 from '$lib/atoms/H2.svelte';
+	import DecorationRight from '$lib/decorations/DecorationRight.svelte';
 </script>
 
-<section class=" overflow-hidden" id="pricing">
+<section class="overflow-hidden" id="pricing">
 	<!-- <section class="bg-base-200 overflow-hidden" id="pricing"> -->
-	<div class="mx-auto max-w-5xl px-8 py-24">
+	<div class="mx-auto max-w-5xl px-8">
 		<div class="mb-10 flex w-full flex-col text-center">
-			<H6 title="Pricing" />
+			<!-- <H6 title="Pricing" /> -->
 			<H2 title="Pick the perfect plan for your team" size="xl" />
 			<Paragraph title="We offer a 14-day free trial. No credit card required." />
 		</div>
@@ -35,10 +36,12 @@
 
 					<div
 						class={clsx(
-							'relative z-10 flex h-full flex-col gap-5 rounded-lg bg-white p-8 lg:gap-8',
+							'relative z-10 flex h-full flex-col gap-5 overflow-hidden rounded-lg bg-accent-content p-8 lg:gap-8',
 							plan.isFeatured ? 'border-2 border-primary' : 'border border-zinc-500',
 						)}
 					>
+						<DecorationRight className="z-20" />
+
 						<div class="flex items-center justify-between gap-4">
 							<div>
 								<p class="text-lg font-bold lg:text-xl">{plan.name}</p>
@@ -88,7 +91,7 @@
 								{/each}
 							</ul>
 						{/if}
-						<div class="space-y-2">
+						<div class="relative z-30 space-y-2">
 							<ButtonCheckout priceId={plan.priceId} />
 
 							<p

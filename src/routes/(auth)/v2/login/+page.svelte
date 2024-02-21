@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import H1 from '$lib/components/H1.svelte';
-	import Paragraph from '$lib/components/Paragraph.svelte';
+	import H1 from '$lib/atoms/H1.svelte';
+	import Paragraph from '$lib/atoms/Paragraph.svelte';
 	import SocialButton from '$lib/components/SocialButton.svelte';
 	import config from '$lib/config';
 </script>
@@ -21,7 +21,7 @@
 					placeholder="Enter your email"
 					class="w-full rounded-md border border-zinc-200 p-3 text-lg"
 				/>
-				<button class="bg-primary w-fit text-nowrap rounded-md px-4 py-3 text-lg text-white">
+				<button class="w-fit text-nowrap rounded-md bg-primary px-4 py-3 text-lg text-white">
 					Log in
 				</button>
 			</div>

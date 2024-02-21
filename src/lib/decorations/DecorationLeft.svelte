@@ -7,7 +7,7 @@
 <svg
 	viewBox="0 0 401 800"
 	focusable="false"
-	class={clsx('absolute left-0 w-[350px] fill-none')}
+	class={clsx('absolute left-0 w-[350px] fill-none text-neutral-100')}
 	style={'top: ' + top}
 	stroke-width="1"
 	stroke-opacity="0.15"

@@ -1,4 +1,4 @@
-<section class="relative flex flex-col items-center overflow-hidden py-24">
+<section class="relative flex flex-col items-center overflow-hidden py-24 text-neutral-100">
 	<div class="absolute inset-0 z-0 flex">
 		<svg viewBox="0 0 4000 184" focusable="false" class="decoration" stroke-width="1"
 			><path

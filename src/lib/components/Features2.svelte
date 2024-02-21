@@ -1,10 +1,11 @@
 <script lang="ts">
 	import clsx from 'clsx';
 	import config from '$lib/config';
-	import H2 from './H2.svelte';
-	import H6 from './H6.svelte';
-	import Link from './Link.svelte';
-	import Paragraph from './Paragraph.svelte';
+	import Link from '../atoms/Link.svelte';
+	import Paragraph from '../atoms/Paragraph.svelte';
+
+	import H6 from '$lib/atoms/H6.svelte';
+	import H2 from '$lib/atoms/H2.svelte';
 
 	const FEATURES = [
 		{

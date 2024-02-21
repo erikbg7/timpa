@@ -2,13 +2,13 @@
 	import { enhance } from '$app/forms';
 	import type { ActionData } from './$types';
 	import config from '$lib/config';
-	import InputText from '$lib/components/InputText.svelte';
-	import ListBullet from '$lib/components/ListBullet.svelte';
+	import InputText from '$lib/atoms/InputText.svelte';
+	import ListBullet from '$lib/atoms/ListBullet.svelte';
 	import SocialButton from '$lib/components/SocialButton.svelte';
-	import H6 from '$lib/components/H6.svelte';
-	import Paragraph from '$lib/components/Paragraph.svelte';
-	import H1 from '$lib/components/H1.svelte';
-	import H2 from '$lib/components/H2.svelte';
+	import Paragraph from '$lib/atoms/Paragraph.svelte';
+	import H1 from '$lib/atoms/H1.svelte';
+	import H2 from '$lib/atoms/H2.svelte';
+	import H6 from '$lib/atoms/H6.svelte';
 
 	export let form: ActionData;
 
@@ -60,7 +60,7 @@
 			<SocialButton value="Sign up with Google" provider="Google" />
 			<SocialButton value="Sign up with Google" provider="Google" />
 		</div>
-		<a class="hover:cursor text-primary text-center font-semibold" href="/login">Log In</a>
+		<a class="hover:cursor text-center font-semibold text-primary" href="/login">Log In</a>
 	</div>
 </div>
 

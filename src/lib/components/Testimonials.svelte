@@ -2,11 +2,11 @@
 	import config from '$lib/config';
 	import testimonials from '$lib/testimonials';
 
-	import H2 from './H2.svelte';
-	import Paragraph from './Paragraph.svelte';
+	import Paragraph from '../atoms/Paragraph.svelte';
 	import TestimonialCard from '$lib/components/TestimonialCard.svelte';
 	import DecorationRight from '$lib/decorations/DecorationRight.svelte';
 	import DecorationLeft from '$lib/decorations/DecorationLeft.svelte';
+	import H2 from '$lib/atoms/H2.svelte';
 </script>
 
 <section class="relative">
