@@ -1,33 +1,24 @@
 <script lang="ts">
-	// const faqList = [
-	// 	{
-	// 		question: 'What do I get exactly?',
-	// 		answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
-	// 	},
-	// 	{
-	// 		question: 'Can I get a refund?',
-	// 		answer: (
-	// 			<p>Yes! You can request a refund within 7 days of your purchase. Reach out by email.</p>
-	// 		),
-	// 	},
-	// 	{
-	// 		question: 'I have another question',
-	// 		answer: <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>,
-	// 	},
-	// ];
+	import config from '$lib/config';
+	import SectionHeader from './SectionHeader.svelte';
+
+	const faqs = config.faqs.list;
 </script>
 
-<div class="my-24">
-	<div class="flex gap-24">
-		<div class="flex flex-1 text-5xl">Frequently Asked Questions</div>
-		<div class="flex">
-			<div class="collapse collapse-arrow bg-base-200">
-				<input type="checkbox" />
-				<div class="collapse-title text-xl font-medium">Click me to show/hide content</div>
-				<div class="collapse-content">
-					<p>hello</p>
+<section>
+	<SectionHeader title={config.faqs.title} description={config.faqs.description} />
+
+	<div class="mx-auto my-0 max-w-4xl px-8">
+		{#each faqs as item}
+			<div class="flex">
+				<div class="collapse collapse-arrow rounded-none border-b border-zinc-400 bg-base-200">
+					<input type="checkbox" />
+					<div class="collapse-title text-lg font-medium">{item.question}</div>
+					<div class="collapse-content text-neutral-400">
+						{@html item.answer}
+					</div>
 				</div>
 			</div>
-		</div>
+		{/each}
 	</div>
-</div>
+</section>

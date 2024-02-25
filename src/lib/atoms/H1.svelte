@@ -6,8 +6,8 @@
 </script>
 
 <h1
-	class={clsx('header-effect mb-8 text-7xl font-semibold leading-tight', {
-		'text-lg': size === 'sm',
+	class={clsx('header-effect mb-8 font-semibold leading-tight', {
+		'text-xl': size === 'sm',
 		'text-2xl': size === 'md',
 		'text-4xl': size === 'lg',
 		'text-7xl': size === 'xl',

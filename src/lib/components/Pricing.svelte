@@ -1,22 +1,15 @@
 <script lang="ts">
-	import config from '$lib/config';
-	import Paragraph from '../atoms/Paragraph.svelte';
 	import clsx from 'clsx';
-	import ButtonCheckout from './ButtonCheckout.svelte';
-	import H6 from '$lib/atoms/H6.svelte';
-	import H2 from '$lib/atoms/H2.svelte';
+	import config from '$lib/config';
 	import DecorationRight from '$lib/decorations/DecorationRight.svelte';
+	import ButtonCheckout from './ButtonCheckout.svelte';
+	import SectionHeader from './SectionHeader.svelte';
 </script>
 
 <section class="overflow-hidden" id="pricing">
-	<!-- <section class="bg-base-200 overflow-hidden" id="pricing"> -->
-	<div class="mx-auto max-w-5xl px-8">
-		<div class="mb-10 flex w-full flex-col text-center">
-			<!-- <H6 title="Pricing" /> -->
-			<H2 title="Pick the perfect plan for your team" size="xl" />
-			<Paragraph title="We offer a 14-day free trial. No credit card required." />
-		</div>
+	<SectionHeader title={config.pricing.title} description={config.pricing.description} />
 
+	<div class="mx-auto max-w-5xl px-8">
 		<div
 			class="relative flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch"
 		>

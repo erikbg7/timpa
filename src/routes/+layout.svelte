@@ -21,6 +21,9 @@
 
 	// 	return () => data.subscription.unsubscribe();
 	// });
+
+	import { page } from '$app/stores';
+	$: route = $page.route;
 </script>
 
 <!-- <span id="auth_header">
@@ -34,8 +37,13 @@
 	{/if}
 </span> -->
 
-<!-- <NavBar /> -->
-<slot />
+{#if route?.id?.includes('/signin')}
+	<slot />
+{:else}
+	<NavBar />
+	<slot />
+	<Footer />
+{/if}
 
 <!-- <Footer /> -->
 
