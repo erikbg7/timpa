@@ -4,7 +4,11 @@ import daisyui from 'daisyui';
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				banner: '#251F42',
+			},
+		},
 	},
 	daisyui: {
 		themes: [

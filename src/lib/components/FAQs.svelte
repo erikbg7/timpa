@@ -5,7 +5,7 @@
 	const faqs = config.faqs.list;
 </script>
 
-<section>
+<section id="faqs">
 	<SectionHeader title={config.faqs.title} description={config.faqs.description} />
 
 	<div class="mx-auto my-0 max-w-4xl px-8">

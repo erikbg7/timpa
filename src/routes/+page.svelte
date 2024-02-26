@@ -68,13 +68,13 @@
 	<Features1 />
 	<SectionSeparator />
 
-	<Testimonials />
-	<SectionSeparator />
-
 	<Pricing />
 	<SectionSeparator />
 
 	<FAQs />
+	<SectionSeparator />
+
+	<Testimonials />
 	<SectionSeparator />
 
 	<Banner />

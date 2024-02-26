@@ -134,6 +134,15 @@ const config = {
 			},
 		],
 	},
+	navbar: {
+		list: [
+			{ label: 'Product', href: '#product' },
+			{ label: 'Pricing', href: '#pricing' },
+			{ label: 'Testimonials', href: '#testimonials' },
+			{ label: 'FAQs', href: '#faqs' },
+			{ label: 'About Us', href: '/about' },
+		],
+	},
 };
 
 export default config;

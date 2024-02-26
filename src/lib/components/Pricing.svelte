@@ -6,7 +6,7 @@
 	import SectionHeader from './SectionHeader.svelte';
 </script>
 
-<section class="overflow-hidden" id="pricing">
+<section id="pricing" class="overflow-hidden">
 	<SectionHeader title={config.pricing.title} description={config.pricing.description} />
 
 	<div class="mx-auto max-w-5xl px-8">

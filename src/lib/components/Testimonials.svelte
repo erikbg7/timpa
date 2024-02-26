@@ -9,7 +9,7 @@
 	const testimonials = config.testimonials.list;
 </script>
 
-<section class="relative">
+<section id="testimonials" class="relative">
 	<DecorationLeft />
 	<DecorationRight />
 

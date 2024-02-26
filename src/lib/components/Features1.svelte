@@ -8,7 +8,7 @@
 	const features = config.features1.list;
 </script>
 
-<section class="relative">
+<section id="product" class="relative">
 	<DecorationLeft top="0rem" />
 
 	<SectionHeader title={config.features1.title} description={config.features1.description} />
