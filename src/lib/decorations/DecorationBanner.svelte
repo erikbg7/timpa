@@ -4,7 +4,7 @@
 	height="500"
 	viewBox="0 0 1200 500"
 	fill="none"
-	class="absolute -bottom-8 right-0"
+	class="absolute -bottom-8 -right-24 lg:right-0"
 >
 	<g clip-path="url(#clip0_32_334)">
 		<path d="M1029 497C1121 441 1238 207 1216 28" stroke="white" stroke-opacity="0.2" />

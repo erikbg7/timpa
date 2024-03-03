@@ -21,8 +21,6 @@ export default {
 					accent: '#b394ff',
 					'accent-content': '#161522',
 
-					neutral: '#2563eb',
-
 					'base-100': '#0f0c1b',
 
 					info: '#ffffff',

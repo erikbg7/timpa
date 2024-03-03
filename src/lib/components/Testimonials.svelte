@@ -15,7 +15,7 @@
 
 	<SectionHeader title={config.testimonials.title} description={config.testimonials.description} />
 
-	<div class="mx-auto grid max-w-screen-xl grid-cols-3 gap-x-12 px-8">
+	<div class="mx-auto grid max-w-screen-xl grid-cols-1 gap-x-12 px-8 lg:grid-cols-3">
 		<div class="flex flex-col justify-center gap-12">
 			{#each testimonials.slice(0, 3) as testimonial}
 				<TestimonialCard {testimonial} />

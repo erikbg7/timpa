@@ -13,7 +13,9 @@
 
 	<SectionHeader title={config.features1.title} description={config.features1.description} />
 
-	<div class="relative mx-auto mb-12 grid max-w-screen-xl grid-cols-2 gap-x-16 gap-y-20 px-8">
+	<div
+		class="relative mx-auto mb-0 grid max-w-screen-xl grid-cols-1 gap-x-16 gap-y-20 px-4 md:mb-12 md:grid-cols-2 md:px-8"
+	>
 		{#each features as feature}
 			<div class="flex gap-8">
 				<div

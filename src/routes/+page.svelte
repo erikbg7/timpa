@@ -14,11 +14,11 @@
 	class="relative mx-auto flex min-h-screen max-w-screen-xl flex-col justify-center overflow-hidden px-8 py-16"
 > -->
 <main>
-	<section class="relative min-h-screen">
+	<section class="relative mt-6 min-h-screen">
 		<HeroGradient />
 		<DecorationHero />
-		<div class="relative flex h-screen flex-col justify-center">
-			<div class="mb-20 grid grid-cols-2 px-24">
+		<div class="relative flex h-screen flex-col justify-center px-2">
+			<div class="mb-20 grid grid-cols-1 lg:grid-cols-2 lg:px-32">
 				<div class="flex max-w-lg flex-col justify-center">
 					<H1 size="lg">Serverless database platform powered by PostgreSQL</H1>
 					<p class="mb-8">
@@ -34,33 +34,35 @@
 			</div>
 		</div>
 
-		<div class="absolute bottom-12 left-0 right-0 flex flex-wrap items-center justify-center">
-			<p class="mr-6 text-xs opacity-50">as seen on</p>
-			<img
-				alt="techcrunch social logo"
-				class="filter-to-white my-2 mr-6 h-4 w-auto md:h-6"
-				src="/socials/techcrunch.png"
-			/>
-			<img
-				alt="stability social logo"
-				class="filter-to-white my-2 mr-6 h-4 w-auto md:h-6"
-				src="/socials/stability-ai.png"
-			/>
-			<img
-				alt="fstoppers social logo"
-				class="filter-to-white my-2 mr-6 h-4 w-auto md:h-6"
-				src="/socials/fstoppers.png"
-			/>
-			<img
-				alt="tiktok social logo"
-				class="filter-to-white my-2 mr-6 h-4 w-auto md:h-6"
-				src="/socials/tiktok.png"
-			/>
-			<img
-				alt="instagram social logo"
-				class="filter-to-white mb-2 mr-6 mt-3 h-4 w-auto md:h-6"
-				src="/socials/instagram.png"
-			/>
+		<div class="absolute bottom-12 left-0 right-0 flex flex-col items-center">
+			<p class="py-6 text-lg font-semibold opacity-60">Follow our journey on</p>
+			<div class="flex flex-wrap items-center justify-center">
+				<img
+					alt="techcrunch social logo"
+					class="filter-to-white my-2 mr-6 h-4 w-auto md:h-6"
+					src="/socials/techcrunch.png"
+				/>
+				<img
+					alt="stability social logo"
+					class="filter-to-white my-2 mr-6 h-4 w-auto md:h-6"
+					src="/socials/stability-ai.png"
+				/>
+				<img
+					alt="fstoppers social logo"
+					class="filter-to-white my-2 mr-6 h-4 w-auto md:h-6"
+					src="/socials/fstoppers.png"
+				/>
+				<img
+					alt="tiktok social logo"
+					class="filter-to-white my-2 mr-6 h-4 w-auto md:h-6"
+					src="/socials/tiktok.png"
+				/>
+				<img
+					alt="instagram social logo"
+					class="filter-to-white mb-2 mr-6 mt-3 h-4 w-auto md:h-6"
+					src="/socials/instagram.png"
+				/>
+			</div>
 		</div>
 	</section>
 	<SectionSeparator />

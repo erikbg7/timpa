@@ -17,36 +17,41 @@
 
 <section class="mx-auto max-w-7xl">
 	<div
-		class="relative mx-10 overflow-hidden rounded-3xl border-8 border-neutral-900 bg-neutral-900"
+		class="relative mx-2 overflow-hidden rounded-3xl border-8 border-neutral-900 bg-neutral-900 lg:mx-10"
 	>
-		<div class="bg-banner relative flex justify-between rounded-lg p-24">
+		<div
+			class="relative flex flex-col justify-between rounded-lg bg-banner p-4 lg:flex-row lg:p-24"
+		>
 			<DecorationBanner />
 			<div class="relative flex max-w-lg flex-col gap-8">
-				<h2 class="text-4xl font-semibold text-neutral-100">Start free, pay as you grow</h2>
-				<p class="no-aliasing text-lg text-white">
+				<h2 class="text-2xl font-semibold text-neutral-100 lg:text-4xl">
+					Start free, pay as you grow
+				</h2>
+				<p class="no-aliasing text-md text-white lg:text-lg">
 					Xata provides the best free plan in the industry. It is production ready by default and
 					doesn't pause or cool-down. Take your time to build your business and upgrade when you're
 					ready to scale.
 				</p>
-				<div class="flex gap-4">
+				<div class="hidden gap-4 lg:flex">
 					<button class="text-md btn btn-primary w-40">Start Free</button>
 					<button class="text-md bg- btn btn-secondary w-40">How It Works</button>
 				</div>
 			</div>
-			<div class="relative">
+			<div class="relative my-8 lg:my-0">
 				<span
 					class="bg-green-300/20 px-[0.2rem] py-[0.1rem] text-xs font-semibold uppercase text-green-300/90"
 					>free plan includes</span
 				>
 				<ul class="mt-4">
 					{#each BANNER_FEATURES as feature}
-						<li class="text-md flex items-center gap-3 py-1 font-light text-neutral-200">
+						<li class="lg:text-md flex items-center gap-3 py-1 text-sm font-light text-neutral-200">
 							<ListBullet size="sm" status="success" />
 							{feature}
 						</li>
 					{/each}
 				</ul>
 			</div>
+			<button class="text-md btn btn-primary btn-block relative lg:hidden">Start Free</button>
 		</div>
 	</div>
 </section>

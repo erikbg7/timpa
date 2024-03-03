@@ -24,9 +24,9 @@
 	};
 </script>
 
-<footer class="mx-auto max-w-screen-xl border-t border-zinc-300 py-12">
+<footer class="mx-auto max-w-screen-xl pb-12 pt-6">
 	<div class="flex flex-col gap-3">
-		<div class="flex justify-between">
+		<div class="flex flex-wrap justify-between">
 			<ul class="flex gap-6 text-sm font-semibold">
 				<li>Privacy</li>
 				<li>Terms and Conditions</li>
@@ -35,7 +35,7 @@
 			<ul class="flex gap-3">
 				{#each config.footer.socials as social}
 					<li>
-						<a class="text-sm font-semibold text-zinc-800" href={social.link}
+						<a class="text-sm font-semibold text-neutral-300" href={social.link}
 							><svelte:component this={getIcon(social.icon)} /></a
 						>
 					</li>
