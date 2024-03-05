@@ -24,6 +24,8 @@
 
 	import { page } from '$app/stores';
 	$: route = $page.route;
+
+	console.log({ page: $page });
 </script>
 
 <!-- <span id="auth_header">
@@ -37,7 +39,7 @@
 	{/if}
 </span> -->
 
-{#if route?.id?.includes('/signin')}
+{#if route?.id?.includes('(auth)') || route?.id?.includes('(legal)')}
 	<slot />
 {:else}
 	<NavBar />

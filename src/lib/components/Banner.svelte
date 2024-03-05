@@ -16,6 +16,16 @@
 </script>
 
 <section class="mx-auto max-w-7xl">
+	<!-- <ul>
+		{#each BANNER_FEATURES.filter(({sites}) => sites.length < 80) as structure}
+		  {@const { id } = structure}
+		  {@const href = `https://materialsproject.org/materials/${id}`}
+		  <li>
+			<h2><a {href}>{id}</a></h2>
+			<Structure {structure} />
+		  </li>
+		{/each}
+	  </ul> -->
 	<div
 		class="relative mx-2 overflow-hidden rounded-3xl border-8 border-neutral-900 bg-neutral-900 lg:mx-10"
 	>

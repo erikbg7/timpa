@@ -92,7 +92,7 @@
 				</ul>
 			</div>
 			<ul class="flex items-center gap-4 text-neutral-100">
-				<li class="hidden lg:block"><a href="/login">Log In</a></li>
+				<li class="hidden lg:block"><a href="/signin">Log In</a></li>
 				<li>
 					<a href="/login" class="btn btn-primary btn-sm font-light text-white">Get Started</a>
 				</li>
