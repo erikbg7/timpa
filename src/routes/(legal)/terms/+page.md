@@ -1,0 +1,341 @@
+<header class="legal-information-header">
+
+# Terms of use
+
+<p>Effective Date: March 1, 2024</p>
+
+</header>
+
+These Terms of Use (these “Terms”) are between you (“you,” “Customer” (with respect to a business, organization or other legal entity), or “User” (with respect to an individual)) and Xatabase, Inc. (“Xatabase”, “Xata, “we”, “our”, or “us”) and describe your rights and responsibilities when using the Xatabase web-based software platform (the “Xata Platform”), including related downloadable software (“Software”) and technology services offered by us (collectively, the “Services”). These Terms, any Order Form(s) (as defined in Section 3. A (Services Subscription) below), and any terms and conditions, policies, and disclaimers referenced in these Terms, presented through the Services, or otherwise required to access certain features of the Services (the “Additional Terms”) form the “Agreement” between you and us with respect to the Services. If there is a conflict between these Terms and any Additional Terms, the Additional Terms will control with respect to the specific content, service or feature. All terms not defined in this paragraph have the meanings set forth in these Terms below. In the Agreement, the words “include” and “including” will not be construed as terms of limitation.
+
+By accessing or using the Services, submitting an Order Form, or clicking a button or checking a box marked “I Agree” (or something similar), Customer, through its authorized representative, or a User, as applicable, signifies that you have read, understood, and agree to be bound by this Agreement, and are legally able to receive the Services under the laws of the United States or other countries in which you are resident or from which you use the Services. Users must be over the age of 18, and, if a business, duly organized and legally in good standing. A Customer must take all reasonable steps to ensure that its Users comply with these Terms.
+
+**PLEASE READ THIS AGREEMENT CAREFULLY TO ENSURE THAT YOU UNDERSTAND EACH PROVISION. THIS AGREEMENT CONTAINS A MANDATORY INDIVIDUAL ARBITRATION PROVISION IN SECTION 16.B (THE “ARBITRATION AGREEMENT”) AND CLASS ACTION/JURY TRIAL WAIVER PROVISION IN SECTION 16.C (THE “CLASS ACTION/JURY TRIAL WAIVER”) THAT REQUIRE, UNLESS YOU OPT OUT PURSUANT TO THE INSTRUCTIONS IN SECTION 16.B, THE EXCLUSIVE USE OF FINAL AND BINDING ARBITRATION ON AN INDIVIDUAL BASIS TO RESOLVE DISPUTES BETWEEN YOU AND XATABASE, INCLUDING ANY CLAIMS THAT AROSE OR WERE ASSERTED BEFORE YOU AGREED TO THESE TERMS. TO THE FULLEST EXTENT PERMITTED BY LAW, YOU EXPRESSLY WAIVE YOUR RIGHT TO SEEK RELIEF IN A COURT OF LAW AND TO HAVE A JURY TRIAL ON YOUR CLAIMS, AS WELL AS YOUR RIGHT TO PARTICIPATE AS A PLAINTIFF OR CLASS MEMBER IN ANY CLASS, COLLECTIVE, PRIVATE ATTORNEY GENERAL OR REPRESENTATIVE ACTION OR PROCEEDING**
+
+#
+
+## 1. Changes to these Terms
+
+We may update these Terms from time to time. If we materially update any portion of these Terms, we will notify you, at the email address provided in your Account profile, or other reasonable means (for example, by posting a notice on our website) before the date the update becomes effective. We will also post the updated Terms in their original location marked with the new date. Changes will not be retroactive nor affect your current Subscription Term (as defined in Section 3. A (Services Subscription) below). Your renewal of your Subscription Term after we publish or send a notice about changes to these Terms means that you are consenting to the updated terms.
+
+#
+
+## 2. Accounts
+
+#
+
+### A. Users
+
+Users must register an account with Xata (an “Account”) prior to accessing the Services. Users agree to: (a) not share your Account or transfer any part of it to anyone else; (b) provide accurate, current and complete information during the registration process and keep your Account up-to-date; and (c) keep your password secure and confidential. Xatabase reserves the right to refuse registration of, or cancel, passwords that we deem inappropriate. You agree to notify Xatabase immediately of any unauthorized use of your Account and are responsible for anything that happens through your Account prior to closing it or reporting misuse to us.
+
+#
+
+### B. Account Profile
+
+You may control your Account profile and how it interacts with the Services by changing the settings in your Account. You consent to Xatabase using the email address you provide in your Account profile to send you Services-related notices, including any notices required by law, in lieu of communication by other means such as postal mail. Xatabase may also use your email address to send you other messages, such as changes to Services features, special offers, or Services-related newsletters.
+
+#
+
+### C. Customer License Administrator
+
+If you are registering an Account as an administrator of the Services on behalf of a Customer (a “Customer License Administrator”), either through the online mechanism provided by us when you accept the Agreement or other registration process, you do so on behalf of all Users authorized by Customer to access and use the Services under Customer’s license; and you represent and warrant that you have the authority to legally bind the Customer and to grant Xatabase all permissions and licenses provided in this Agreement.
+
+#
+
+### D. Account Access
+
+Customer is responsible for ensuring that access to and use of the Services comports with any limits stated in the applicable Order Form or otherwise agreed to with Xatabase, including by (a) protecting all authentication keys and access tokens for the Services in accordance with the usage limitations; (b) prohibiting access to or use of the Services by anyone other than authorized Users; and (c) ensuring that the authentication keys or access tokens are used solely as necessary to exercise Customer’s rights granted under the Agreement. Customer is responsible and liable to Xatabase for all activity that occurs with the authentication keys, access tokens or otherwise through or in connection with Customer’s User Accounts. Users must register an account with Xata (an “Account”) prior to accessing the Services. Users agree to: (a) not share your Account or transfer any part of it to anyone else; (b) provide accurate, current and complete information during the registration process and keep your Account up-to-date; and (c) keep your password secure and confidential. Xatabase reserves the right to refuse registration of, or cancel, passwords that we deem inappropriate. You agree to notify Xatabase immediately of any unauthorized use of your Account and are responsible for anything that happens through your Account prior to closing it or reporting misuse to us.
+
+#
+
+## 3. Provision of the Services
+
+#
+
+### A. Services Subscription.
+
+A subscription to the Services may be procured through the Services interface, or in some cases, via an order form or other manual ordering process between Customer and us (each, an “Order Form”). During the Subscription Term (as defined in Section 8. A (Subscription Term and Renewal) below), Xatabase grants you a revocable, nonexclusive, non-sublicensable, non-transferable, limited license to (a) access and use the Services described in the applicable Order Form solely in accordance with any usage or license limitations set forth in the Order Form; (b) if applicable, install any Software provided by us for download through the Services, solely as permitted by the features of the Software, and use the Software solely in connection with the Xata Platform for your internal business purposes; and (c) access any and all documentation related to the Software and Services that Xatabase may make available from time to time in any format we may decide in our sole discretion (the “Documentation”) internally and solely in connection with Customer’s authorized use of the Services. Upon the written agreement of the parties, Xatabase may also perform additional technical, supplemental, or professional services for Customer at either Xatabase’s published pricing rates or at rates mutually agreed to in writing between Customer and Xatabase. The definition of “Services” is comprehensive of the Xata Platform, software that may be downloadable through the Xata Platform, professional services, technical support, training materials, Documentation, and other services specific to Xatabase’s and our affiliates’ products and services.
+
+#
+
+### B. Subscription Fees
+
+You shall pay all fees and rates specified in Order Forms (“Subscription Fees”) by credit card or other payment method permitted by us from time to time, and you authorize us to charge your credit card or bank account for all fees payable during the Subscription Term, at the start of the applicable billing period specified in your Order Form (monthly, or as otherwise stated). You further authorize us to use a third party to process payments, and consent to the disclosure of your payment information to such third party. Except as otherwise specified in the applicable Order Form, Subscription Fees for the Subscription Term are non-refundable, including in the event of a suspension or termination pursuant to Section 8.B (Termination or Suspension) below. In the event your usage increases over the limitations set forth in your Order Form, we reserve the right to charge or invoice you for the subscription package pertaining to your usage, on a prorated basis and less Subscription Fees you have already paid for the Subscription Term, commencing on the first day of the month of the Subscription Term in which the usage exceeded the applicable limit. You are responsible for all taxes, duties or other fees imposed, assessed or collected by or under the authority of any governmental body (“Taxes”) imposed on the transaction or the delivery of Services (except Taxes based on our net income), and acknowledge and agree that the amount billed for your subscription may vary due to promotional offers, changes in your subscription plan at the time of renewal (in accordance with this Agreement) or changes in Taxes, and you authorize us (or payment processor, as applicable) to charge your payment method for the changed amounts.
+
+#
+
+### C. Free Trial Services
+
+In certain cases, we may make Services to which you have subscribed available on a free trial basis (a “Trial”). In such event, we will make the Trial available to you until the earlier of: (a) the end of the then-current Trial period offered by us; (b) the start date of any paid Services you order; or (c) the date on which we elect in our sole discretion to terminate your access to the Trial (the “Trial Term”). You acknowledge and agree that the features and functionality of the Services may be limited during the Trial Term. We reserve the right to terminate a Trial, or disable or remove any project or database deployment during a Trial, with or without notice at our sole discretion, and you agree that Xatabase will not be liable to you or any third party for such actions. In addition, any changes made to Your Content (as defined in Section 4. A (License to Your Content) below) or Customer Data (as defined in Section 5. B (License to Customer Data) below) (by you or for you) during the Trial Term may be permanently lost unless you purchase a subscription to the same or upgraded Services to those covered during the Trial Term. We reserve the right to delete Your Content and Customer Data following the Trial Term to the extent you do not purchase a paid subscription within seven (7) days following the end of the Trial Term. NOTWITHSTANDING ANYTHING TO THE CONTRARY IN THIS AGREEMENT, WE DO NOT PROVIDE ANY WARRANTY, SUPPORT OR INDEMNIFICATION OF ANY KIND WITH RESPECT TO THE SERVICES DURING THE TRIAL TERM, AND ASSUME NO LIABILITY OF ANY TYPE WITH RESPECT TO THE TRIAL UNLESS SUCH EXCLUSION OF LIABILITY IS NOT ENFORCEABLE UNDER APPLICABLE LAW IN WHICH CASE XATABASE’S LIABILITY WITH RESPECT TO THE TRIAL SHALL NOT EXCEED ONE HUNDRED U.S. DOLLARS ($100).
+
+#
+
+### D. Usage Limitations
+
+The Services may be subject to certain limitations, such as, for example, (a) limits on the number of Users; (b) limits to named (not concurrent) devices or persons; or (c) limits on content storage capacity specific to Customer’s subscription type. Xatabase will specify these limitations in the Order Form for the applicable subscription package.
+
+#
+
+### E. Services Updates
+
+Customer’s use of the Services includes the right to access all functionality available in the Service to which Customer subscribed in the Order Form, on the effective date of such Order Form. Xatabase may enhance and modify the Services and introduce new Services from time to time but will provide Customer with notice unless such changes are of minor nature with no material effect on Xatabase’s contractual obligations. You acknowledge that we reserve the right to change our general practices, Services features and usage limits at any time, in our sole discretion; provided, however, that if we make any such modifications during your Subscription Term that would negatively impact you, we will either (a) delay enacting these modifications with respect to your subscription until the start of your next Subscription Term renewal, if any; or (b) permit you to terminate your subscription in exchange for a pro-rated refund of the Subscription Fee over the then-current Subscription Term. To the extent Xatabase makes available any new or different features, functionality or enhancements to the Services, Xatabase will market these separately and may require the payment of additional fees. Customer agrees that Xatabase will not be liable to Customer or any third party for any modification of the Services in keeping with this section.
+
+#
+
+### F. Service Availability and Support
+
+We will make the Services available to you subject to the terms of this Agreement, including the applicable Order Form(s) and Documentation, and may, but are not required to, provide you with commercially reasonable remote technical support during Xatabase’s normal business hours. We will use commercially reasonable efforts to make the online Services available 24 hours a day, 7 days a week, except for: (a) planned downtime (of which Xatabase shall give advance electronic notice); (b) unavailability due to problems or issues related to alpha, beta or otherwise not-generally-available Service features or products to which we’ve provided you with access; and (c) any unavailability caused by circumstances beyond Xatabase’s reasonable control, including, for example, pursuant to Section 13 (Force Majeure), Third-Party Materials and Services (including Non-Xatabase Applications, as defined in Section 3. H below), or denial of service attack. For clarity, we have no obligation to provide any support during a Trial.
+
+#
+
+### G. Software Updates
+
+Software may automatically download and install updates from time to time from Xatabase (or its licensors). These updates are designed to improve, enhance and further develop the Software, as applicable, and may take the form of bug fixes, enhanced functions, new software modules and completely new versions. You agree to receive such updates (and permit Xatabase to deliver these to you) as part of your use of the Software.
+
+#
+
+### H. Third Party Materials and Services
+
+The Services may integrate with, or contain features designed to interoperate with, third party services or Non-Xatabase Applications, or contain materials, or information, or links thereto that are not owned or controlled by us (“Third-Party Materials and Services”). “Non-Xatabase Application” means a web-based, mobile, offline or other software application functionality that interoperates with a Service, that is provided by Customer or a third party. If Customer or any User accesses any Third-Party Materials and Services, you do so at your own risk, and Customer acknowledges and agrees that the Agreement and our Privacy Policy do not apply to Customer or any User’s use of such Third-Party Materials and Services. We cannot guarantee the continued availability of features in the Service designed to interoperate with certain Third Party Materials and Services, and may cease providing them without entitling Customer to any refund, credit, or other compensation, if for example and without limitation, the provider of a Non-Xatabase Application ceases to make the Non-Xatabase Application available for interoperation with the corresponding Service features in a manner acceptable to Xatabase. You are responsible for the interoperation of any Non-Xatabase Applications with which you use the Services. We are not responsible for any interruptions or issues with the Services caused by Third-Party Materials and Services, and make no representation or warranty regarding Third-Party Materials and Services, whether or not we recommend, certify, or otherwise approve such Third-Party Materials and Services for use with the Services. You expressly relieve us from any and all liability arising from your use of any Third-Party Materials and Services.
+
+#
+
+## 4. Your Content
+
+#
+
+### A. License to Your Content
+
+You hereby grant Xatabase and our applicable contractors a worldwide, limited-term license to host, copy, use, transmit, and display any and all software, code, data, information, text, images, video, audiovisual content, works of authorship or other types of materials, information or communications, or hyperlinks to any of the foregoing that you provide, post, upload, publish, transmit or distribute on or through the Services, including any Non-Xatabase Applications and program code created by or for Customer using a Service or for use by Customer with the Services (collectively, “Your Content”) during the Subscription Term, as appropriate for Xatabase (a) to provide and ensure proper operation of the Services and associated systems in accordance with this Agreement; and (b) to perform such other actions as authorized or instructed by Customer in writing (email to suffice). If you choose to use a Non-Xatabase Application with the Service, you grant us permission to allow the Non-Xatabase Application and its provider to access Your Content, Customer Data and information about your usage of the Non-Xatabase Application as appropriate for the interoperation of that Non-Xatabase Application with the Service. Subject to the limited licenses granted herein, Xatabase acquires no right, title or interest from Customer or its licensors under this Agreement in or to any of Your Content.
+
+#
+
+### B. Your Responsibility for Your Content
+
+We do not own Your Content, and you, not Xatabase, shall have sole responsibility for the accuracy, quality, integrity, legality, reliability, appropriateness, and intellectual property ownership or right to use of Your Content. In connection with Your Content, Customer, and User as applicable, represents and warrants that you (a) have obtained (and are solely responsible for obtaining) all consents that may be required by federal, state or local law, regulation ordinance, court order or other legal process (“Applicable Law”) to submit Your Content; (b) Your Content and our use thereof as contemplated by the Agreement and the Services will not violate any law or infringe any rights of any third party, including but not limited to any intellectual property rights and/or privacy rights; and (c) you will comply with the terms of service of any Non-Xatabase Applications with which you use the Services. We expressly disclaim any liability for the data and content transmitted through or intermediately, temporarily or permanently stored on Xatabase networks or any server and for the actions or omissions of Customers or Users.
+
+#
+
+### C. Our Right to Remove Your Content
+
+We have the absolute right to remove or disable access to any content on the Services, including any Non-Xatabase Applications, as needed (a) to operate, secure and improve the Services (including without limitation for fraud prevention, risk assessment, investigation and customer support purposes); (b) to ensure compliance with the Agreement (or any Xatabase policy), Applicable Law, or an order or requirement of a court, law enforcement or other administrative agency or governmental body; or (c) as otherwise set forth in this Agreement. If we become aware of any content posted through the Services that allegedly violates this Agreement, we may investigate the allegation and determine in our sole discretion whether to act, but have no liability or responsibility to you to do so. You agree to cooperate with us in good faith, as we may reasonably request, in any investigation we choose to undertake with respect to Your Content. If requested by Xatabase, Customer shall confirm such deletion and discontinuance of use in writing and Xatabase will be authorized to provide a copy of such confirmation to any such third party claimant or governmental authority, as applicable. In addition, if Xatabase is required by any third party rights holder to remove content, or receives information that content provided to Customer may violate applicable law or third-party rights, Xatabase may discontinue Customer’s access to content through the Services.
+
+#
+
+## 5. Customer Data
+
+#
+
+### A. Compliance with Data Protection Laws
+
+The parties to this Agreement recognize that this Agreement is subject to, and intended to comply with, all Applicable Law in the United States relating to the use, collection, retention, storage, security, disclosure, transfer, sale or other processing of personal information (collectively, the “Data Protection Laws”).
+
+#
+
+### B. License to Customer Data
+
+In connection with the provision of the Services to Customer, Xatabase may process personal information and data from or about Customer’s authorized Users, employees, current or potential clients or other individuals that is collected, submitted, posted, displayed, uploaded or otherwise received from or provided by Customer’s Users by or through the Services (collectively, “Customer Data”). Customer hereby grants to Xatabase and its applicable contractors a fully paid-up, royalty-free, worldwide, nonexclusive right and license, with the right to sublicense, copy, reproduce, modify, use, publicly perform, display, distribute and create derivative works of all Customer Data during the Subscription Term for the purpose of (a) providing the Services in accordance with the purposes set forth in the Agreement and applicable Order Form and in accordance with Customer’s instructions set forth in writing; (b) detecting data security incidents or to protect against fraudulent or illegal activity; and (c) enforcing Xatabase’s rights under this Agreement.
+
+#
+
+### C. Customer Data Disclosure
+
+Xatabase will not disclose or sell Customer Data other than as necessary to perform the agreed-upon Services, or in accordance with Customer’s instructions. Notwithstanding the foregoing, nothing in this Agreement will restrict Xatabase’s ability to disclose Customer Data (a) to a subcontractor for a business purpose pursuant to a written agreement to protect the confidentiality of Customer Data, provided that Xatabase shall be liable to Customer for the acts or omissions of any subcontractor to whom Xatabase has disclosed or permitted to access Customer Data as if they were the acts or omissions of Xatabase; (b) to a third party as necessary to comply with Applicable Laws; (c) with the Customer’s or User’s consent; or (d) as otherwise permitted by applicable Data Protection Laws.
+
+#
+
+### D. Your Responsibility for Customer Data
+
+Customer acknowledges and affirms that Customer has provided all notices and obtained all consents necessary, if any, under the Data Protection Laws, to provide to Xatabase, or permit Xatabase to access and collect, Customer Data for the purposes described in this Agreement. Customer shall not submit, or cause to be submitted by any User, Customer Data that includes (a) unless otherwise agreed, personal information relating to a resident of the European Economic Area or which may be subject to the General Data Protection Regulation (GDPR); (b) personal information or other data that may be subject to additional protections under applicable laws or regulations; or (c) a social security number, passport number, driver’s license number, or similar identifier, credit card or debit card number or financial information, without Xatabase’s prior written approval.
+
+#
+
+### E. De-Identified or Anonymized Data
+
+Xatabase will have the right to derive De-Identified Data from Customer Data and/or to collect, analyze and use De-Identified Data and/or aggregate data directly from the Services. Customer acknowledges and agrees that Xatabase may use De-Identified Data and aggregate data to: (a) analyze, improve, market or develop the Services or new products and services; (b) train predictive models; (c) conduct research; and (d) inform Xatabase’s marketing and advertising campaigns. “De-Identified Data” means any data, including but not limited to Customer Data, usage data or other data generated from Customer’s and its Users’ use of the Services, from which all personal information, including direct and indirect identifiers, has been removed or obscured so that the remaining information does not reasonably identify an individual, and for which Xatabase has implemented technical safeguards and business processes to prohibit the reidentification of such data. For clarity and without limitation, De-Identified Data shall not be deemed “Customer Data,” and nothing in these Terms shall limit Xatabase’s right, both during and after the Term of the Agreement, to use, store, transmit, modify, copy, display, sublicense and create derivative works from De-Identified Data.
+
+#
+
+### F. California Consumer Privacy Act
+
+To the extent the California Consumer Privacy Act of 2018 and its implementing regulations (the “CCPA”) applies, Xatabase and Customer acknowledge that Xatabase processes any and all “personal information” (as defined in the CCPA) contained in Customer Data for and on behalf of Customer as a “Service Provider” (as defined in the CCPA), and shall not collect, retain, use or disclose such personal information for any commercial purpose other than for the specific purposes of performing the Services, as instructed by the Customer, and as otherwise specified in the Agreement. Xatabase agrees to reasonably cooperate with Customer, at Customer’s expense, to assist Customer with ensuring its compliance with the CCPA, including to respond to requests for access, knowledge, deletion or rectification to the extent such actions cannot be performed by Customer through the Service dashboard and User controls. If and to the extent Customer instructs Xatabase to delete a User’s personal information in response to a consumer request received by Customer which cannot be performed by Customer through the Services dashboard, Xatabase agrees to delete or de-identify such information within thirty (30) days of receipt of the request. For the avoidance of doubt, Xatabase shall have no obligation to delete De-Identified Data.
+
+#
+
+## 6. Acceptable Use
+
+Your use of this website is subject to all applicable local, state, national and international laws and regulations, and you agree not to violate such laws and regulations. Any attempt by any person to deliberately damage this website or application is a violation of criminal and civil laws. Xatabase, Inc., and its subsidiaries, reserves the right to seek damages from any such person to the fullest extent permitted by law. In addition, you agree not to post or transmit through this website any material or content that violates or infringes in any way the rights of others or solicits, encourages or promotes the use of illegal substances or activities, which is unlawful, threatening, abusive, harassing, defamatory, libelous, derogatory, invasive of privacy or publicity rights, vulgar, obscene, bigoted or hateful, profane, scandalous, pornographic, indecent or otherwise objectionable, gives rise to civil or criminal liability or otherwise violates any applicable law. You may not engage in any activity on this website that restricts or inhibits any other user from using or enjoying this website by "hacking", "cracking", "spoofing", or defacing any portions of this website.
+
+You may not post or transmit through this website advertising or commercial solicitations; promotional materials relating to website or online services which are competitive with Xata and/or this website; software or other materials that contain viruses, worms, time bombs, Trojan horses, or other harmful or disruptive components, political campaign materials; chain letters; mass mailings, spam mail, any robot, spider, site search/retrieval application, or other manual or automatic device or process to retrieve, index, "data mine", or in any way reproduce or circumvent the navigational structure or presentation of this website or its contents. You may not harvest or collect information about website visitors without their express written consent.
+
+#
+
+## 7. Proprietary Rights
+
+#
+
+### A. Ownership
+
+As between Xatabase and Customer (a) Customer and its licensors own all right, title and interest in and to (i) Your Content, (ii) Customer Data, and (ii) Customer’s copyrights, trademarks, service marks, trade names, trade secrets, and other intellectual and proprietary rights with respect to Customer’s products and services; and (b) Xatabase and our licensors own all right, title and interest in and to (i) the Services (including, but not limited to, the Xata Platform, Software, Documentation and any information, code, text, links, graphics, photos, audio, videos, and all other forms of data or communication that Users can view on, access or otherwise interact with through the Services, with the exception of Your Content and Customer Data), and (ii) Xatabase’s and our affiliates’ copyrights, trademarks, service marks, trade names, trade secrets, and other intellectual and proprietary rights with respect to Xatabase’s and our affiliates’ products and services.
+
+#
+
+### B. Feedback
+
+If Customer or a User provides any feedback, comments, questions, suggestions, or the like about the Services (collectively "Feedback"), then Customer or User, as applicable, hereby assigns to Xatabase all right, title, and interest in, and Xatabase is free to use, without any attribution or compensation to any party, any ideas, know-how, concepts, techniques, or other intellectual property rights contained in the Feedback, for any purpose whatsoever, including, without limitation, for the improvement, marketing, and promotion of the Services. Customer agrees that Feedback provided by Customer or its Users is given entirely voluntarily and that Feedback, even if designated as confidential by Customer, will not, absent a separate written agreement, create any confidentiality obligation for Xatabase with respect to such Feedback.
+
+#
+
+### C. Reservation of Rights
+
+Each party reserves all rights not expressly granted in the Agreement, and no licenses are granted by either party to the other under the Agreement, whether by implication, estoppel or otherwise, except as expressly set forth herein.
+
+#
+
+## 8. Term and Termination
+
+#
+
+### A. Subscription Term and Renewal
+
+The initial term of the subscription for Services specified in an Order Form (the “Subscription Term”) shall begin on the start date of your subscription as specified in the Order Form, and extend for the term specified in the applicable Order Form. Unless otherwise specified in the applicable Order Form, you may not cancel your subscription before the expiration of the Subscription Term. A Subscription Term may be renewed upon mutual agreement of the parties and payment of the applicable Subscription Fee.
+
+#
+
+### B. Termination and Suspension
+
+We may temporarily or permanently suspend access to the Services with respect to Customer or a User in the event that we suspect in good faith that Customer or a User is engaged in any conduct in violation of this Agreement, or has failed to make payment of the applicable Subscription Fee when due. We may also terminate your Account and this Agreement at any time by providing thirty (30) days prior notice to the administrative email address associated with your Account. In the event we suspend Customer’s Account, all User Accounts will be likewise suspended. You have the right to terminate your account at any time by sending a cancellation request to support@xata.io. Such termination will be effective at the start of the next billing or renewal period, unless an earlier termination and pro-rated refund for the applicable Subscription Term is provided for by Xatabase, at its sole discretion. All of Your Content on the Services (if any) may be permanently deleted by Xatabase upon any termination of your account in its sole discretion.
+
+#
+
+### C. Effect of Termination
+
+Upon the expiration or termination of the Agreement: (a) all rights and licenses granted by a party to the other party will immediately terminate; and (b) Xatabase will terminate Customer’s and/or User’s access to Your Content and Customer Data through the Services (subject to Section 8.D (Availability of Your Content and Customer Data) below). Any section of the Agreement that, by its terms or its nature, should survive the termination or expiration of the Agreement shall so survive, including, without limitation, accrued rights to payment, confidentiality obligations, warranty disclaimers, indemnification, and limitations of liability. If we terminate your Account without cause prior to the end of your then-current Subscription Term, we will refund the pro-rated, unearned portion of any amount that you have prepaid to Xatabase for such Services.
+
+#
+
+### D. Availability of Your Content
+
+In the event of a termination or expiration hereunder, Customer or User, as applicable, will have access to, and the ability to export Your Content for a period of thirty (30) days following such termination or expiration. After thirty (30) days, Xatabase will have no obligation to retain Your Content. Xatabase has no obligation to assist Customer and/or User in exporting Your Content; provided, however, that Customer or User may request in writing that Xatabase provide such assistance, and, to the extent that Xatabase agrees to such request, shall incur any costs associated with such assistance, to be determined at Xatabase’s sole discretion.
+
+#
+
+## 9. Confidential Information
+
+#
+
+### A. Confidentiality
+
+Xatabase and Customer each agree to retain in confidence the non-public information and know-how disclosed pursuant to the Agreement which is either designated in writing as proprietary and/or confidential, if disclosed in writing, or if disclosed orally, is designated in writing (which may be via email) as confidential within thirty (30) days of the oral disclosure, or should reasonably be understood to be confidential by the recipient (the “Confidential Information”). Notwithstanding any failure to so designate them, the Services is Xatabase's Confidential Information; and the Customer Data and Your Content is Customer’s Confidential Information. Each party agrees to: (a) preserve and protect the confidentiality of the other party’s Confidential Information; (b) refrain from using the other party’s Confidential Information except as contemplated herein; and (c) not disclose such Confidential Information to any third party except to employees, officers, affiliates, controlling stockholders, agents, advisors, subcontractors and other representatives (including, with respect to Xatabase, to a Non-Xatabase Application provider) as is reasonably required in connection with the exercise of its rights and obligations under the Agreement (and only subject to binding use and disclosure restrictions at least as protective as those set forth herein). Each party agrees to immediately notify the other party of any unauthorized disclosure or use of any Confidential Information and to assist the other party in remedying such unauthorized use or disclosure by taking such steps as are reasonably requested. Notwithstanding the foregoing, either party may disclose Confidential Information of the other party which is: (i) already publicly known without breach of the Agreement; (ii) discovered, created or independently developed by the receiving party without use of, or reference to, the Confidential Information of the disclosing party, as shown in records of the receiving party; (iii) otherwise known to the receiving party through no wrongful conduct of the receiving party; or (iv) required to be disclosed by law or court order; provided that the receiving party shall provide prompt notice thereof and commercially reasonable assistance to the disclosing party to enable the disclosing party to seek a protective order or otherwise prevent or restrict such disclosure. Moreover, either party hereto may disclose any Confidential Information hereunder to such party’s agents, attorneys and other representatives (and only subject to confidentiality obligations at least as protective as those set forth herein) or any court of competent jurisdiction as reasonably required to resolve any dispute between the parties hereto. Upon the disclosing party’s written request, the receiving party shall, within a reasonable time, return to the disclosing party or permanently delete or destroy any and all of the disclosing party’s Confidential Information, and any and all copies thereof, within its possession or control as may have been provided pursuant to the Agreement.
+
+#
+
+### B. Data Security
+
+Xatabase employs commercially reasonable administrative, physical and technical safeguards and technologies, designed to secure Customer Data from unauthorized access, disclosure or use. In the event that Xatabase determines that unencrypted or unredacted Customer Data was accessed or acquired by an unauthorized party, Xatabase will promptly inform Customer without undue delay and shall provide reasonable cooperation with Customer’s investigation of the incident. Customer, as the owner of Customer Data, shall be solely responsible for compliance with any notification obligations that may be required under applicable laws. NOTWITHSTANDING THE FOREGOING IN THIS SECTION 9.B, YOU UNDERSTAND THAT THE OPERATION OF THE SERVICES, INCLUDING YOUR CONTENT, MAY BE UNENCRYPTED AND MAY INVOLVE (A) TRANSMISSIONS OVER VARIOUS NETWORKS; (B) CHANGES TO CONFORM AND ADAPT TO TECHNICAL REQUIREMENTS OF CONNECTING NETWORKS OR DEVICES; AND (D) TRANSMISSION TO XATABASE’S THIRD-PARTY VENDORS AND HOSTING PARTNERS TO PROVIDE THE NECESSARY HARDWARE, SOFTWARE, NETWORKING, STORAGE, AND RELATED TECHNOLOGY REQUIRED TO OPERATE AND MAINTAIN THE SERVICES. ACCORDINGLY, YOU ACKNOWLEDGE THAT YOU BEAR SOLE RESPONSIBILITY FOR ADEQUATE SECURITY, PROTECTION AND BACKUP OF YOUR CONTENT. XATABASE WILL HAVE NO LIABILITY TO YOU FOR ANY UNAUTHORIZED ACCESS OR USE OF ANY OF YOUR CONTENT THAT IS ATTRIBUTABLE, IN WHOLE OR IN PART, TO AN INSECURITY IN YOUR WEBSITE OR PROJECT, OR ANY CORRUPTION, DELETION, DESTRUCTION OR LOSS OF ANY OF YOUR CONTENT. IN ADDITION, WITH RESPECT TO CUSTOMER DATA, XATABASE DOES NOT GUARANTEE THAT UNAUTHORIZED THIRD PARTIES WILL NEVER BE ABLE TO DEFEAT XATABASE’S SECURITY MEASURES OR USE THE CUSTOMER DATA FOR IMPROPER PURPOSES. CUSTOMER ACKNOWLEDGES THAT IT PROVIDES CUSTOMER DATA AT ITS OWN RISK AND THAT XATABASE TAKES NO RESPONSIBILITY AND ASSUMES NO LIABILITY FOR CUSTOMER DATA.
+
+#
+
+## 10. Indemnification
+
+    Customer agrees to indemnify and hold harmless Xatabase, our affiliates, and each of our respective directors, officers, employees, shareholders and agents (collectively, the "Indemnified Parties") against any losses, claims, damages, liabilities, penalties, actions, proceedings, judgments, or any and all costs thereof (collectively, "Losses") to which the Indemnified Parties may become subject and which Losses arise out of, or relate to, the Agreement, Customer’s use of the Services, Your Content (including the combination of a Non-Xatabase Application provided by you and used with the Services), your websites, Customer Data, your breach of any confidentiality obligation, or any alleged infringement of any trademark, copyright, patent or other intellectual property right, and shall reimburse the Indemnified Parties for all legal and other expenses, including, but not limited to, reasonable attorney's fees incurred by the Indemnified Parties, in connection with investigating, defending, or settling any Losses, whether or not in connection with pending or threatened litigation in which the Indemnified Parties may be a party.
+
+#
+
+## 11. Limitation on Liability and Claims
+
+    XATABASE WILL NOT BE LIABLE FOR: (A) ANY INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES, OR FOR ANY LOSS OF PROFITS OR LOSS OF REVENUE RESULTING FROM THE USE OF THE SERVICES BY YOU OR ANY THIRD PARTIES OR ANY FAILURE OF THE SERVICES; OR (B) ANY LOSS, EXFILTRATION, DISCLOSURE OR CORRUPTION OF CUSTOMER DATA, YOUR CONTENT OR OTHER DATA, INCLUDING, WITHOUT LIMITATION, LOSS OF DATA RESULTING FROM SERVICE INTERRUPTIONS, FAILURE OF XATABASE’S NETWORK, RECLAMATION OF SERVERS, FAILURE OF SERVERS, THE RELOADING OF AN OPERATING SYSTEM OR OTHER SOFTWARE ON A SERVER. IN NO EVENT SHALL XATABASE'S AGGREGATE LIABILITY UNDER THE AGREEMENT EXCEED THE AGGREGATE AMOUNT PAID BY CUSTOMER TO XATABASE IN THE BILLING CYCLE IMMEDIATELY PRECEDING SUCH CLAIM. NO CLAIM ARISING OUT OF OR RELATING TO THIS AGREEMENT MAY BE ASSERTED BY CUSTOMER AGAINST XATABASE MORE THAN ONE (1) YEAR FOLLOWING THE DATE OF THE EVENT THAT UNDERLIES ANY SUCH CLAIM.
+
+#
+
+## 12. DISCLAIMER OF WARRANTIES
+
+    XATABASE PROVIDES ALL SERVICES “AS IS,” WITHOUT WARRANTY OF ANY KIND, WHETHER EXPRESS OR IMPLIED, AND DISCLAIMS ALL IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. YOU BEAR THE ENTIRE RISK AS TO THE PERFORMANCE OF THE SERVICES. XATABASE DOES NOT WARRANT THAT THE OPERATION OF THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE OR SECURE, AND ASSUMES NO RESPONSIBILITY OR LIABILITY OF ANY KIND FOR ERRORS IN THE SERVICES OR FOR THE CONSEQUENCES OF ANY SUCH ERRORS. YOU ACKNOWLEDGE THAT THERE ARE RISKS INHERENT IN INTERNET CONNECTIVITY THAT COULD RESULT IN THE LOSS OF YOUR CONTENT, PRIVACY, TECHNOLOGY, CUSTOMER DATA, CONFIDENTIAL INFORMATION, OR OTHER MATERIALS. XATABASE WILL NOT BE RESPONSIBLE OR LIABLE IN ANY MANNER FOR ANY THIRD-PARTY MATERIALS AND SERVICES (INCLUDING FOR ANY DELAYS, INTERRUPTIONS, TRANmdISSION ERRORS, SECURITY FAILURES, AND OTHER PROBLEMS CAUSED BY THESE ITEMS OR TO THESE ITEMS BY THE SERVICES), FOR THE COLLECTION, USE AND DISCLOSURE OF CUSTOMER DATA AUTHORIZED BY THIS AGREEMENT, OR FOR DECISIONS OR ACTIONS TAKEN (OR NOT TAKEN) BY CUSTOMER BASED UPON THE SERVICES. THE DISCLAIMERS IN THIS SECTION WILL APPLY TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, NOTWITHSTANDING ANYTHING TO THE CONTRARY IN THIS AGREEMENT. YOU MAY HAVE OTHER STATUTORY RIGHTS. HOWEVER, ANY STATUTORILY REQUIRED WARRANTIES UNDER APPLICABLE LAW, IF ANY, WILL BE LIMITED TO THE SHORTEST PERIOD AND MAXIMUM EXTENT PERMITTED BY LAW
+
+#
+
+## 13. Force Majeure
+
+    Neither party shall lose any rights hereunder or be liable to the other party for damages or losses on account of failure of performance by the defaulting party if the failure is due by any occurrence or contingency beyond its reasonable control, including, but not limited to, war, strike, fire, Act of God, earthquake, flood, lockout, embargo, pandemics, governmental acts or orders or restrictions, failure of suppliers, or any other reason where failure to perform is beyond the reasonable control of the nonperforming party; provided that such party shall use commercially reasonable efforts to promptly mitigate any damages or losses.
+
+#
+
+## 14. Publicity
+
+    Customer agrees that Xatabase may publicly disclose that Xatabase is providing Services to Customer and may include Customer’s name, logo, trade names, trademarks, service marks, trade dress, logos and other rights in indicia in any promotional materials, including without limitation any press releases issued by Xatabase and on Xatabase’s website and printed materials. Except as set forth in this Agreement, neither party may publicly use the other party’s name, logo or other trade or service mark. Customer hereby grants to Xatabase a nonexclusive license to use, reproduce, and display Customer’s name, logo, service marks, trademarks, and related brand features (“Marks”) on or within the user interface of the Services, including as made available to actual or potential customers, as well as in marketing and promotional materials. We will use such Marks in compliance with any reasonable written usage guidelines provided to us by Customer.
+
+#
+
+## 15. Federal Government End Use Provisions
+
+    Xatabase provides the Services, including related software and technology, for ultimate federal government end use in accordance with the following: The Services consist of “commercial items,” as defined at FAR 2.101. In accordance with FAR 12.211-12.212 and DFARS 227.7102-4 and 227.7202-4, as applicable, the rights of the U.S. Government to use, modify, reproduce, release, perform, display, or disclose commercial computer software, commercial computer software documentation, and technical data furnished in connection with the Services shall be as provided in this Agreement, except that, for U.S. Department of Defense end users, technical data customarily provided to the public is furnished in accordance with DFARS 252.227-7015. If a government agency needs additional rights, it must negotiate a mutually acceptable written addendum to this Agreement specifically granting those rights.
+
+#
+
+## 16. Governing Law, Arbitration, and Class Action/Jury Trial Waiver
+
+#
+
+### A. Governing Law
+
+Unless unenforceable under applicable law, these Terms will be governed by and interpreted in accordance with the laws of the applicable state or country identified below, without regard to conflicts of laws and principles that would cause the laws of another jurisdiction to apply. These Terms will not be governed by the United Nations Convention on Contracts for the International Sale of Goods. Except as provided in Section 16.B (Arbitration), any legal suit, action, or proceeding arising out of or related to these Terms or the Services will be instituted in the applicable courts identified below, and each party consents to the personal jurisdiction of these courts.
+
+If Customer is domiciled in:
+
+Governing law:
+
+Courts with personal jurisdiction:
+
+Any country outside of the European Economic Area or its regions or territories, the United Kingdom, Switzerland, Andorra, or Vatican City
+
+State of California
+
+State or federal courts of New Castle County, Delaware, United States of America
+
+Any country within the European Economic Area or its regions or territories, the United Kingdom, Switzerland, Andorra, or Vatican City
+
+England and Wales
+
+Courts of London, England
+
+If Customer is domiciled in:Any country outside of the European Economic Area or its regions or territories, the United Kingdom, Switzerland, Andorra, or Vatican City
+
+Governing law:State of California
+
+Courts with personal jurisdiction:State or federal courts of New Castle County, Delaware, United States of America
+
+If Customer is domiciled in:Any country within the European Economic Area or its regions or territories, the United Kingdom, Switzerland, Andorra, or Vatican City
+
+Governing law:England and Wales
+
+Courts with personal jurisdiction:Courts of London, England
+
+#
+
+### B. Arbitration
+
+READ THIS SECTION CAREFULLY BECAUSE IT REQUIRES THE PARTIES TO ARBITRATE THEIR DISPUTES AND LIMITS THE MANNER IN WHICH YOU CAN SEEK RELIEF FROM XATABASE. This Section 16.B (the “Arbitration Agreement”) applies to and governs any dispute, controversy, or claim between you and Xatabase that arises out of or relates to, directly or indirectly: (a) this Agreement, including the formation, existence, breach, termination, enforcement, interpretation, validity, or enforceability thereof; (b) access to or use of the Service, including receipt of any advertising or marketing communications; (c) any transactions through, by, or using the Service; or (d) any other aspect of your relationship or transactions with Xatabase, directly or indirectly, as a consumer (“Claim” or collectively, “Claims”). The Arbitration Agreement shall apply, without limitation, to all Claims that arose or were asserted before or after your agreement to this Agreement. If you are a new Xatabase user, you can reject and opt-out of this Arbitration Agreement within 30 days of accepting this Agreement by emailing Xatabase at legal@xata.io with your first and last name and stating your intent to opt-out of the Arbitration Agreement. Note that opting out of this Arbitration Agreement does not affect any other part of this Agreement, including the provisions regarding controlling law or in which courts any disputes must be brought. For any Claim, you agree to first contact us at legal@xata.io and attempt to resolve the dispute with us informally. In the unlikely event that Xatabase has not been able to resolve a Claim after sixty (60) days, we each agree to resolve any Claim exclusively through binding arbitration by the American Arbitration Association (“AAA”) before a single arbitrator (the “Arbitrator”), under the Expedited Procedures then in effect for AAA (the “Rules”), except as provided herein. In the event of any conflict between the Rules and this Arbitration Agreement, this Arbitration Agreement shall control. AAA may be contacted at www.adr.org, where the Rules are also available. The arbitration will be conducted in New Castle County, Delaware, unless you and Xatabase agree otherwise. If you are using the Service for commercial purposes, each party will be responsible for paying any AAA filing, administrative and arbitrator fees in accordance with AAA rules, and the award rendered by the arbitrator shall include costs of arbitration, reasonable attorneys’ fees and reasonable costs for expert and other witnesses. If you are an individual using the Service for non-commercial purposes: (i) AAA may require you to pay a fee for the initiation of your case, unless you apply for and successfully obtain a fee waiver from AAA; (ii) the award rendered by the arbitrator may include your costs of arbitration, your reasonable attorney’s fees, and your reasonable costs for expert and other witnesses; and (iii) you may sue in a small claims court of competent jurisdiction without first engaging in arbitration, but this does not absolve you of your commitment to engage in the informal dispute resolution process. Any judgment on the award rendered by the arbitrator may be entered in any court of competent jurisdiction. You and Xatabase agree that the Arbitrator, and not any federal, state, or local court or agency, shall have exclusive authority to resolve any disputes relating to the interpretation, applicability, enforceability or formation of this Arbitration Agreement, including any claim that all or any part of this Arbitration Agreement is void or voidable. The Arbitrator shall also be responsible for determining all threshold arbitrability issues, including issues relating to whether the Agreement, any provision of the Agreement, is unconscionable or illusory and any defense to arbitration, including waiver, delay, laches, unconscionability, or estoppel. Nothing in this Section shall be deemed as: preventing Xatabase from seeking injunctive or other equitable relief from the courts as necessary to prevent the actual or threatened infringement, misappropriation, or violation of our data security, Intellectual Property Rights or other proprietary rights; or preventing you from asserting claims in small claims court, if your claims qualify and so long as the matter remains in such court and advances on only an individual (non-class, non-representative) basis. If this Arbitration Agreement is found to be void, unenforceable, or unlawful, in whole or in part, the void, unenforceable, or unlawful provision, in whole or in part, shall be severed. Severance of the void, unenforceable, or unlawful provision, in whole or in part, shall have no impact on the remaining provisions of the Arbitration Agreement, which shall remain in force, or the parties’ ability to compel arbitration of any remaining claims on an individual basis pursuant to the Arbitration Agreement. Notwithstanding the foregoing, if the Class Action/Jury Trial Waiver is found to be void, unenforceable, or unlawful, in whole or in part, because it would prevent you from seeking public injunctive relief, then any dispute regarding the entitlement to such relief (and only that relief) must be severed from arbitration and may be litigated in a civil court of competent jurisdiction. All other claims for relief subject to arbitration under this Arbitration Agreement shall be arbitrated under its terms, and the parties agree that litigation of any dispute regarding the entitlement to public injunctive relief shall be stayed pending the outcome of any individual claims in arbitration.
+
+#
+
+### C. Class Action/Jury Trial Waiver
+
+WITH RESPECT TO ALL PERSONS AND ENTITIES, REGARDLESS OF WHETHER THEY HAVE OBTAINED OR USED THE SERVICE FOR PERSONAL, COMMERCIAL OR OTHER PURPOSES, ALL CLAIMS MUST BE BROUGHT IN THE PARTIES’ INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS ACTION, COLLECTIVE ACTION, PRIVATE ATTORNEY GENERAL ACTION OR OTHER REPRESENTATIVE PROCEEDING. THIS WAIVER APPLIES TO CLASS ARBITRATION, AND, UNLESS WE AGREE OTHERWISE, THE ARBITRATOR MAY NOT CONSOLIDATE MORE THAN ONE PERSON’S CLAIMS. YOU AND XATABASE AGREE THAT THE ARBITRATOR MAY AWARD RELIEF ONLY TO AN INDIVIDUAL CLAIMANT AND ONLY TO THE EXTENT NECESSARY TO PROVIDE RELIEF ON YOUR INDIVIDUAL CLAIM(S). ANY RELIEF AWARDED MAY NOT AFFECT OTHER XATABASE USERS. YOU AND XATABASE FURTHER AGREE THAT, BY ENTERING INTO THIS AGREEMENT, YOU AND XATABASE ARE EACH WAIVING THE RIGHT TO A TRIAL BY JURY OR TO BRING, JOIN, OR PARTICIPATE IN A CLASS ACTION, COLLECTIVE ACTION, PRIVATE ATTORNEY GENERAL ACTION, OR OTHER REPRESENTATIVE PROCEEDING OF ANY KIND AS A PLAINTIFF OR CLASS MEMBER.
+
+#
+
+### D. General Terms
+
+This Agreement (including each Order Form) contains the entire understanding between Xatabase and you relating to the subject matter herein and supersedes all prior oral or written agreements between us. We reject any additional or different terms proposed by you, including those contained in your purchase order, vendor onboarding process or web portal. In the event of a conflict between the terms of your Agreement and an Order Form, the terms of the Order Form shall control, but only as to that Order Form. You may not assign or transfer your rights and benefits under this Agreement without our prior written consent, but we may assign or transfer this Agreement without restriction. Except as set forth in this Agreement, nothing in this Agreement shall be deemed to confer any rights or benefits on any third party. No waiver, amendment, modification or addition to this Agreement shall be valid unless in writing and signed by both you and us. In the event any provision of this Agreement is determined to be invalid by a court of competent jurisdiction, such determination shall in no way affect the validity or enforceability of any other provision herein. Xatabase and Customer are independent contractors, and this Agreement does not create a partnership, joint venture, employment or agency relationship between the Xatabase and Customer or any User. This is a non-exclusive arrangement.
+
+#
+
+### E. Compliance with Laws
+
+The parties recognize that this Agreement is subject to, and intended to comply with, Applicable Law, and agree that the Services addressed in this Agreement do not exceed those which are reasonably necessary to accomplish the commercially reasonable business purposes of this Agreement.
+
+#
+
+### F. Information or Complaints
+
+If you have a question or complaint regarding the Services, please send an e-mail to legal@xata.io. You may also contact Xata by writing to Xatabase, Inc. Attn: Legal Department, 584 Castro St #2144, San Francisco CA 94114-2512 US. Please note that e-mail communications will not necessarily be secure; accordingly, you should not include credit card information or other sensitive information in your e-mail correspondence with Xatabase. California residents may reach the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs by mail at 1625 North Market Blvd., Sacramento, CA 95834, or by telephone at (916) 445-1254 or (800) 952-5210.

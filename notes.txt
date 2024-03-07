@@ -28,3 +28,13 @@ s9/FraSM9HuX/l34Y3sB0che4IDB6R1+0v7eR8/CtfqN6YPqscCmbLz6uV6Lb9kq38RItzbE3Rjt6lYK
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
     user-select: none;
+
+
+Write Steps List in Readme
+- Update legal documents (change name, review policies, etc)
+- Replace SaaSIcon components with the new brand icon
+
+
+TODO:
+- SEO per page, general SEO
+- Write SEO guide in Readme

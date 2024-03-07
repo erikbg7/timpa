@@ -28,9 +28,10 @@
 	<div class="flex flex-col gap-3">
 		<div class="flex flex-wrap justify-between">
 			<ul class="flex gap-6 text-sm font-semibold">
-				<li>Privacy</li>
-				<li>Terms and Conditions</li>
-				<li>Cookie Settings</li>
+				<li><a href="/privacy">Cookie Settings</a></li>
+				<li><a href="/security">Security</a></li>
+				<li><a href="/privacy">Privacy Policy</a></li>
+				<li><a href="/terms">Terms and Conditions</a></li>
 			</ul>
 			<ul class="flex gap-3">
 				{#each config.footer.socials as social}
