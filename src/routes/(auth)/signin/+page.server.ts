@@ -1,8 +1,8 @@
 import { z } from 'zod';
 import { fail, redirect } from '@sveltejs/kit';
-import type { PageServerLoad, Actions } from './$types';
+import type { Actions } from './$types';
 
-export async function load({ locals: { getSession } }) {
+export async function load({ locals: { getSession, supabase } }) {
 	const session = await getSession();
 	// if the user is already logged in return him to the home page
 	if (session) {

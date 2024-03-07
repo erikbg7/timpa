@@ -7,7 +7,12 @@
 
 	type AuthMode = 'signin' | 'signup' | 'magiclink';
 
+	export let data;
 	export let form: ActionData;
+
+	$: ({ supabase } = data);
+
+	$: console.log({ supabase });
 
 	let mode: AuthMode;
 	$: urlMode = $page.url.searchParams.get('mode') as AuthMode;
@@ -24,6 +29,17 @@
 		signup: `${config.appName} doesn't require a credit card to start. Our free plan works great for hobby projects.`,
 		magiclink: `${config.appName} will send you an email with a magic link to sign in. No password required.`,
 	};
+
+	const signInWithGithub = async () => {
+		const { data, error } = await supabase.auth.signInWithOAuth({
+			provider: 'github',
+			// options: { redirectTo: 'http://localhost:5173/profile' },
+		});
+
+		if (data?.url) {
+			window.location.href = data.url;
+		}
+	};
 </script>
 
 <div class="mb-8 flex flex-col gap-2 text-sm">
@@ -32,7 +48,10 @@
 </div>
 
 {#if ['signin', 'signup'].includes(mode)}
-	<button class="btn btn-primary btn-sm mb-6 h-[2.5rem] text-neutral-200">
+	<button
+		on:click={signInWithGithub}
+		class="btn btn-primary btn-sm mb-6 h-[2.5rem] text-neutral-200"
+	>
 		Continue with Github
 	</button>
 	<button class="btn btn-secondary btn-sm mb-6 h-[2.5rem]">Continue with Google</button>

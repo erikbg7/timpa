@@ -1,4 +1,3 @@
-import { PATH } from './../.svelte-kit/ambient.d';
 import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public';
 import { createServerClient } from '@supabase/ssr';
 
@@ -7,10 +6,10 @@ export const handle = async ({ event, resolve }) => {
 		cookies: {
 			get: (key) => event.cookies.get(key),
 			set: (key, value, options) => {
-				event.cookies.set(key, value, options);
+				event.cookies.set(key, value, { ...options, path: '/' });
 			},
 			remove: (key, options) => {
-				event.cookies.delete(key, options);
+				event.cookies.delete(key, { ...options, path: '/' });
 			},
 		},
 	});
