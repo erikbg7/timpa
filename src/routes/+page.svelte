@@ -8,6 +8,18 @@
 	import Pricing from '$lib/components/Pricing.svelte';
 	import FAQs from '$lib/components/FAQs.svelte';
 	import Banner from '$lib/components/Banner.svelte';
+
+	const handlePost = async () => {
+		const res = await fetch('http://localhost:5173/api/stripe-webhook', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ name: 'John' }),
+		});
+		const data = await res.json();
+		console.log(data);
+	};
 </script>
 
 <!-- <main
@@ -26,7 +38,7 @@
 						application needs to evolve and scale.
 					</p>
 					<div>
-						<button class="btn btn-primary btn-sm">Start Free</button>
+						<button on:click={handlePost} class="btn btn-primary btn-sm">Start Free</button>
 						<button class="btn btn-secondary btn-sm">How It Works</button>
 					</div>
 				</div>

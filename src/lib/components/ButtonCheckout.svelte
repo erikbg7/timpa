@@ -9,19 +9,21 @@
 	const handlePayment = async () => {
 		isLoading = true;
 
-		// try {
-		// 	const res = await apiClient.post('/stripe/create-checkout', {
-		// 		priceId,
-		// 		successUrl: window.location.href,
-		// 		cancelUrl: window.location.href,
-		// 	});
+		try {
+			const res = await fetch('/api/create-checkout', {
+				method: 'POST',
+				body: JSON.stringify({ priceId }),
+				headers: { 'Content-Type': 'application/json' },
+			});
+			const data = await res.json();
+			if (!data.url) throw new Error('No URL returned from the server.');
+			window.location.href = data.url;
+		} catch (error) {
+			// show error notification
+			console.error('this is an error:', error);
+		}
 
-		// 	window.location.href = res.url;
-		// } catch (e) {
-		// 	console.error(e);
-		// }
-
-		// isLoading = false;
+		isLoading = false;
 	};
 </script>
 

@@ -7,7 +7,7 @@ export const load: PageServerLoad = async ({ depends, url, locals: { getSession 
 
 	// if the user is already logged in return them to the account page
 	if (session) {
-		throw redirect(303, '/profile');
+		throw redirect(303, '/dashboard');
 	}
 
 	return { url: url.origin };
