@@ -1,7 +1,7 @@
 import { redirect } from '@sveltejs/kit';
 
-export async function load({ locals: { getSession } }) {
-	const session = await getSession();
+export async function load({ locals: { auth } }) {
+	const session = await auth.queries.getSession();
 
 	// if the user is already logged in return him to the home page
 	if (session) {

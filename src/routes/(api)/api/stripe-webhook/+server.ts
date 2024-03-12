@@ -104,7 +104,7 @@ const mockedData = {
 /** @type {import('./$types').RequestHandler} */
 export const POST = async (event) => {
 	const {
-		locals: { stripe, supabase, getSession },
+		locals: { stripe, supabase, auth },
 	} = event;
 
 	try {
@@ -118,7 +118,7 @@ export const POST = async (event) => {
 			case 'checkout.session.completed': {
 				const checkoutSession = data.object!;
 
-				const session = await getSession();
+				const session = await auth.queries.getSession();
 				const sessionEmail = session?.user?.email;
 
 				const status = checkoutSession.payment_status;

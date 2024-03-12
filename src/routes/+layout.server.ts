@@ -1,11 +1,10 @@
-// src/routes/+layout.server.js
-export const load = async (event) => {
-	let session = await event.locals.getSession();
+export const load = async ({ locals, cookies }) => {
+	let session = await locals.auth.queries.getSession();
 
-	// solving the case when the session is null, i.e. the user was deleted from the database but the browser still has a cookie/loggedin user
-	// +layout.server.js will delete the cookie
+	// solving the case when the session is null, i.e. the user was deleted from the database
+	// but the browser still has a cookie/loggedin user +layout.server.js will delete the cookie
 	if (session == null) {
-		event.cookies.delete(event.locals.supabase.storageKey, { path: '/' });
+		cookies.delete(locals.auth.queries.getStorageKey(), { path: '/' });
 	}
 
 	return {

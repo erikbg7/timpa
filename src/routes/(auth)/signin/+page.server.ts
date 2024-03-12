@@ -2,49 +2,43 @@ import { z } from 'zod';
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
 
-export async function load({ locals: { getSession, supabase } }) {
-	const session = await getSession();
-	// if the user is already logged in return him to the home page
-	if (session) {
-		throw redirect(303, '/');
-	}
-}
-
 export const actions: Actions = {
-	login: async (event) => {
+	signInWithMagicLink: async (event) => {
 		const formData = await event.request.formData();
 		const email = formData.get('email') as string;
-		const emailSchema = z.string().email();
-
-		let result = {} as any;
 
 		try {
+			const emailSchema = z.string().email();
 			emailSchema.parse(email);
 
-			result = await event.locals.supabase.auth.signInWithOtp({
-				email: email,
-				options: {
-					// set this to false if you do not want the user to be automatically signed up
-					shouldCreateUser: true,
-					emailRedirectTo: 'http://localhost:5173/',
-				},
-			});
-
-			console.log('[SVELTE SAAS]: Success login');
+			await event.locals.auth.mutations.signInWithMagicLink({ email });
 		} catch (error) {
-			console.log('[SVELTE SAAS]: ', error);
+			console.log('[SVELTE SAAS ERROR]: ', error);
 			return fail(400, { errors: { email: 'Please enter a valid email address' } });
 		}
-
-		return result?.error
-			? fail(400, { errors: JSON.stringify(result.error) })
-			: redirect(303, `/confirm-session?email=${encodeURIComponent(email)}`);
+		redirect(303, `/confirm-session?email=${encodeURIComponent(email)}`);
 	},
-	logout: async ({ locals }) => {
-		const { error } = await locals.supabase.auth.signOut();
-		if (error) {
-			console.log('[SVELTE SAAS]: ', error);
+	signInWithProvider: async (event) => {
+		let url;
+		try {
+			const formData = await event.request.formData();
+			const provider = formData.get('provider') as 'github' | 'google';
+
+			const data = await event.locals.auth.mutations.signInWithProvider({ provider });
+			url = data.url;
+		} catch (error) {
+			console.log('[SVELTE SAAS ERROR]: ', error);
+			fail(400, { errors: { provider: 'Invalid provider' } });
 		}
+		redirect(303, url!);
+	},
+	signOut: async ({ locals }) => {
+		try {
+			await locals.auth.mutations.signOut();
+		} catch (error) {
+			console.log('[SVELTE SAAS ERROR]: ', error);
+		}
+
 		throw redirect(303, '/');
 	},
 };

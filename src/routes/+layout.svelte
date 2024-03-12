@@ -35,7 +35,7 @@
 	});
 </script>
 
-{#if route?.id?.includes('(auth)') || route?.id?.includes('(legal)')}
+{#if route?.id?.includes('(auth)') || route?.id?.includes('(legal)') || route?.id?.includes('(app)')}
 	<slot />
 {:else}
 	<NavBar />
