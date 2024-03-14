@@ -94,7 +94,9 @@
 			<ul class="flex items-center gap-4 text-neutral-100">
 				<li class="hidden lg:block"><a href="/signin">Log In</a></li>
 				<li>
-					<a href="/login" class="btn btn-primary btn-sm font-light text-white">Get Started</a>
+					<a href="/signin?mode=signup" class="btn btn-primary btn-sm font-light text-white"
+						>Get Started</a
+					>
 				</li>
 			</ul>
 		</div>

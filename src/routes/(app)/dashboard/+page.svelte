@@ -8,8 +8,8 @@
 
 <h2>User dashboard</h2>
 
-<div class="flex justify-end">
-	<div class=" dropdown dropdown-end">
+<div class="relative flex justify-end">
+	<!-- <div class=" dropdown dropdown-end">
 		<div tabIndex={0} role="button" class="avatar btn btn-circle btn-ghost">
 			<div class="w-10 rounded-full border-2 border-green-400">
 				<img src={data.session?.user.user_metadata.avatar_url} />
@@ -39,10 +39,10 @@
 				</form>
 			</li>
 		</ul>
-	</div>
+	</div> -->
 </div>
 
-{JSON.stringify(data.session)}
+<!-- {JSON.stringify(data.session)} -->
 
 <!-- <details open>
 	<summary>Parent item</summary>

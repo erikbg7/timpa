@@ -2,16 +2,14 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 import type { Session } from '@supabase/supabase-js';
 import type { Database } from '../types/supabase';
 import type { Stripe } from 'stripe';
-import type { AuthService } from '$auth/service';
-import type { PaymentsService } from './features/payments/service';
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 declare global {
 	namespace App {
 		interface Locals {
-			auth: AuthService;
-			payments: PaymentsService;
+			stripe: Stripe;
 			supabase: SupabaseClient<Database>;
+			getSession: () => Promise<Session | null>;
 		}
 		interface PageData {
 			session: Session | null;

@@ -1,4 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8">
+<script lang="ts">
+	import clsx from 'clsx';
+
+	export let size: 'sm' | 'md' = 'md';
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 24 24"
+	fill="currentColor"
+	class={clsx('fill-current', {
+		'size-6': size === 'sm',
+		'size-8': size === 'md',
+	})}
+>
 	<path
 		d="M5.507 4.048A3 3 0 0 1 7.785 3h8.43a3 3 0 0 1 2.278 1.048l1.722 2.008A4.533 4.533 0 0 0 19.5 6h-15c-.243 0-.482.02-.715.056l1.722-2.008Z"
 	/>

@@ -1,6 +1,6 @@
 import { fail, json } from '@sveltejs/kit';
 import { STRIPE_WEBHOOK_SECRET } from '$env/static/private';
-import { z } from 'zod';
+import { isValidEmail } from '$lib/validations/index.js';
 
 const mockedData = {
 	object: {
@@ -104,7 +104,7 @@ const mockedData = {
 /** @type {import('./$types').RequestHandler} */
 export const POST = async (event) => {
 	const {
-		locals: { stripe, supabase, auth },
+		locals: { supabase, stripe, getSession },
 	} = event;
 
 	try {
@@ -118,27 +118,23 @@ export const POST = async (event) => {
 			case 'checkout.session.completed': {
 				const checkoutSession = data.object!;
 
-				const session = await auth.queries.getSession();
-				const sessionEmail = session?.user?.email;
-
 				const status = checkoutSession.payment_status;
-				const customerEmail = sessionEmail || checkoutSession.customer_details?.email;
-				const email = z.string().email().parse(customerEmail);
-
-				if (!email) {
-					fail(500, { message: 'No email found' });
-				}
-
 				if (status !== 'paid') {
 					fail(400, { message: 'Payment not completed' });
 				}
 
-				const { data: user, error } = await supabase.from('customers').insert({ email });
-				console.log('CREATING NEW USER ACTION: ', { user, error });
+				const session = await getSession();
+				const sessionEmail = session?.user?.email;
+				const checkoutEmail = checkoutSession.customer_details?.email;
 
-				if (!!error) {
-					fail(500, { message: 'Error creating user' });
+				const email = sessionEmail || (checkoutEmail as string);
+				if (!isValidEmail(email)) {
+					fail(500, { message: 'No email found' });
 				}
+
+				const { error } = await supabase.from('customers').insert({ email });
+
+				if (!!error) fail(500, { message: 'Error creating user' });
 
 				break;
 			}

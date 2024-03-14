@@ -1,11 +1,15 @@
-import type { Database } from './../types/supabase';
-import { PUBLIC_SUPABASE_URL } from '$env/static/public';
-import { SUPABASE_SERVICE_KEY } from '$env/static/private';
+import Stripe from 'stripe';
 import { createServerClient } from '@supabase/ssr';
-import { createAuthService } from '$auth/service';
-import { createPaymentsService } from './features/payments/service';
+import { PUBLIC_SUPABASE_URL } from '$env/static/public';
+import { STRIPE_SECRET_KEY, SUPABASE_SERVICE_KEY } from '$env/static/private';
+import type { Database } from './../types/supabase';
 
 export const handle = async ({ event, resolve }) => {
+	event.locals.stripe = new Stripe(STRIPE_SECRET_KEY, {
+		// https://github.com/stripe/stripe-node#configuration
+		apiVersion: '2023-10-16',
+	});
+
 	event.locals.supabase = createServerClient<Database>(PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_KEY, {
 		cookies: {
 			get: (key) => event.cookies.get(key),
@@ -18,8 +22,20 @@ export const handle = async ({ event, resolve }) => {
 		},
 	});
 
-	event.locals.payments = createPaymentsService();
-	event.locals.auth = createAuthService(event.locals.supabase);
+	event.locals.getSession = async () => {
+		let {
+			data: { session },
+		} = await event.locals.supabase?.auth?.getSession();
+
+		// solving the case if the user was deleted from the database but the browser still has a cookie/loggedin user
+		// +layout.server.js will delete the cookie if the session is null
+		const { data: getUserData } = await event.locals.supabase.auth.getUser();
+
+		if (getUserData.user == null) {
+			session = null;
+		}
+		return session;
+	};
 
 	return resolve(event, {
 		filterSerializedResponseHeaders(name) {
