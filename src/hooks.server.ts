@@ -1,4 +1,5 @@
 import Stripe from 'stripe';
+import prisma from '$lib/prisma';
 import { createServerClient } from '@supabase/ssr';
 import { PUBLIC_SUPABASE_URL } from '$env/static/public';
 import { STRIPE_SECRET_KEY, SUPABASE_SERVICE_KEY } from '$env/static/private';
@@ -9,6 +10,8 @@ export const handle = async ({ event, resolve }) => {
 		// https://github.com/stripe/stripe-node#configuration
 		apiVersion: '2023-10-16',
 	});
+
+	event.locals.prisma = prisma;
 
 	event.locals.supabase = createServerClient<Database>(PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_KEY, {
 		cookies: {

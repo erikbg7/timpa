@@ -4,6 +4,8 @@
 	import Pricing from '$lib/components/Pricing.svelte';
 
 	export let data;
+
+	$: console.log({ data });
 </script>
 
 <h2>User dashboard</h2>

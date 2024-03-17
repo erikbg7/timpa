@@ -1,4 +1,5 @@
 import { redirect } from '@sveltejs/kit';
+import prisma from '$lib/prisma';
 
 export async function load(event) {
 	const session = await event.locals.getSession();
@@ -7,16 +8,18 @@ export async function load(event) {
 		throw redirect(303, '/');
 	}
 
-	const customer = await event.locals.supabase
-		.from('customers')
-		.select()
-		.eq('email', session.user.email!)
-		.single();
+	const customer = await prisma.customer.findUnique({
+		where: {
+			email: session.user.email!,
+		},
+	});
+
+	console.log('customer', customer);
 
 	return {
 		props: {
 			session: session,
-			isCustomer: !!customer.data,
+			isCustomer: !!customer,
 		},
 	};
 }

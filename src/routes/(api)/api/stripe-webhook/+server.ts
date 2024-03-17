@@ -104,7 +104,7 @@ const mockedData = {
 /** @type {import('./$types').RequestHandler} */
 export const POST = async (event) => {
 	const {
-		locals: { supabase, stripe, getSession },
+		locals: { supabase, stripe, getSession, prisma },
 	} = event;
 
 	try {
@@ -132,9 +132,13 @@ export const POST = async (event) => {
 					fail(500, { message: 'No email found' });
 				}
 
-				const { error } = await supabase.from('customers').insert({ email });
+				const customer = await prisma.customer.upsert({
+					where: { email },
+					update: {},
+					create: { email },
+				});
 
-				if (!!error) fail(500, { message: 'Error creating user' });
+				if (!customer) fail(500, { message: 'Error creating user' });
 
 				break;
 			}

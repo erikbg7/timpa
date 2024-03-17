@@ -39,3 +39,4 @@ Write Steps List in Readme
 TODO:
 - SEO per page, general SEO
 - Write SEO guide in Readme
+

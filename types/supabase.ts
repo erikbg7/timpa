@@ -9,7 +9,40 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      customers: {
+      _prisma_migrations: {
+        Row: {
+          applied_steps_count: number
+          checksum: string
+          finished_at: string | null
+          id: string
+          logs: string | null
+          migration_name: string
+          rolled_back_at: string | null
+          started_at: string
+        }
+        Insert: {
+          applied_steps_count?: number
+          checksum: string
+          finished_at?: string | null
+          id: string
+          logs?: string | null
+          migration_name: string
+          rolled_back_at?: string | null
+          started_at?: string
+        }
+        Update: {
+          applied_steps_count?: number
+          checksum?: string
+          finished_at?: string | null
+          id?: string
+          logs?: string | null
+          migration_name?: string
+          rolled_back_at?: string | null
+          started_at?: string
+        }
+        Relationships: []
+      }
+      Customer: {
         Row: {
           created_at: string
           email: string
@@ -27,6 +60,96 @@ export type Database = {
         }
         Relationships: []
       }
+      Event: {
+        Row: {
+          createdAt: string
+          description: string | null
+          eventType: Database["public"]["Enums"]["EventType"]
+          flowSessionId: number
+          id: number
+        }
+        Insert: {
+          createdAt?: string
+          description?: string | null
+          eventType: Database["public"]["Enums"]["EventType"]
+          flowSessionId: number
+          id?: number
+        }
+        Update: {
+          createdAt?: string
+          description?: string | null
+          eventType?: Database["public"]["Enums"]["EventType"]
+          flowSessionId?: number
+          id?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "Event_flowSessionId_fkey"
+            columns: ["flowSessionId"]
+            isOneToOne: false
+            referencedRelation: "FlowSession"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+      FlowSession: {
+        Row: {
+          createdAt: string
+          id: number
+          workspaceId: number
+        }
+        Insert: {
+          createdAt?: string
+          id?: number
+          workspaceId: number
+        }
+        Update: {
+          createdAt?: string
+          id?: number
+          workspaceId?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "FlowSession_workspaceId_fkey"
+            columns: ["workspaceId"]
+            isOneToOne: false
+            referencedRelation: "Workspace"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+      Workspace: {
+        Row: {
+          created_at: string
+          customerId: number
+          description: string | null
+          id: number
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          customerId: number
+          description?: string | null
+          id?: number
+          name: string
+        }
+        Update: {
+          created_at?: string
+          customerId?: number
+          description?: string | null
+          id?: number
+          name?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "Workspace_customerId_fkey"
+            columns: ["customerId"]
+            isOneToOne: false
+            referencedRelation: "Customer"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
     }
     Views: {
       [_ in never]: never
@@ -35,7 +158,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      EventType: "START" | "BREAK" | "INTERRUPTION" | "LONG_BREAK" | "END"
     }
     CompositeTypes: {
       [_ in never]: never

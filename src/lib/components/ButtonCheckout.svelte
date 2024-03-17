@@ -9,7 +9,7 @@
 
 <form
 	method="post"
-	action="?/createCheckoutSession"
+	action="/?/createCheckoutSession"
 	use:enhance={() => {
 		loading = true;
 		return ({ update }) => {

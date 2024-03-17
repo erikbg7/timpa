@@ -7,16 +7,16 @@ export async function load(event) {
 		throw redirect(303, '/');
 	}
 
-	const customer = await event.locals.supabase
-		.from('customers')
-		.select()
-		.eq('email', session.user.email!)
-		.single();
+	const customer = await event.locals.prisma.customer.findUnique({
+		where: {
+			email: session.user.email!,
+		},
+	});
 
 	return {
 		props: {
 			session: session,
-			isCustomer: !!customer.data,
+			isCustomer: customer,
 		},
 	};
 }
