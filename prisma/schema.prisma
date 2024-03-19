@@ -13,6 +13,8 @@ model Customer {
     created_at DateTime @default(now()) @db.Timestamptz(6)
     email      String   @unique
 
+    plan Plan @default(FREE)
+
     workspaces Workspace[]
 }
 
@@ -56,4 +58,10 @@ enum EventType {
     INTERRUPTION
     LONG_BREAK
     END
+}
+
+enum Plan {
+    FREE
+    STANDARD
+    PRO
 }

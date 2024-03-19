@@ -1,78 +1,34 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
-	import H1 from '$lib/atoms/H1.svelte';
+	import Dialog from '$lib/components/Dialog.svelte';
 	import Pricing from '$lib/components/Pricing.svelte';
+	import DashboardSection from '$lib/features/workspaces/components/DashboardSection.svelte';
+	import WorkspaceCard from '$lib/features/workspaces/components/WorkspaceCard.svelte';
+	import WorkspaceCreationForm from '$lib/features/workspaces/components/WorkspaceCreationForm.svelte';
 
 	export let data;
-
-	$: console.log({ data });
+	let dialog: HTMLDialogElement;
 </script>
 
-<h2>User dashboard</h2>
-
-<div class="relative flex justify-end">
-	<!-- <div class=" dropdown dropdown-end">
-		<div tabIndex={0} role="button" class="avatar btn btn-circle btn-ghost">
-			<div class="w-10 rounded-full border-2 border-green-400">
-				<img src={data.session?.user.user_metadata.avatar_url} />
-			</div>
-		</div>
-		<ul
-			tabIndex={0}
-			class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box border border-white/10 bg-neutral-900 p-2 shadow"
-		>
-			<li>
-				<div class="flex flex-col items-start">
-					<span class="text-sm">Signed in as</span>
-					<span class="font-semibold">{data.session?.user.user_metadata.full_name}</span>
-				</div>
-			</li>
-			<hr class="my-2 border-white/10" />
-			<li>
-				<a class="justify-between">
-					Profile
-					<span class="badge">New</span>
-				</a>
-			</li>
-			<li><a>Settings</a></li>
-			<li>
-				<form action="/signin?/signOut" method="POST" use:enhance>
-					<button type="submit">Logout</button>
-				</form>
-			</li>
-		</ul>
-	</div> -->
-</div>
-
-<!-- {JSON.stringify(data.session)} -->
-
-<!-- <details open>
-	<summary>Parent item</summary>
-	<ul>
-		<li><a>Submenu 1</a></li>
-		<li><a>Submenu 2</a></li>
-		<li>
-			<details open>
-				<summary>Parent</summary>
-				<ul>
-					<li><a>item 1</a></li>
-					<li><a>item 2</a></li>
-				</ul>
-			</details>
-		</li>
-	</ul>
-</details>
-<div class="avatar hover:cursor-pointer">
-	<div class="w-8 rounded-full border-2 border-green-400">
-		<img src={data.session?.user.user_metadata.avatar_url} />
-	</div>
-</div> -->
-<!-- <p><a href="/update_email">Change your email</a></p>
-<p><a href="/update_password">Change password</a></p>
-<p><a href="/delete_user">Delete my account</a></p> -->
+<Dialog bind:dialog>
+	<WorkspaceCreationForm on:success={() => dialog.close()} />
+</Dialog>
 
 {#if data?.props?.isCustomer}
-	<H1>CONGRATS! YOU ARE A CUSTOMER {data.session?.user?.email}</H1>
+	<DashboardSection title="Your workspaces">
+		<button slot="action" class="btn btn-primary btn-sm" on:click={() => dialog.showModal()}>
+			+ Add workspace
+		</button>
+		<div slot="content" class="grid grid-cols-4 gap-6">
+			{#each data.props.workspaces as wp}
+				<WorkspaceCard {wp} />
+			{/each}
+		</div>
+	</DashboardSection>
 {:else}
-	<Pricing />
+	<DashboardSection title="Your workspaces">
+		<div slot="content" class="h-full w-full">
+			<h2>You cannot use this feature while being in the free plan</h2>
+			<Pricing />
+		</div>
+	</DashboardSection>
 {/if}

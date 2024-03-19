@@ -1,6 +1,7 @@
 import { fail, json } from '@sveltejs/kit';
 import { STRIPE_WEBHOOK_SECRET } from '$env/static/private';
 import { isValidEmail } from '$lib/validations/index.js';
+import type { Plan } from '@prisma/client';
 
 const mockedData = {
 	object: {
@@ -104,7 +105,7 @@ const mockedData = {
 /** @type {import('./$types').RequestHandler} */
 export const POST = async (event) => {
 	const {
-		locals: { supabase, stripe, getSession, prisma },
+		locals: { stripe, getSession, prisma },
 	} = event;
 
 	try {
@@ -127,6 +128,7 @@ export const POST = async (event) => {
 				const sessionEmail = session?.user?.email;
 				const checkoutEmail = checkoutSession.customer_details?.email;
 
+				const plan = checkoutSession.metadata?.type as Plan;
 				const email = sessionEmail || (checkoutEmail as string);
 				if (!isValidEmail(email)) {
 					fail(500, { message: 'No email found' });
@@ -135,7 +137,7 @@ export const POST = async (event) => {
 				const customer = await prisma.customer.upsert({
 					where: { email },
 					update: {},
-					create: { email },
+					create: { email, plan },
 				});
 
 				if (!customer) fail(500, { message: 'Error creating user' });

@@ -17,7 +17,10 @@ export const load: PageServerLoad = async ({ depends, url, locals }) => {
 export const actions = {
 	createCheckoutSession: async (event) => {
 		const formData = await event.request.formData();
-		const priceId = formData.get('priceId') as string;
+		const plan = formData.get('plan') as string;
+		const [priceId, type] = plan.split(',');
+
+		console.log({ plan });
 
 		// If we require the user to be logged before paying, we can redirect to signIn here
 		const session = await event.locals.getSession();
@@ -39,6 +42,9 @@ export const actions = {
 			],
 			cancel_url: PUBLIC_BASE_URL.concat(cancelUrl),
 			success_url: PUBLIC_BASE_URL.concat(successUrl),
+			metadata: {
+				type: type,
+			},
 		});
 
 		if (!stripeSession.url) throw new Error('Failed to create checkout session');

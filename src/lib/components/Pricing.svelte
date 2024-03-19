@@ -4,6 +4,7 @@
 	import DecorationRight from '$lib/decorations/DecorationRight.svelte';
 	import ButtonCheckout from './ButtonCheckout.svelte';
 	import SectionHeader from './SectionHeader.svelte';
+	import { Plan } from '@prisma/client';
 </script>
 
 <section id="pricing" class="overflow-hidden">
@@ -85,7 +86,7 @@
 							</ul>
 						{/if}
 						<div class="relative z-30 space-y-2">
-							<ButtonCheckout priceId={plan.priceId} />
+							<ButtonCheckout type={plan.type} priceId={plan.priceId} />
 
 							<p
 								class="relative flex items-center justify-center gap-2 text-center text-sm font-medium text-base-content/80"

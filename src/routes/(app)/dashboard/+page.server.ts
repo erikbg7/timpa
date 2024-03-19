@@ -13,10 +13,74 @@ export async function load(event) {
 		},
 	});
 
+	const workspaces = await event.locals.prisma.workspace.findMany({
+		where: {
+			customerId: customer!.id,
+		},
+	});
+
 	return {
 		props: {
 			session: session,
 			isCustomer: customer,
+			workspaces: workspaces || [],
 		},
 	};
 }
+
+export const actions = {
+	createWorkspace: async (event) => {
+		const formData = await event.request.formData();
+		const name = formData.get('name') as string;
+		const description = formData.get('description') as string;
+
+		console.log({ name, description });
+
+		const session = await event.locals.getSession();
+		const customer = await event.locals.prisma.customer.findUnique({
+			where: {
+				email: session!.user.email!,
+			},
+		});
+
+		try {
+			const workspace = await event.locals.prisma.workspace.create({
+				data: {
+					name,
+					description,
+					customerId: customer!.id,
+				},
+			});
+
+			console.log({ workspace });
+
+			return { success: true };
+		} catch (error) {
+			console.log({ error });
+		}
+	},
+	deleteWorkspace: async (event) => {
+		const formData = await event.request.formData();
+		const workspaceId = formData.get('workspaceId') as string;
+
+		const session = await event.locals.getSession();
+		const customer = await event.locals.prisma.customer.findUnique({
+			where: {
+				email: session!.user.email!,
+			},
+		});
+
+		try {
+			const workspace = await event.locals.prisma.workspace.delete({
+				where: {
+					id: BigInt(workspaceId),
+					customerId: customer!.id,
+				},
+			});
+
+			console.log({ workspace });
+		} catch (error) {
+			console.log({ error });
+		}
+	},
+};

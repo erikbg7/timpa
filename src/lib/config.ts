@@ -52,6 +52,7 @@ const config = {
 		// Create multiple plans in your Stripe dashboard, then add them here. You can add as many plans as you want, just make sure to add the priceId
 		plans: [
 			{
+				type: 'STANDARD',
 				// REQUIRED — we use this to find the plan in the webhook (for instance if you want to update the user's credits based on the plan)
 				priceId:
 					process.env.NODE_ENV === 'development' ? 'price_1OsV3LCwovyfOAFP1u90AION' : 'price_456',
@@ -74,7 +75,9 @@ const config = {
 			},
 			{
 				// This plan will look different on the pricing page, it will be highlighted. You can only have one plan with isFeatured: true
+				type: 'PRO',
 				isFeatured: true,
+				isPro: true,
 				priceId:
 					process.env.NODE_ENV === 'development' ? 'price_1OsV3LCwovyfOAFP1u90AION' : 'price_456',
 				name: 'Advanced',
