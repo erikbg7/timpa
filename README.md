@@ -40,4 +40,11 @@ You can preview the production build with `npm run preview`.
 # HELP
 
 - Generate supabase types
+
   - `npx supabase gen types typescript --project-id [DB_PASSWORD] --schema public > types/supabase.ts`
+
+- Change content in `static/robots.txt`
+- Generate sitemap
+  - `npx svelte-add sitemap`
+- Update icons
+- Update SEO component

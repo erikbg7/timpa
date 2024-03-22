@@ -9,6 +9,7 @@
 	import LinkedInIcon from '$lib/icons/LinkedinIcon.svelte';
 
 	// You can get any missing icon from https://icons8.com/icons/set/tiktok
+
 	const socials = {
 		twitter: TwitterIcon,
 		instagram: InstagramIcon,
@@ -36,13 +37,15 @@
 			<ul class="flex gap-3">
 				{#each config.footer.socials as social}
 					<li>
-						<a class="text-sm font-semibold text-neutral-300" href={social.link}
-							><svelte:component this={getIcon(social.icon)} /></a
+						<a
+							class="text-sm font-semibold text-neutral-300"
+							aria-label={social.ariaLabel}
+							href={social.link}><svelte:component this={getIcon(social.icon)} /></a
 						>
 					</li>
 				{/each}
 			</ul>
 		</div>
-		<span class="text-sm text-zinc-500">Copyright {config.appName} 2024</span>
+		<span class="text-sm text-zinc-400">Copyright {config.appName} 2024</span>
 	</div>
 </footer>

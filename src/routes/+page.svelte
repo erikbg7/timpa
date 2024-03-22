@@ -8,6 +8,7 @@
 	import Pricing from '$lib/components/Pricing.svelte';
 	import FAQs from '$lib/components/FAQs.svelte';
 	import Banner from '$lib/components/Banner.svelte';
+	import Seo from '$lib/components/SEO.svelte';
 
 	const handlePost = async () => {
 		const res = await fetch('http://localhost:5173/api/stripe-webhook', {
@@ -25,6 +26,9 @@
 <!-- <main
 	class="relative mx-auto flex min-h-screen max-w-screen-xl flex-col justify-center overflow-hidden px-8 py-16"
 > -->
+
+<Seo />
+
 <main>
 	<section class="relative mt-6 min-h-screen">
 		<HeroGradient />
@@ -42,7 +46,7 @@
 						<button class="btn btn-secondary btn-sm">How It Works</button>
 					</div>
 				</div>
-				<img alt="hero image" class="" src="/hero.png" />
+				<img alt="hero image" class="" src="/hero.webp" />
 			</div>
 		</div>
 

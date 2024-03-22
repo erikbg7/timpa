@@ -5,6 +5,12 @@ import SparklesIcon from '$lib/icons/SparklesIcon.svelte';
 import SearchIcon from './icons/SearchIcon.svelte';
 import ServerIcon from './icons/ServerIcon.svelte';
 import WorldIcon from './icons/WorldIcon.svelte';
+import {
+	PUBLIC_BASE_URL,
+	PUBLIC_CONTACT_EMAIL,
+	PUBLIC_GITHUB_PAGE,
+	PUBLIC_LINKEDIN_PROFILE,
+} from '$env/static/public';
 
 const appName = 'Calendly';
 
@@ -30,18 +36,22 @@ const config = {
 		socials: [
 			{
 				icon: 'tiktok',
+				ariaLabel: 'Go to Xata TikTok page',
 				link: '#',
 			},
 			{
 				icon: 'twitter',
+				ariaLabel: 'Go to Xata Twitter page',
 				link: '#',
 			},
 			{
 				icon: 'instagram',
+				ariaLabel: 'Go to Xata Instagram page',
 				link: '#',
 			},
 			{
 				icon: 'linkedin',
+				ariaLabel: 'Go to Xata LinkedIn page',
 				link: '#',
 			},
 		],
@@ -145,6 +155,30 @@ const config = {
 			{ label: 'FAQs', href: '#faqs' },
 			{ label: 'About Us', href: '/about' },
 		],
+	},
+	website: {
+		author: 'Erik Blanca',
+		ogLanguage: 'en_GB',
+		siteLanguage: 'en-GB',
+		siteTitle: 'Svelte SaaS Started',
+		siteShortTitle: 'Svelte SaaS',
+		description:
+			'Kickstart your SaaS project with this boilerplate. It includes everything you need to get started, including authentication, payments, and more.',
+		siteUrl: PUBLIC_BASE_URL,
+		backgroundColor: '#1b4079',
+		themeColor: '#d62828',
+		contactEmail: PUBLIC_CONTACT_EMAIL,
+		// facebookAuthorPage: `https://www.facebook.com/${facebookAuthorPageName}`,
+		// facebookAuthorPageName,
+		// facebookPage: `https://www.facebook.com/${facebookPageName}`,
+		// facebookPageName,
+		githubPage: PUBLIC_GITHUB_PAGE,
+		linkedinProfile: PUBLIC_LINKEDIN_PROFILE,
+		// telegramUsername: PUBLIC_TELEGRAM_USERNAME,
+		// tiktokUsername: PUBLIC_TIKTOK_USERNAME,
+		// twitterUsername: PUBLIC_TWITTER_USERNAME,
+		// twitterUserId: PUBLIC_TWITTER_USER_ID,
+		// wireUsername: PUBLIC_WIRE_USERNAME,
 	},
 };
 
