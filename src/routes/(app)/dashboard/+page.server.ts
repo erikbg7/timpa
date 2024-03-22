@@ -4,7 +4,7 @@ export async function load(event) {
 	const session = await event.locals.getSession();
 	// if the user is not logged in redirect back to the home page
 	if (!session) {
-		throw redirect(303, '/');
+		redirect(303, '/');
 	}
 
 	const customer = await event.locals.prisma.customer.findUnique({
@@ -13,16 +13,26 @@ export async function load(event) {
 		},
 	});
 
+	if (!customer) {
+		return {
+			session: session,
+			isCustomer: false,
+		};
+	}
+
 	const workspaces = await event.locals.prisma.workspace.findMany({
 		where: {
 			customerId: customer!.id,
+		},
+		include: {
+			flowSessions: true,
 		},
 	});
 
 	return {
 		props: {
 			session: session,
-			isCustomer: customer,
+			isCustomer: !!customer,
 			workspaces: workspaces || [],
 		},
 	};

@@ -18,10 +18,12 @@
 		<button slot="action" class="btn btn-primary btn-sm" on:click={() => dialog.showModal()}>
 			+ Add workspace
 		</button>
-		<div slot="content" class="grid grid-cols-4 gap-6">
-			{#each data.props.workspaces as wp}
-				<WorkspaceCard {wp} />
-			{/each}
+		<div slot="content">
+			<div class="grid grid-cols-3 gap-6">
+				{#each data.props.workspaces as wp}
+					<WorkspaceCard {wp} />
+				{/each}
+			</div>
 		</div>
 	</DashboardSection>
 {:else}

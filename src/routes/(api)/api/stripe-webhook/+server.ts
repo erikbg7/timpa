@@ -1,7 +1,7 @@
 import { fail, json } from '@sveltejs/kit';
 import { STRIPE_WEBHOOK_SECRET } from '$env/static/private';
 import { isValidEmail } from '$lib/validations/index.js';
-import type { Plan } from '@prisma/client';
+import type { Plan } from '$lib/enums';
 
 const mockedData = {
 	object: {

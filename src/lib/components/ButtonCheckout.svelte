@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import type { Plan } from '@prisma/client';
+	import type { Plan } from '$lib/enums';
 	import clsx from 'clsx';
 	// This component is used to create Stripe Checkout Sessions
 	// By default, user doesn't have to be logged in. You can change that in the API route

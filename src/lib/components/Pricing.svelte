@@ -4,7 +4,6 @@
 	import DecorationRight from '$lib/decorations/DecorationRight.svelte';
 	import ButtonCheckout from './ButtonCheckout.svelte';
 	import SectionHeader from './SectionHeader.svelte';
-	import { Plan } from '@prisma/client';
 </script>
 
 <section id="pricing" class="overflow-hidden">
