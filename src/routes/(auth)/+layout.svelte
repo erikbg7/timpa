@@ -1,9 +1,9 @@
-<div class="bg-contrast grid grid-cols-2">
-	<div class="flex min-h-screen flex-col items-center justify-center">
-		<div class="flex w-[400px] flex-1 flex-col justify-center">
+<div class="bg-contrast grid grid-cols-1 lg:grid-cols-2">
+	<div class="flex min-h-screen flex-col items-center justify-center p-8">
+		<div class="flex w-full flex-1 flex-col justify-center md:w-[400px]">
 			<slot />
 		</div>
-		<p class="pb-8 text-xs text-neutral-400">
+		<p class="pb-8 text-center text-xs text-neutral-400">
 			By signing in, you agree to our
 			<a href="/terms" class="text-accent">Terms of Service</a>
 			and
@@ -11,7 +11,9 @@
 		</p>
 	</div>
 
-	<div class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
+	<div
+		class="relative hidden min-h-screen flex-col items-center justify-center overflow-hidden lg:flex"
+	>
 		<div class="top-decoration"></div>
 		<svg
 			viewBox="0 0 395 334"

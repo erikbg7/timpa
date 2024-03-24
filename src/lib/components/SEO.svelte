@@ -17,6 +17,7 @@
 	export let title: string =
 		'Flow Productivity App - Improve Your Results - Definitive Pomodoro Competitor';
 
+	export let showDescription: boolean = true;
 	export let description: string =
 		'Your database should be easy to use, not a source of frustration. Xata easily integrates into your developer workflow, providing the best data experience for GitHub, Vercel and Netlify based deployments.';
 
@@ -35,7 +36,10 @@
 	<!-- HTML Meta Tags -->
 	<title>{title}</title>
 	<meta charset="UTF-8" />
-	<meta name="description" content={description} />
+
+	{#if showDescription}
+		<meta name="description" content={description} />
+	{/if}
 
 	<!-- <link rel="preload" href={atomic} as="font" type="font/woff2" crossorigin />
 <link rel="preload" href={jost} as="font" type="font/woff2" crossorigin /> -->

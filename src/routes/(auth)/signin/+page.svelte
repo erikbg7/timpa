@@ -4,6 +4,7 @@
 	import { page } from '$app/stores';
 	import { enhance } from '$app/forms';
 	import type { ActionData } from './$types';
+	import Seo from '$lib/components/SEO.svelte';
 
 	type AuthMode = 'signin' | 'signup' | 'magiclink';
 
@@ -24,7 +25,15 @@
 		signup: `${config.appName} doesn't require a credit card to start. Our free plan works great for hobby projects.`,
 		magiclink: `${config.appName} will send you an email with a magic link to sign in. No password required.`,
 	};
+
+	const seoTitle: Record<AuthMode, string> = {
+		signin: 'Sign in',
+		signup: 'Sign up',
+		magiclink: 'Sign in',
+	};
 </script>
+
+<Seo showDescription={false} title={seoTitle[mode]} />
 
 <div class="mb-8 flex flex-col gap-2 text-sm">
 	<h1 class="text-3xl font-semibold text-neutral-200">{title[mode]}</h1>
@@ -60,6 +69,7 @@
 			<input
 				name="email"
 				type="text"
+				required
 				placeholder="user@example.com"
 				class={clsx('text-md w-full rounded-md border border-white/10 bg-neutral-900 p-2', {
 					'input-error': form?.errors?.email,
