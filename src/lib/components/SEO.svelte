@@ -32,8 +32,8 @@
 </script>
 
 <svelte:head>
+	<!-- HTML Meta Tags -->
 	<title>{title}</title>
-
 	<meta charset="UTF-8" />
 	<meta name="description" content={description} />
 
@@ -52,38 +52,19 @@
 
 	<meta name="keywords" content="flow, productivity, timer, study, mindset, improve" />
 
-	<!-- HTML Meta Tags -->
-	<title>Flow Productivity App - Improve Your Results - Definitive Pomodoro Competitor</title>
-	<meta
-		name="description"
-		content="Your database should be easy to use, not a source of frustration. Xata easily integrates into your developer workflow, providing the best data experience for GitHub, Vercel and Netlify based deployments."
-	/>
-
 	<!-- Facebook Meta Tags -->
 	<meta property="og:url" content="https://lavelada.es/" />
 	<meta property="og:type" content="website" />
-	<meta
-		property="og:title"
-		content="Flow Productivity App - Improve Your Results - Definitive Pomodoro Competitor"
-	/>
-	<meta
-		property="og:description"
-		content="Your database should be easy to use, not a source of frustration. Xata easily integrates into your developer workflow, providing the best data experience for GitHub, Vercel and Netlify based deployments."
-	/>
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
 	<meta property="og:image" content="https://lavelada.es/img/og.jpg" />
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="twitter:domain" content="lavelada.es" />
 	<meta property="twitter:url" content="https://lavelada.es/" />
-	<meta
-		name="twitter:title"
-		content="Flow Productivity App - Improve Your Results - Definitive Pomodoro Competitor"
-	/>
-	<meta
-		name="twitter:description"
-		content="Your database should be easy to use, not a source of frustration. Xata easily integrates into your developer workflow, providing the best data experience for GitHub, Vercel and Netlify based deployments."
-	/>
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
 	<meta name="twitter:image" content="https://lavelada.es/img/og.jpg" />
 
 	<!-- Meta Tags Generated via https://www.opengraph.xyz -->
