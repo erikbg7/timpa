@@ -6,7 +6,7 @@
 	import '../app.css';
 	import Footer from '$lib/components/Footer.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
-	import { Toaster } from 'svelte-french-toast';
+	// import { Toaster } from 'svelte-french-toast';
 
 	export let data;
 
@@ -36,7 +36,7 @@
 	});
 </script>
 
-<Toaster />
+<!-- <Toaster /> -->
 {#if route?.id?.includes('(auth)') || route?.id?.includes('(legal)') || route?.id?.includes('(app)')}
 	<slot />
 {:else}
