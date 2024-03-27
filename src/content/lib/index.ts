@@ -1,14 +1,15 @@
-type Post = {
-	metadata: {
-		postDate: string;
-		postTitle: string;
-		postDescription: string;
-		featuredImage: string;
-		featuredImageAlt: string;
-	};
+type PostMetadata = {
+	postDate: string;
+	postLastUpdate: string;
+	postTitle: string;
+	postDescription: string;
+	featuredImage: string;
+	featuredImageAlt: string;
 };
 
-type ImportedPosts = Record<string, () => Promise<Post>>;
+type Post = { content: string; slug: string } & PostMetadata;
+
+type ImportedPosts = Record<string, () => Promise<{ metadata: PostMetadata }>>;
 
 const getAllPosts = async () => {
 	const files = import.meta.glob('../*.md') as ImportedPosts;
@@ -21,13 +22,13 @@ const getAllPosts = async () => {
 		}),
 	);
 
-	return posts;
+	return posts as Omit<Post, 'content'>[];
 };
 
 const getPostBySlug = async (slug: string) => {
 	const post = await import(`../${slug}.md`);
 	const { metadata, default: content } = post;
-	return { metadata, content } as Post & { content: string };
+	return { metadata, content } as { metadata: PostMetadata; content: string };
 };
 
 const getBlogEntries = async () => {
@@ -35,4 +36,5 @@ const getBlogEntries = async () => {
 	return posts.map((p) => ({ slug: p.slug }));
 };
 
+export type { Post, PostMetadata };
 export { getAllPosts, getBlogEntries, getPostBySlug };

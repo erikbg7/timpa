@@ -1,5 +1,6 @@
 ---
 postDate: '2021-04-07'
+postLastUpdate: '2021-04-07'
 postTitle: 'Best Medium Format Camera for Starting Out'
 postDescription: "Best medium format camera for starting out is probably a question at the front of your mind right now! Let's take a look."
 
