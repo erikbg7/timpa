@@ -27,6 +27,7 @@
 >
 	<button
 		type="submit"
+		aria-label="Get Calendly"
 		name="plan"
 		value={[priceId, type].join(',')}
 		class={clsx(

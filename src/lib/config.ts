@@ -2,7 +2,7 @@ import FAQs from './faqs';
 import testimonials from './testimonials';
 
 import SparklesIcon from '$lib/icons/SparklesIcon.svelte';
-import SearchIcon from './icons/SearchIcon.svelte';
+import SearchIcon from '$lib/icons/SearchIcon.svelte';
 import ServerIcon from './icons/ServerIcon.svelte';
 import WorldIcon from './icons/WorldIcon.svelte';
 import {
@@ -16,7 +16,6 @@ const appName = 'Calendly';
 
 const config = {
 	appName: appName,
-
 	signup: {
 		title: 'Create your <span>free</span> account',
 		description:
@@ -37,22 +36,22 @@ const config = {
 			{
 				icon: 'tiktok',
 				ariaLabel: 'Go to Xata TikTok page',
-				link: '#',
+				link: 'https://twitter.com/ErikBG47',
 			},
 			{
 				icon: 'twitter',
 				ariaLabel: 'Go to Xata Twitter page',
-				link: '#',
+				link: 'https://twitter.com/ErikBG47',
 			},
 			{
 				icon: 'instagram',
 				ariaLabel: 'Go to Xata Instagram page',
-				link: '#',
+				link: 'https://twitter.com/ErikBG47',
 			},
 			{
 				icon: 'linkedin',
 				ariaLabel: 'Go to Xata LinkedIn page',
-				link: '#',
+				link: 'https://twitter.com/ErikBG47',
 			},
 		],
 	},
@@ -153,7 +152,8 @@ const config = {
 			{ label: 'Pricing', href: '#pricing' },
 			{ label: 'Testimonials', href: '#testimonials' },
 			{ label: 'FAQs', href: '#faqs' },
-			{ label: 'About Us', href: '/about' },
+			{ label: 'Blog', href: '/blog' },
+			// { label: 'About Us', href: '/about' },
 		],
 	},
 	website: {

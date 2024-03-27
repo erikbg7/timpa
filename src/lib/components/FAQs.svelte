@@ -12,7 +12,7 @@
 		{#each faqs as item}
 			<div class="flex">
 				<div class="collapse collapse-arrow rounded-none border-b border-zinc-400 bg-base-200">
-					<input type="checkbox" />
+					<input type="checkbox" aria-checked="false" aria-label="Toggle Frequently Add Question" />
 					<div class="collapse-title text-lg font-medium">{item.question}</div>
 					<div class="collapse-content text-neutral-400">
 						{@html item.answer}

@@ -46,7 +46,7 @@
 						<button class="btn btn-secondary btn-sm">How It Works</button>
 					</div>
 				</div>
-				<img alt="hero image" class="" src="/hero.webp" />
+				<img alt="xata hero" width="100%" src="/hero.webp" />
 			</div>
 		</div>
 
@@ -56,27 +56,27 @@
 				<img
 					alt="techcrunch social logo"
 					class="filter-to-white my-2 mr-6 h-4 w-auto md:h-6"
-					src="/socials/techcrunch.png"
+					src="/socials/techcrunch.webp"
 				/>
 				<img
 					alt="stability social logo"
 					class="filter-to-white my-2 mr-6 h-4 w-auto md:h-6"
-					src="/socials/stability-ai.png"
+					src="/socials/stability-ai.webp"
 				/>
 				<img
 					alt="fstoppers social logo"
 					class="filter-to-white my-2 mr-6 h-4 w-auto md:h-6"
-					src="/socials/fstoppers.png"
+					src="/socials/fstoppers.webp"
 				/>
 				<img
 					alt="tiktok social logo"
 					class="filter-to-white my-2 mr-6 h-4 w-auto md:h-6"
-					src="/socials/tiktok.png"
+					src="/socials/tiktok.webp"
 				/>
 				<img
 					alt="instagram social logo"
 					class="filter-to-white mb-2 mr-6 mt-3 h-4 w-auto md:h-6"
-					src="/socials/instagram.png"
+					src="/socials/instagram.webp"
 				/>
 			</div>
 		</div>
