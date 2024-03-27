@@ -48,10 +48,8 @@
 						<div class="flex gap-2">
 							{#if plan.priceAnchor}
 								<div class="mb-[4px] flex flex-col justify-end text-lg">
-									<p class="text-base-content/80">
-										<s>
-											${plan.priceAnchor}
-										</s>
+									<p class="text-base-content/80 line-through">
+										${plan.priceAnchor}
 									</p>
 								</div>
 							{/if}

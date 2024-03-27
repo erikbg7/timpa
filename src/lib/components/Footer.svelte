@@ -25,10 +25,10 @@
 	};
 </script>
 
-<footer class="mx-auto max-w-screen-xl pb-12 pt-6">
+<footer class="mx-auto max-w-screen-xl px-8 pb-12 pt-6">
 	<div class="flex flex-col gap-3">
-		<div class="flex flex-wrap justify-between">
-			<ul class="flex gap-6 text-sm font-semibold">
+		<div class="flex flex-wrap justify-between gap-8">
+			<ul class="flex gap-6">
 				<li><a href="/privacy">Cookie Settings</a></li>
 				<li><a href="/security">Security</a></li>
 				<li><a href="/privacy">Privacy Policy</a></li>
