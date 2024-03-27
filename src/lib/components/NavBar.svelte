@@ -13,17 +13,11 @@
 
 	let checked = false;
 
-	const handleMenuOpen = () => (checked = true);
-
-	const handleMenuClose = () => {
-		checked = false;
-	};
-
 	const scrollIntoView = (route: string) => (event: MouseEvent) => {
 		if (route.startsWith('#')) {
 			event.preventDefault();
 			if (checked) {
-				handleMenuClose();
+				checked = false;
 			}
 			if (!isRoute('/')) {
 				return goto('/' + route);

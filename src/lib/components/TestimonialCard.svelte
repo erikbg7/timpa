@@ -9,12 +9,6 @@
 		message: string;
 	}
 
-	// export let name: ITestimonial['name'];
-	// export let username: ITestimonial['username'];
-	// export let role: ITestimonial['role'];
-	// export let image: ITestimonial['image'];
-	// export let message: ITestimonial['message'];
-
 	export let testimonial: ITestimonial;
 </script>
 
