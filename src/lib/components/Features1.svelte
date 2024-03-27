@@ -1,6 +1,6 @@
 <script lang="ts">
 	import config from '$lib/config';
-	import Link from '$lib/atoms/Link.svelte';
+	// import Link from '$lib/atoms/Link.svelte';
 	import DecorationLeft from '$lib/decorations/DecorationLeft.svelte';
 
 	import SectionHeader from './SectionHeader.svelte';
@@ -26,7 +26,7 @@
 				<div>
 					<h3 class="mb-4 text-3xl font-semibold text-neutral-100">{feature.title}</h3>
 					<p class="pb-4">{feature.description}</p>
-					<Link href="no where" title="Learn More" />
+					<!-- <Link href="no where" title="Learn More" /> -->
 				</div>
 			</div>
 		{/each}
