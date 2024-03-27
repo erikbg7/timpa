@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
 	import type { Plan } from '$lib/enums';
 	import clsx from 'clsx';
 	// This component is used to create Stripe Checkout Sessions
@@ -10,26 +9,25 @@
 	export let type: Plan;
 	export let priceId: string;
 	export let size: 'sm' | 'md' | 'lg' = 'md';
+
+	const createCheckoutSession = async () => {
+		loading = true;
+
+		const formData = new FormData();
+		formData.append('type', type);
+		formData.append('priceId', priceId);
+
+		const res = await fetch('/api/stripe-checkout', { method: 'POST', body: formData });
+		const data = await res.json();
+
+		window.location = data.url;
+	};
 </script>
 
-<form
-	method="post"
-	action="/?/createCheckoutSession"
-	use:enhance={() => {
-		loading = true;
-		return ({ update }) => {
-			// Set invalidateAll to false if you don't want to reload page data when submitting
-			update({ invalidateAll: true }).finally(async () => {
-				loading = false;
-			});
-		};
-	}}
->
+<form method="post" on:submit|preventDefault={createCheckoutSession}>
 	<button
 		type="submit"
 		aria-label="Get Calendly"
-		name="plan"
-		value={[priceId, type].join(',')}
 		class={clsx(
 			'group btn btn-primary relative flex w-full items-center justify-center gap-3 rounded-xl text-white',
 			{
