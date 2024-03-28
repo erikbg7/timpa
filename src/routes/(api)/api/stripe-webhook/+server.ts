@@ -2,6 +2,7 @@ import { fail, json } from '@sveltejs/kit';
 import { STRIPE_WEBHOOK_SECRET } from '$env/static/private';
 import { isValidEmail } from '$lib/validations/index.js';
 import type { Plan } from '$lib/enums';
+import { PUBLIC_BASE_URL } from '$env/static/public';
 
 const mockedData = {
 	object: {
@@ -17,7 +18,7 @@ const mockedData = {
 			status: null,
 		},
 		billing_address_collection: null,
-		cancel_url: 'http://localhost:5173/cancel',
+		cancel_url: `${PUBLIC_BASE_URL}/cancel`,
 		client_reference_id: null,
 		client_secret: null,
 		consent: null,
@@ -91,7 +92,7 @@ const mockedData = {
 		status: 'complete',
 		submit_type: null,
 		subscription: null,
-		success_url: 'http://localhost:5173/payment-success?session_id={CHECKOUT_SESSION_ID}',
+		success_url: `${PUBLIC_BASE_URL}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
 		total_details: {
 			amount_discount: 0,
 			amount_shipping: 0,

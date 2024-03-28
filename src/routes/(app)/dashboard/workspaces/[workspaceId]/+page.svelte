@@ -98,8 +98,11 @@
 							{@const duration = fsEvents.getSessionDuration()}
 							{@const eventDurationPercentage = (event.duration / duration) * 100}
 							<div
-								class={clsx('h-full opacity-70', { [COLORS[event.eventType]]: true })}
-								style="width: {eventDurationPercentage}%;"
+								class={clsx(
+									'h-full opacity-70',
+									{ [COLORS[event.eventType]]: true },
+									`w-[${eventDurationPercentage}%]`,
+								)}
 								title={event.eventType}
 							></div>
 						{/each}

@@ -158,12 +158,17 @@ const config = {
 	},
 	website: {
 		author: 'Erik Blanca',
+
 		ogLanguage: 'en_GB',
+		ogImage: '/img/og.jpg',
+
 		siteLanguage: 'en-GB',
-		siteTitle: 'Svelte SaaS Started',
-		siteShortTitle: 'Svelte SaaS',
-		description:
-			'Kickstart your SaaS project with this boilerplate. It includes everything you need to get started, including authentication, payments, and more.',
+		siteTitle: 'Flow Productivity App - Improve Your Results - Get Flow State', // Should take between 20 and 60 characters
+		siteKeyWords: 'flow, productivity, timer, study, mindset, improve',
+		siteShortTitle: 'Flow Productivity App',
+		// Should take around 200 characters
+		siteDescription:
+			'Your database should be easy to use, not a source of frustration. Xata easily integrates into your developer workflow, providing the best data experience for GitHub, Vercel and Netlify based deployments.',
 		siteUrl: PUBLIC_BASE_URL,
 		backgroundColor: '#1b4079',
 		themeColor: '#d62828',

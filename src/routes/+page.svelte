@@ -9,9 +9,10 @@
 	import FAQs from '$lib/components/FAQs.svelte';
 	import Banner from '$lib/components/Banner.svelte';
 	import Seo from '$lib/components/SEO.svelte';
+	import { PUBLIC_BASE_URL } from '$env/static/public';
 
 	const handlePost = async () => {
-		const res = await fetch('http://localhost:5173/api/stripe-webhook', {
+		const res = await fetch(`${PUBLIC_BASE_URL}/api/stripe-webhook`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

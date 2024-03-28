@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { PUBLIC_BASE_URL } from '$env/static/public';
+	import config from '$lib/config';
 	// import jost from "@fontsource-variable/jost/files/jost-latin-wght-normal.woff2"
 	// import atomic from "/fonts/atomic.woff2"
 
@@ -14,19 +15,16 @@
 		crossorigin?: string;
 	}
 
-	export let title: string =
-		'Flow Productivity App - Improve Your Results - Definitive Pomodoro Competitor';
-
+	export let title: string = config.website.siteTitle;
 	export let showDescription: boolean = true;
-	export let description: string =
-		'Your database should be easy to use, not a source of frustration. Xata easily integrates into your developer workflow, providing the best data experience for GitHub, Vercel and Netlify based deployments.';
+	export let description: string = config.website.siteDescription;
 
 	export let preload: Preload[] = [];
 	export let preconnectLinks: string[] = [];
 
 	export let canonical: string = '';
 
-	export let image: string = '/img/og.jpg';
+	export let image: string = config.website.ogImage;
 
 	const canonicalURL = canonical
 		? new URL(canonical, PUBLIC_BASE_URL)
@@ -58,7 +56,7 @@
 	<meta name="viewport" content="width=device-width" />
 	<meta name="theme-color" content="#d5ff00" />
 
-	<meta name="keywords" content="flow, productivity, timer, study, mindset, improve" />
+	<meta name="keywords" content={config.website.siteKeyWords} />
 
 	<!-- Facebook Meta Tags -->
 	<meta property="og:url" content="https://lavelada.es/" />
@@ -88,9 +86,9 @@
 	<meta name="og:title" content={title} />
 	<meta name="og:description" content={description} />
 	<meta name="og:url" content={PUBLIC_BASE_URL} />
-	<meta name="og:site_name" content="La Velada 4" />
+	<meta name="og:site_name" content={config.website.siteShortTitle} />
 	<meta name="og:type" content="website" />
-	<meta name="og:locale" content="es_ES" />
+	<meta name="og:locale" content={config.website.ogLanguage} />
 
 	<meta name="robots" content="index, follow" />
 	<meta name="googlebot" content="index, follow" />

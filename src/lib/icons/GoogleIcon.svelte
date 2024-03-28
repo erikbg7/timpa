@@ -4,7 +4,7 @@
 	height="24px"
 	fill="none"
 	viewBox="0 0 30 30"
-	style="margin-right: 16px;"
+	class="mr-4"
 	><g clip-path="url(#a)"
 		><path
 			fill="#4285F4"

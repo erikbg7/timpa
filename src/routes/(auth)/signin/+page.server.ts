@@ -1,6 +1,7 @@
 import { fail, redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
 import { isValidEmail, isValidProvider } from '$lib/validations';
+import { PUBLIC_BASE_URL } from '$env/static/public';
 
 export const actions: Actions = {
 	signInWithMagicLink: async (event) => {
@@ -14,7 +15,7 @@ export const actions: Actions = {
 		const { error } = await event.locals.supabase.auth.signInWithOtp({
 			email,
 			// set this to false if you do not want the user to be automatically signed up
-			options: { shouldCreateUser: true, emailRedirectTo: 'http://localhost:5173/' },
+			options: { shouldCreateUser: true, emailRedirectTo: PUBLIC_BASE_URL },
 		});
 
 		if (error) {
