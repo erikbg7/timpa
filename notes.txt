@@ -41,7 +41,12 @@ Write Steps List in Readme
 TODO:
 - SEO per page, general SEO
 - Write SEO guide in Readme
-- 404 error page xata.io/bhzjbjhxbcjhvbjhx
+- SEO for blog pages
+
+
+// "svelte-french-toast": "^1.2.0",
+// svelte-sonner
+
 
 SEO
 https://github.com/rodneylab/sveltekit-seo/blob/main/src/lib/config/website.js
@@ -49,3 +54,6 @@ https://github.com/midudev/la-velada-web-oficial/blob/main/src/pages/pronosticos
 
 https://www.opengraph.xyz/url/https%3A%2F%2Flavelada.es%2F
 https://squoosh.app/
+
+Tips on SEO
+https://www.seoptimer.com/svelte-saas-template.vercel.app

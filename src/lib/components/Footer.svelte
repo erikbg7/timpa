@@ -8,8 +8,6 @@
 	import TiktokIcon from '$lib/icons/TikTokIcon.svelte';
 	import LinkedInIcon from '$lib/icons/LinkedinIcon.svelte';
 
-	// You can get any missing icon from https://icons8.com/icons/set/tiktok
-
 	const socials = {
 		twitter: TwitterIcon,
 		instagram: InstagramIcon,

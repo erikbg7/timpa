@@ -37,7 +37,7 @@
 		<div class="relative flex h-screen flex-col justify-center px-2">
 			<div class="mb-20 grid grid-cols-1 lg:grid-cols-2 lg:px-32">
 				<div class="flex max-w-lg flex-col justify-center">
-					<H1 size="lg">Serverless database platform powered by PostgreSQL</H1>
+					<H1 className="text-4xl mb-8">Serverless database platform powered by PostgreSQL</H1>
 					<p class="mb-8">
 						Modern applications are complex. We make the data part easy with the functionality your
 						application needs to evolve and scale.
@@ -99,6 +99,7 @@
 	<Banner />
 	<SectionSeparator />
 </main>
+
 <!-- .filter-to-gray {
 	filter: invert(72%) sepia(14%) saturate(225%) hue-rotate(179deg) brightness(88%) contrast(90%);
 	mix-blend-mode: lighten;

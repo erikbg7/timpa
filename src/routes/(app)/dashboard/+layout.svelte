@@ -54,7 +54,7 @@
 		<div class="flex h-full items-center justify-between px-4">
 			<SaasIcon />
 			<div class="flex items-center gap-2">
-				<span class="text-sm">Blog</span>
+				<span class="text-sm"><a href="/blog">Blog</a></span>
 				<span class="font-extralight opacity-30">|</span>
 				<span class="text-sm">Support</span>
 				<DashboardProfile

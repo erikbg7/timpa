@@ -53,6 +53,13 @@ You can preview the production build with `npm run preview`.
 
 - Resize and convert images to webp using [Squoosh](https://squoosh.app/)
 
+## Icons
+
+- Get the icons from:
+  - [Heroicons](https://heroicons.com/)
+  - [Lucide](https://lucide.dev/icons/)
+  - [Icons8](https://icons8.com/icons/set/tiktok)
+
 ## SEO
 
 - Primary keywords should appear in title tag, meta description and heading tags to help Search Engines to properly identify the topic of this webpage.
