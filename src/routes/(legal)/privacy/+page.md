@@ -8,8 +8,6 @@
 
 This Privacy Notice (also referred to as our "Privacy Statement") explains how Xatabase, Inc., and our subsidiaries and affiliated companies ("Xata," "we," "our," or "us") collect, use, share and otherwise process information that identifies or could be identifiable to you ("personal data") and that we use to manage our business and our relationships with customers, visitors and event attendees. It does not address our privacy practices relating to job applicants, employees and other personnel.
 
-#
-
 ## Region-Specific Disclosures
 
 We may choose or be required by law to provide different or additional disclosures, relating to the processing of Personal information (as defined below) about residents of certain countries, regions or states. Please refer below for disclosures that may be applicable to you:
@@ -18,13 +16,9 @@ Nevada: If you are a resident of the State of Nevada, Chapter 603A of the Nevada
 
 European Economic Area, United Kingdom or Switzerland: If you are located in the European Economic Area (“EEA”), United Kingdom (“UK”) or Switzerland, or otherwise engage with our European operations, please see the Privacy Disclosures for the European Economic Area, United Kingdom and Switzerland section below for additional European-specific privacy disclosures, including what constitutes your personal data, the lawful bases we rely on to process your personal data, how we use cookies when you access our Site from the EEA, UK or Switzerland, and your rights in respect of your personal data.
 
-#
-
 ## What is Personal Information?
 
 When we use the term “Personal Information” in this Privacy Notice, we mean information that identifies, relates to, describes, is reasonably capable of being associated with, or could reasonably be linked, directly or indirectly, to an individual. It does not include aggregated or de-identified information that is maintained in a form that is not reasonably capable of being associated with or linked to an individual.
-
-#
 
 ## Our Collection of Personal Information
 
@@ -54,8 +48,6 @@ We also obtain Personal Information from third parties; which we often combine w
 - Information Providers: We may from time to time obtain information from third-party information providers to correct or supplement Personal Information we collect. For example, we may obtain updated contact information from third-party information providers to reconnect with an individual.
 - Publicly Available Sources: We collect Personal Information about individuals that we do not otherwise have, such as contact information, employment-related information, and interest-in-services information, from publicly available sources. We may combine this information with the information we collect from an individual directly. We use this information to contact individuals, to send advertising or promotional materials or to personalize our Services and to better understand the demographics of the individuals with whom we interact.
 
-#
-
 ## Our Use of Personal Information
 
 We may use Personal Information we collect to:
@@ -78,8 +70,6 @@ We may use Personal Information we collect to:
 - Comply with legal obligations.
 
 Where an individual chooses to contact us, we may need additional information to fulfill the request or respond to inquiries. We may provide additional privacy disclosures where the scope of the inquiry/request and/or Personal Information we require fall outside the scope of this Privacy Notice. In that case, the additional privacy disclosures will govern how we may process the information provided at that time.
-
-#
 
 ## Our Disclosure of Personal Information
 
@@ -104,25 +94,17 @@ We may disclose Personal Information in the following ways:
 
 Otherwise With Consent or Direction: We may disclose Personal Information about an individual to certain other third parties or publicly with their consent or direction. For example, with an individual’s consent or direction we may post their testimonial on our Site or service-related publications.
 
-#
-
 ## Children’s Personal Information
 
 Our Services are not directed to, and we do not intend to, or knowingly, collect or solicit Personal Information from children under the age of 13. If an individual is under the age of 13, they should not use our Services or otherwise provide us with any Personal Information either directly or by other means. If a child under the age of 13 has provided Personal Information to us, we encourage the child’s parent or guardian to contact us to request that we remove the Personal Information from our systems. If we learn that any Personal Information we collect has been provided by a child under the age of 13, we will promptly delete that Personal Information.
-
-#
 
 ## Links to Third-Party Websites or Services
 
 Our Site and Services may include links to third-party websites, plug-ins and applications. Except where we post, link to or expressly adopt or refer to this Privacy Notice, this Privacy Notice does not apply to, and we are not responsible for, any Personal Information practices of third-party websites and online services or the practices of other third parties. To learn about the Personal Information practices of third parties, please visit their respective privacy notices.
 
-#
-
 ## Updates to This Privacy Notice
 
 We will update this Privacy Notice from time to time. When we make changes to this Privacy Notice, we will change the date at the beginning of this Privacy Notice. If we make material changes to this Privacy Notice, we will notify individuals by email to their registered email address, by prominent posting on this Site or our Services, or through other appropriate communication channels. All changes shall be effective from the date of publication unless otherwise provided.
-
-#
 
 ## Contact Us
 
@@ -132,21 +114,15 @@ Alternatively, inquiries may be addressed to:
 
 Xatabase, Inc. Attn: Legal Department 584 Castro St #2144 San Francisco CA 94114-2512 US
 
-#
-
 ## Privacy Disclosures for the European Economic Area, United Kingdom and Switzerland
 
 This section contains disclosures on how we collect, store, process, transfer, share use data that identifies or is associated with residents of the European Economic Area (“EEA”), Switzerland, and the United Kingdom (“UK”) ("Personal Data") and information regarding our use of cookies and similar technologies (“EU Disclosures”). These EU Disclosures apply solely to residents of the EEA, Switzerland, and the UK (“you”). Please ensure that you have read and understood these EU Disclosures before accessing or using the Services. Unless otherwise expressly stated, all terms in this section have the same meaning as defined in our Privacy Policy or as otherwise defined in the General Data Protection Regulation (“GDPR”). Xatabase, Inc. is the controller of the personal data we hold about you in connection with your use of the Services. This means that we determine and are responsible for how your personal data is used.
-
-#
 
 ## Personal Data We Collect From You When You Use the Service and How We Use It
 
 We collect personal data as set out in the “Our Collection of Personal Information” and “Our Use of Personal Information” sections of our Privacy Notice. We will indicate to you where the provision of certain personal data is mandatory. If you choose not to provide such personal data, we may not be able to provide those parts of the Services to you or respond to your other requests.
 
 The table in Annex 1 sets out in detail the categories of personal data we collect about you and how we use that information when you use the Services, as well as the legal basis which we rely on to process the personal data and recipients of that personal data.
-
-#
 
 ## Information We Collect About You Automatically
 
@@ -156,21 +132,15 @@ The table at Annex 2 sets out in detail the categories of personal data we colle
 We may link or combine the personal data you provide and the information we collect automatically. This allows us to provide you with a personalized experience regardless of how you interact with us.
 We may anonymize and aggregate any of the personal data we collect (so that it does not directly identify you), and may use the anonymized and aggregated information or disclose it as set out in our Privacy Notice.
 
-#
-
 ## How Long Will We Store Your Personal Data
 
 We will usually store the personal data we collect about you for no longer than necessary for the purposes set out in Annexes 1 and 2, including for the purposes of our legitimate business interests and satisfying any legal or reporting requirements, and in accordance with our legal obligations and legitimate business interests.
 
 To determine the appropriate retention period for personal data, we consider the amount, nature, and sensitivity of the personal data, the potential risk of harm from unauthorized use or disclosure of your personal data, the purposes for which we process your personal data and the applicable legal requirements.
 
-#
-
 ## Recipients of Personal Data.
 
 We may share your personal data with the recipients as set out in the “Our Disclosure of Personal Information” section of our Privacy Notice (as required in accordance with the purposes set out in Annexes 1 and 2).
-
-#
 
 ## Marketing and Advertising.
 
@@ -179,8 +149,6 @@ From time to time we may contact you with information about our products and ser
 For some marketing messages, we may use personal data we collect about you to help us determine the most relevant marketing information to share with you.
 We will only send you marketing messages if you have given us your consent to do so. You can withdraw your consent at a later date by clicking on the unsubscribe link at the bottom of our marketing emails or by updating your preferences via the website and app settings.
 
-#
-
 ## Storing and Transferring Your Personal Data.
 
 Security. We implement appropriate technical and organizational measures to protect your personal data against accidental or unlawful destruction, loss, change or damage. We will never send you unsolicited emails or contact you by phone requesting your account ID, password, credit or debit card information or national identification numbers.
@@ -188,8 +156,6 @@ International Transfers of Your Personal Data. The personal data we collect may 
 In the event of such a transfer, we ensure that: (i) the personal data is transferred to countries recognized as offering an equivalent level of protection; or (ii) the transfer is made pursuant to appropriate safeguards, such as standard data protection clauses adopted by the European Commission.
 
 If you wish to enquire further about these safeguards used, please contact us using the details set out at the end of these EU Disclosures.
-
-#
 
 ## Your Rights in Respect of Your Personal Data
 
@@ -214,8 +180,6 @@ If you wish to exercise one of these rights, please contact us using the contact
 
 Due to the confidential nature of data processing we may ask you to provide proof of identity when exercising the above rights. This can be done by providing a scanned copy of a valid identity document or a signed photocopy of a valid identity document.
 
-#
-
 ## Cookies and Similar Technologies Used on Our Site
 
 Our Site uses cookies and similar technologies such as pixels and Local Storage Objects (LSOs) like HTML5 (together “cookies”) to distinguish you from other users of our Site. This helps us to provide you with a good experience when you browse our Site and also allows us to monitor and analyze how you use and interact with our Site so that we can continue to improve our Site. It also helps us and our advertising partners to determine products and services that may be of interest to you, in order to serve you targeted advertisements.
@@ -228,25 +192,17 @@ Functionality cookies. These are used to recognize you when you return to our Si
 Targeting cookies. These cookies record your visit to our Site, the pages you have visited and the links you have followed. We will use this information to make our Site and the marketing messages we send to you more relevant to your interests. We may also share this information with third parties who provide a service to us for this purpose.
 Third party cookies. Please be aware that advertisers and other third parties may use their own cookies tags when you click on an advertisement or link on our Site. These third parties are responsible for setting out their own cookie and privacy policies.
 
-#
-
 ## Our Policy Towards Children
 
 The Services is not directed at persons under 16. We do not knowingly collect or solicit personal data from any persons under the age of 16. In the event that we learn that we have inadvertently collected personal data from a child under age 13, we will delete that information as quickly as possible. If you believe that we might have any information from a child under 13, please contact us using the details at the end of these EU Disclosures.
-
-#
 
 ## Changes to These EU Disclosures
 
 We may update these EU Disclosures from time to time and so you should review this page periodically. When we change these EU Disclosures in a material way, we will update the "Effective Date" above. Changes to these EU Disclosures are effective when they are posted on this page.
 
-#
-
 ## Contact Us
 
 Please contact privacy@xata.io if you have any questions, comments and requests regarding these EU Disclosures.
-
-#
 
 ## ANNEX 1 - PERSONAL DATA YOU PROVIDE TO US
 
@@ -393,8 +349,6 @@ Category of Personal DataAll personal data set out above.
 How We May Use the Personal DataWe may use all the personal data we collect to operate, maintain and provide to you the features and functionality of the Services, to communicate with you, to monitor and improve the Services and business, and to help us develop new products and services.
 
 Legal Bases for ProcessingThe processing is necessary for our legitimate interests, namely, to administer and improve the Services.
-
-#
 
 ## ANNEX 2 Personal Data Collected Automatically
 

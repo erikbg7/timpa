@@ -90,25 +90,24 @@
 	<Pricing />
 	<SectionSeparator />
 
-	<FAQs />
+	<Testimonials />
 	<SectionSeparator />
 
-	<Testimonials />
+	<FAQs />
 	<SectionSeparator />
 
 	<Banner />
 	<SectionSeparator />
 </main>
+<!-- .filter-to-gray {
+	filter: invert(72%) sepia(14%) saturate(225%) hue-rotate(179deg) brightness(88%) contrast(90%);
+	mix-blend-mode: lighten;
+	vertical-align: middle;
+} -->
 
 <style>
 	.filter-to-white {
 		filter: invert(1) saturate(0) brightness(2);
-		mix-blend-mode: lighten;
-		vertical-align: middle;
-	}
-
-	.filter-to-gray {
-		filter: invert(72%) sepia(14%) saturate(225%) hue-rotate(179deg) brightness(88%) contrast(90%);
 		mix-blend-mode: lighten;
 		vertical-align: middle;
 	}

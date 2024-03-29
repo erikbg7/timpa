@@ -48,3 +48,28 @@ You can preview the production build with `npm run preview`.
   - `npx svelte-add sitemap`
 - Update icons
 - Update SEO component
+
+## Images
+
+- Resize and convert images to webp using [Squoosh](https://squoosh.app/)
+
+## SEO
+
+- Primary keywords should appear in title tag, meta description and heading tags to help Search Engines to properly identify the topic of this webpage.
+
+- Add [Structured Data](https://developers.google.com/search/docs/appearance/structured-data/search-gallery):
+  - [Article](https://developers.google.com/search/docs/data-types/article)
+  - [Breadcrumb](https://developers.google.com/search/docs/data-types/breadcrumb)
+  - [FAQ](https://developers.google.com/search/docs/data-types/faqpage)
+  - [SiteLinks Search Box](https://developers.google.com/search/docs/data-types/sitelinks-searchbox)
+  - [How-to](https://developers.google.com/search/docs/data-types/how-to)
+  - [Product](https://developers.google.com/search/docs/data-types/product)
+- Check [social sharing](https://www.opengraph.xyz/url/https%3A%2F%2Flavelada.es%2F) via OG tags
+- Check and [Optimise](https://www.seoptimer.com/svelte-saas-template.vercel.app) SEO
+
+## Launch
+
+- Publish to Indie Hackers
+- Publish to Product Hunt
+- Publish to Reddit
+- Publish to [Webwiki](https://www.webwiki.com/)

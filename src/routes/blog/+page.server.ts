@@ -1,4 +1,4 @@
-import { getAllPosts } from '$content/lib';
+import { getAllPosts } from '$lib/content/utils';
 
 export const prerender = true;
 export const ssr = false;

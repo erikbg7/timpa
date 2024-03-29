@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
-	import DashboardSection from '$lib/features/workspaces/components/DashboardSection.svelte';
-
 	import DecorationCard from '$lib/decorations/DecorationCard.svelte';
 	import ButtonCheckout from '$lib/components/ButtonCheckout.svelte';
 	import config from '$lib/config';

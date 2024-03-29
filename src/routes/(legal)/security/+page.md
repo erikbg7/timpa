@@ -23,8 +23,6 @@ Security is always the number one priority at Xata and we care deeply about the 
 
 Xata is GDPR compliant and will be seeking more compliance certifications in the future. If you require a particular certification in order to use Xata, please contact us.
 
-#
-
 ## Responsible Vulnerability Disclosures
 
 We greatly appreciate the security professionals community for responsibly disclosing vulnerabilities and helping us keep our customers’ data safe.

@@ -46,11 +46,11 @@
 	{#each preconnectLinks as preconnectLink}
 		<link rel="preconnect" href={preconnectLink} />
 	{/each}
-	<!-- {
-	preload?.map(({ href, as, type, rel = "preload", crossorigin }) => (
+
+	{#each preload as preloadLink}
+		{@const { href, as, type, crossorigin, rel = 'preload' } = preloadLink}
 		<link {rel} {href} {as} {type} {crossorigin} />
-	))
-} -->
+	{/each}
 
 	<link rel="canonical" href={canonicalURL.toString()} />
 	<meta name="viewport" content="width=device-width" />

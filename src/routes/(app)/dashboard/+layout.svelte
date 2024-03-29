@@ -6,7 +6,7 @@
 	import PaymentsIcon from '$lib/icons/PaymentsIcon.svelte';
 	import SettingsIcon from '$lib/icons/SettingsIcon.svelte';
 	import AnalyticsIcon from '$lib/icons/AnalyticsIcon.svelte';
-	import DashboardProfile from '$lib/features/workspaces/components/DashboardProfile.svelte';
+	import DashboardProfile from '$lib/components/DashboardProfile.svelte';
 
 	export let data;
 

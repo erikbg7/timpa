@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Dialog from '$lib/components/Dialog.svelte';
 	import Pricing from '$lib/components/Pricing.svelte';
-	import DashboardSection from '$lib/features/workspaces/components/DashboardSection.svelte';
-	import WorkspaceCard from '$lib/features/workspaces/components/WorkspaceCard.svelte';
-	import WorkspaceCreationForm from '$lib/features/workspaces/components/WorkspaceCreationForm.svelte';
+	import DashboardSection from '$lib/components/DashboardSection.svelte';
+	import WorkspaceCard from '$lib/components/WorkspaceCard.svelte';
+	import WorkspaceCreationForm from '$lib/components/WorkspaceCreationForm.svelte';
 
 	export let data;
 	let dialog: HTMLDialogElement;

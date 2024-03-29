@@ -2,8 +2,8 @@
 	import { enhance } from '$app/forms';
 	import { page } from '$app/stores';
 	import DecorationCard from '$lib/decorations/DecorationCard.svelte';
-	import DashboardSection from '$lib/features/workspaces/components/DashboardSection.svelte';
-	import { FlowEvents } from '$lib/features/workspaces/events';
+	import DashboardSection from '$lib/components/DashboardSection.svelte';
+	import { FlowEvents } from '$lib/workspaces/events';
 	import { EventType } from '$lib/enums';
 	import clsx from 'clsx';
 	import { onMount } from 'svelte';
@@ -98,10 +98,11 @@
 							{@const duration = fsEvents.getSessionDuration()}
 							{@const eventDurationPercentage = (event.duration / duration) * 100}
 							<div
+								style={`width: ${eventDurationPercentage}%`}
 								class={clsx(
 									'h-full opacity-70',
 									{ [COLORS[event.eventType]]: true },
-									`w-[${eventDurationPercentage}%]`,
+									// `w-[${eventDurationPercentage}%]`,
 								)}
 								title={event.eventType}
 							></div>

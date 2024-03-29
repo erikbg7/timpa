@@ -1,4 +1,4 @@
-import { getAllPosts, type Post } from '$content/lib/index.js';
+import { getAllPosts, type Post } from '$lib/content/utils/index.js';
 import config from '$lib/config';
 import { error } from '@sveltejs/kit';
 

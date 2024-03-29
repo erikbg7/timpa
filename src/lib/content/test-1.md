@@ -27,9 +27,7 @@ The per-GB cost of storage is significantly cheaper (20 times less!) than the st
 A dedicated cluster is free from all limitations we impose on our shared clusters to protect from abuse: rate and concurrency limits as well as some limitations on the SQL commands you can execute.
 Before we dive into the specifics of dedicated clusters, let's take a step back and provide some insight into our current architecture so you can understand the difference and the importance of having optionality.
 
-#
-
-# Shared cell architecture
+## Shared cell architecture
 
 Xata has a cell-based architecture, in which each cell consists of a Postgres Aurora cluster, an Elasticsearch cluster, a queue, and the associated services that serve the Data API, the SQL wire protocol, and more. The cells form our data plane where we serve our users through our Data API and the Postgres wire protocol.
 
@@ -39,9 +37,7 @@ This approach is great for small projects, indie developers and so on. When your
 
 Our dedicated clusters are, at their core, dedicated cells. You can create branches on them and use them just like you use your branches that got created on shared cells. The difference is, it is only you living in that cell.
 
-#
-
-# Dedicated Clusters Infrastructure
+## Dedicated Clusters Infrastructure
 With the addition of dedicated clusters, we are allowing users to create infrastructure on demand, via a CRUD management API, which is exposed in the Xata UI.
 
 This means that at any given moment, a user will be able to add to our fleet of cells in a region, and we need to be able to allocate database branches to the new cells.
@@ -52,15 +48,11 @@ Under the hood, we use Kubernetes to manage both infrastructure and networking v
 
 All of the supporting Xata cell services are uniquely created on a per-cell basis for dedicated clusters, and these also run in Kubernetes. These are created and managed alongside the infrastructure that Crossplane manages. These services are not shared between every dedicated cluster within a workspace but serve traffic only to that single dedicated cluster, allowing more granular control over considerations like traffic management, scaling, and deployments.
 
-#
-
-# Challenges
+## Challenges
 
 When implementing the backend support for dedicated clusters, we had some architectural challenges to deal with.
 
-#
-
-## Multiple sources of truth
+### Multiple sources of truth
 
 As you can see in the diagram below, Xata stored metadata at various levels. There is metadata stored in the control plane central metadata store - for the entities that need to be known at workspace level and there is also a regional metadata store where the regional entities' information is stored.
 

@@ -8,7 +8,7 @@
 <div class="dropdown dropdown-end">
 	<div tabIndex={0} role="button" class="avatar btn btn-circle btn-ghost">
 		<div class="w-6 rounded-full border-2 border-white">
-			<img src={avatarUrl} />
+			<img alt="avatar" src={avatarUrl} />
 		</div>
 	</div>
 	<ul
@@ -22,13 +22,13 @@
 			</div>
 		</li>
 		<hr class="my-2 border-white/10" />
-		<li>
+		<!-- <li>
 			<a class="justify-between">
 				Profile
 				<span class="badge">New</span>
 			</a>
 		</li>
-		<li><a>Settings</a></li>
+		<li><a>Settings</a></li> -->
 		<li>
 			<form action="/signin?/signOut" method="POST" use:enhance>
 				<button type="submit">Logout</button>
