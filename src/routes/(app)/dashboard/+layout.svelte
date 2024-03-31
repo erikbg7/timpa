@@ -19,7 +19,7 @@
 		{
 			title: 'Analytics',
 			icon: AnalyticsIcon,
-			href: '#',
+			href: '/dashboard/analytics',
 		},
 		{
 			title: 'How does it work',

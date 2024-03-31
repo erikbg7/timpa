@@ -95,22 +95,10 @@ export const actions = {
 			return { error: 'There is no active session in this workspace' };
 		}
 
-		if (eventType === EventType.END) {
-			await event.locals.prisma.workspace.update({
-				where: {
-					id: Number(workspaceId),
-				},
-				data: {
-					activeFlowSessionId: null,
-				},
-			});
-		}
-
 		switch (eventType) {
 			case EventType.ACTIVE:
 			case EventType.BREAK:
 			case EventType.INTERRUPTION:
-			case EventType.END:
 				await event.locals.prisma.event.create({
 					data: {
 						eventType,
@@ -119,6 +107,32 @@ export const actions = {
 				});
 
 				return { success: true };
+
+			case EventType.END:
+				await event.locals.prisma.workspace.update({
+					where: {
+						id: Number(workspaceId),
+					},
+					data: {
+						activeFlowSessionId: null,
+						flowSessions: {
+							update: {
+								where: {
+									id: flowSessionId,
+								},
+								data: {
+									events: {
+										create: {
+											eventType,
+										},
+									},
+								},
+							},
+						},
+					},
+				});
+				return { success: true };
+
 			default:
 				break;
 		}

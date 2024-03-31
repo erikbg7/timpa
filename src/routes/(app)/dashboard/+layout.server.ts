@@ -12,11 +12,34 @@ export async function load(event) {
 		where: {
 			email: session.user.email!,
 		},
+		select: {
+			workspaces: {
+				select: {
+					id: true,
+					name: true,
+					flowSessions: {
+						select: {
+							id: true,
+							createdAt: true,
+							workspaceId: true,
+							events: {
+								select: {
+									id: true,
+									eventType: true,
+									createdAt: true,
+								},
+							},
+						},
+					},
+				},
+			},
+		},
 	});
 
 	return {
 		props: {
 			session: session,
+			customer: customer,
 			isCustomer: !!customer,
 		},
 	};
