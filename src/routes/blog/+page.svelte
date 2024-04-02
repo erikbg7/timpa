@@ -2,8 +2,6 @@
 	import H1 from '$lib/atoms/H1.svelte';
 
 	export let data;
-
-	console.log({ data });
 </script>
 
 <section class="mt-16">
@@ -18,11 +16,12 @@
 						width="800"
 						height="520"
 						loading="lazy"
+						style:--image="image-{post.slug}"
 					/>
 				</div>
 				<div class="border-t border-white/10 bg-accent-content p-4">
-					<h2 class="font-semibold">
-						<a class="before:absolute before:inset-0" href={`/blog/${post.slug}`}>
+					<h2 class="font-semibold" style:--title="title-{post.slug}">
+						<a href={`/blog/${post.slug}`}>
 							{post.postTitle}
 						</a>
 					</h2>
@@ -33,3 +32,13 @@
 		{/each}
 	</div>
 </section>
+
+<style>
+	h2 {
+		view-transition-name: var(--title);
+	}
+
+	img {
+		view-transition-name: var(--image);
+	}
+</style>

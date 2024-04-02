@@ -3,6 +3,7 @@ type PostMetadata = {
 	postLastUpdate: string;
 	postTitle: string;
 	postDescription: string;
+	postReadingTime: number;
 	featuredImage: string;
 	featuredImageAlt: string;
 };

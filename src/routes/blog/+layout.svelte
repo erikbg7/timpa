@@ -1,5 +1,17 @@
 <script>
+	import { onNavigate } from '$app/navigation';
 	import DecorationRight from '$lib/decorations/DecorationRight.svelte';
+
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <DecorationRight top="top-[0rem]" />

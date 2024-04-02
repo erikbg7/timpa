@@ -2,6 +2,7 @@
 postDate: '2021-04-07'
 postLastUpdate: '2021-04-07'
 postTitle: 'This is another post example'
+postReadingTime: 5
 postDescription: "Best medium format camera for starting out is probably a question at the front of your mind right now! Let's take a look."
 
 seoFocusKeyphrase: 'best medium format camera'

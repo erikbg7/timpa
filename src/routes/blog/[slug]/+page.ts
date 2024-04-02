@@ -5,12 +5,15 @@ export const ssr = false;
 
 export async function load({ params }) {
 	const { content, metadata } = await getPostBySlug(params.slug);
-	const { postTitle, postDate } = metadata;
 
 	return {
 		content,
-		title: postTitle,
-		date: postDate,
+		title: metadata.postTitle,
+		date: metadata.postDate,
+		description: metadata.postDescription,
+		readingTime: metadata.postReadingTime,
+		image: metadata.featuredImage,
+		slug: params.slug,
 	};
 }
 
