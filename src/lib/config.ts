@@ -12,24 +12,53 @@ import {
 	PUBLIC_LINKEDIN_PROFILE,
 } from '$env/static/public';
 
+export type AuthMode = 'signin' | 'signup' | 'magiclink';
+export type AuthConfig = Record<AuthMode, { title: string; subtitle: string; seoTitle: string }>;
+export type AuthProviders = 'github' | 'google';
+export type AuthProviderConfig = { id: AuthProviders; title: string; primary: boolean };
+
+type Config = {
+	appName: string;
+	auth: {
+		texts: AuthConfig;
+		providers: AuthProviderConfig[];
+	};
+	footer: {
+		socials: { icon: string; ariaLabel: string; link: string }[];
+	};
+
+	pricing: any;
+	navbar: {
+		list: { label: string; href: string }[];
+	};
+};
+
 const appName = 'Calendly';
 
-const config = {
+const config: Config = {
 	appName: appName,
-	signup: {
-		title: 'Create your <span>free</span> account',
-		description:
-			'Make scheduling with clients and recruits easier with a free Calendly account. First-time signups also receive a free, 14-day trial of our Teams subscription plan!',
-		features: [
-			'Ability to book meetings as a team with clients and more',
-			'Unlimited event types (30-minute video call, 15-minute phone call)',
-			'Remove Calendly branding',
-			'Ability to charge for meetings with PayPal and Stripe',
+	auth: {
+		texts: {
+			signin: {
+				title: 'Sign in',
+				subtitle: `New to ${appName}? <a class="text-accent" href="/signin?mode=signup"> Sign up now </a>`,
+				seoTitle: 'Sign in',
+			},
+			signup: {
+				title: 'Get Started',
+				subtitle: `${appName} doesn't require a credit card to start. Our free plan works great for hobby projects.`,
+				seoTitle: 'Sign up',
+			},
+			magiclink: {
+				title: 'Sign In',
+				subtitle: `${appName} will send you an email with a magic link to sign in. No password required.`,
+				seoTitle: 'Sign in',
+			},
+		},
+		providers: [
+			{ id: 'github', title: 'Continue with Github', primary: true },
+			{ id: 'google', title: 'Continue with Google', primary: false },
 		],
-	},
-	login: {
-		title: `Welcome back to <span>${appName}</span>`,
-		description: 'Log in to your account to get back to your hub for scheduling meetings.',
 	},
 	footer: {
 		socials: [
@@ -148,10 +177,10 @@ const config = {
 	},
 	navbar: {
 		list: [
-			{ label: 'Product', href: '#product' },
-			{ label: 'Pricing', href: '#pricing' },
-			{ label: 'Testimonials', href: '#testimonials' },
-			{ label: 'FAQs', href: '#faqs' },
+			{ label: 'Product', href: '/#product' },
+			{ label: 'Pricing', href: '/#pricing' },
+			{ label: 'Testimonials', href: '/#testimonials' },
+			{ label: 'FAQs', href: '/#faqs' },
 			{ label: 'Blog', href: '/blog' },
 			// { label: 'About Us', href: '/about' },
 		],

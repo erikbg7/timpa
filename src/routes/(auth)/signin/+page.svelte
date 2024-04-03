@@ -1,12 +1,10 @@
 <script lang="ts">
 	import clsx from 'clsx';
-	import config from '$lib/config';
+	import config, { type AuthMode } from '$lib/config';
 	import { page } from '$app/stores';
 	import { enhance } from '$app/forms';
 	import type { ActionData } from './$types';
 	import Seo from '$lib/components/SEO.svelte';
-
-	type AuthMode = 'signin' | 'signup' | 'magiclink';
 
 	export let form: ActionData;
 
@@ -14,46 +12,31 @@
 	$: urlMode = $page.url.searchParams.get('mode') as AuthMode;
 	$: mode = urlMode || 'signin';
 
-	const title: Record<AuthMode, string> = {
-		signin: 'Sign in',
-		signup: 'Get Started',
-		magiclink: 'Sign in',
-	};
-
-	const subtitle: Record<AuthMode, string> = {
-		signin: `New to ${config.appName}? <a class="text-accent" href="/signin?mode=signup"> Sign up now </a>`,
-		signup: `${config.appName} doesn't require a credit card to start. Our free plan works great for hobby projects.`,
-		magiclink: `${config.appName} will send you an email with a magic link to sign in. No password required.`,
-	};
-
-	const seoTitle: Record<AuthMode, string> = {
-		signin: 'Sign in',
-		signup: 'Sign up',
-		magiclink: 'Sign in',
-	};
+	const texts = config.auth.texts;
+	const providers = config.auth.providers;
 </script>
 
-<Seo showDescription={false} title={seoTitle[mode]} />
+<Seo showDescription={false} title={texts[mode].seoTitle} />
 
 <div class="mb-8 flex flex-col gap-2 text-sm">
-	<h1 class="text-3xl font-semibold text-neutral-200">{title[mode]}</h1>
-	<p class="text-neutral-400">{@html subtitle[mode]}</p>
+	<h1 class="text-3xl font-semibold text-neutral-200">{texts[mode].title}</h1>
+	<p class="text-neutral-400">{@html texts[mode].subtitle}</p>
 </div>
 
 {#if ['signin', 'signup'].includes(mode)}
 	<form method="post" action={`signin?/signInWithProvider`} use:enhance>
-		<button
-			name="provider"
-			value="github"
-			class="btn btn-primary btn-sm mb-6 h-[2.5rem] w-full text-neutral-200"
-		>
-			Continue with Github
-		</button>
-	</form>
-	<form method="post" action={`signin?/signInWithProvider`} use:enhance>
-		<button name="provider" value="google" class="btn btn-secondary btn-sm mb-6 h-[2.5rem] w-full"
-			>Continue with Google</button
-		>
+		{#each providers as provider}
+			<button
+				name="provider"
+				value={provider.id}
+				class={clsx(
+					'btn btn-sm mb-6 h-[2.5rem] w-full ',
+					provider.primary ? 'btn-primary text-neutral-200' : 'btn-secondary',
+				)}
+			>
+				{provider.title}
+			</button>
+		{/each}
 	</form>
 	<p class="text-center text-sm">
 		or <a class="text-sm text-accent" href="/signin?mode=magiclink"

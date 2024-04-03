@@ -7,7 +7,7 @@
 	import clsx from 'clsx';
 
 	let y: number;
-	$: isRoute = (path: string) => path === $page.route.id;
+	$: isRoute = (path: string) => $page.route.id?.startsWith(path);
 
 	const NAVIGATION_LINKS = config.navbar.list;
 
