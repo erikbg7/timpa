@@ -34,7 +34,9 @@ export const actions: Actions = {
 
 		const { data, error } = await event.locals.supabase.auth.signInWithOAuth({
 			provider,
-			// options: { redirectTo: 'http://localhost:5173/dashboard' },
+			options: {
+				redirectTo: `${PUBLIC_BASE_URL}/callback?next=/dashboard`,
+			},
 		});
 
 		if (error) {
