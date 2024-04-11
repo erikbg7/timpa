@@ -3,7 +3,7 @@
 	import { type IWorkspace } from '$lib/types';
 	import { FlowEvents } from '$lib/workspaces/events';
 
-	const workspaces = $page.data?.props?.customer?.workspaces || [];
+	const workspaces = $page.data?.customer?.workspaces || [];
 
 	let selected: IWorkspace;
 

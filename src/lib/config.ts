@@ -17,6 +17,19 @@ export type AuthConfig = Record<AuthMode, { title: string; subtitle: string; seo
 export type AuthProviders = 'github' | 'google';
 export type AuthProviderConfig = { id: AuthProviders; title: string; primary: boolean };
 
+export type PlanMode = 'STANDARD' | 'PRO';
+export type Plan = {
+	type: PlanMode;
+	priceId: string;
+	name: string;
+	description: string;
+	isFeatured?: boolean;
+	isPro?: boolean;
+	price: number;
+	priceAnchor?: number;
+	features: { name: string }[];
+};
+
 type Config = {
 	appName: string;
 	auth: {
@@ -27,7 +40,11 @@ type Config = {
 		socials: { icon: string; ariaLabel: string; link: string }[];
 	};
 
-	pricing: any;
+	pricing: {
+		title: string;
+		description: string;
+		plans: Plan[];
+	};
 	navbar: {
 		list: { label: string; href: string }[];
 	};

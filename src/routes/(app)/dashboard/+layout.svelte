@@ -45,8 +45,6 @@
 			href: '/dashboard/billing',
 		},
 	];
-
-	let collapsed = false;
 </script>
 
 <main class="relative inset-0 h-screen w-screen overflow-hidden">

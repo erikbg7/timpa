@@ -1,16 +1,19 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-
 	import DecorationCard from '$lib/decorations/DecorationCard.svelte';
 	import ButtonCheckout from '$lib/components/ButtonCheckout.svelte';
 	import config from '$lib/config';
 	import { Plan } from '$lib/enums';
 
-	$: console.log({ p: $page.data.props.isCustomer });
+	export let data;
+
+	export const preload = false;
+	export const ssr = false;
+
+	$: customerPlan = data.customer?.plan;
 </script>
 
 <div>
-	{#if $page.data?.props?.plan === Plan.FREE}
+	{#if customerPlan === Plan.FREE}
 		{@const priceId = config.pricing.plans.find((p) => !p.isPro)?.priceId}
 
 		<p class="my-8 text-sm">
@@ -24,14 +27,13 @@
 				<p>This workspace has limited capabilities and does not support analytics.</p>
 			</div>
 			<div>
-				<!-- @ts-ignore -->
 				<ButtonCheckout size="sm" {priceId}>
 					<span slot="buttonContent">Upgrade to Standard</span>
 				</ButtonCheckout>
 			</div>
 		</div>
 	{/if}
-	{#if $page.data?.props?.plan === Plan.STANDARD}
+	{#if customerPlan === Plan.STANDARD}
 		{@const plan = config.pricing.plans.find((p) => !!p.isPro)}
 		<p class="my-8 text-sm">
 			Your are missing out some <a href="/pricing">key features</a> to discover and unlock you true potential.
@@ -50,7 +52,7 @@
 			</div>
 		</div>
 	{/if}
-	{#if $page.data?.props?.plan === Plan.PRO}
+	{#if customerPlan === Plan.PRO}
 		<p class="my-8 text-sm">
 			You are on the Pro plan. Enjoy all the features and capabilities of the workspace.
 		</p>

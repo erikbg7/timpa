@@ -1,42 +1,42 @@
 import { redirect } from '@sveltejs/kit';
 
-export async function load(event) {
-	const session = await event.locals.getSession();
-	// if the user is not logged in redirect back to the home page
-	if (!session) {
-		redirect(303, '/');
-	}
+// export async function load(event) {
+// 	const session = await event.locals.getSession();
+// 	// if the user is not logged in redirect back to the home page
+// 	if (!session) {
+// 		redirect(303, '/');
+// 	}
 
-	const customer = await event.locals.prisma.customer.findUnique({
-		where: {
-			email: session.user.email!,
-		},
-	});
+// 	const customer = await event.locals.prisma.customer.findUnique({
+// 		where: {
+// 			email: session.user.email!,
+// 		},
+// 	});
 
-	if (!customer) {
-		return {
-			session: session,
-			isCustomer: false,
-		};
-	}
+// 	if (!customer) {
+// 		return {
+// 			session: session,
+// 			isCustomer: false,
+// 		};
+// 	}
 
-	const workspaces = await event.locals.prisma.workspace.findMany({
-		where: {
-			customerId: customer!.id,
-		},
-		include: {
-			flowSessions: true,
-		},
-	});
+// 	const workspaces = await event.locals.prisma.workspace.findMany({
+// 		where: {
+// 			customerId: customer!.id,
+// 		},
+// 		include: {
+// 			flowSessions: true,
+// 		},
+// 	});
 
-	return {
-		props: {
-			session: session,
-			isCustomer: !!customer,
-			workspaces: workspaces || [],
-		},
-	};
-}
+// 	return {
+// 		props: {
+// 			session: session,
+// 			isCustomer: !!customer,
+// 			workspaces: workspaces || [],
+// 		},
+// 	};
+// }
 
 export const actions = {
 	createWorkspace: async (event) => {

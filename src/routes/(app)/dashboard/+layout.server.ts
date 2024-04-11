@@ -13,6 +13,7 @@ export async function load(event) {
 			email: session.user.email!,
 		},
 		select: {
+			plan: true,
 			workspaces: {
 				select: {
 					id: true,
@@ -39,8 +40,9 @@ export async function load(event) {
 	return {
 		props: {
 			session: session,
-			customer: customer,
 			isCustomer: !!customer,
 		},
+		customer: customer,
+		workspaces: customer?.workspaces || [],
 	};
 }
