@@ -47,6 +47,9 @@ TODO:
 // "svelte-french-toast": "^1.2.0",
 // svelte-sonner
 
+AUTH
+https://supabase.com/docs/guides/auth/server-side/creating-a-client?environment=api-route
+
 
 SEO
 https://github.com/rodneylab/sveltekit-seo/blob/main/src/lib/config/website.js

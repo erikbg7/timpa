@@ -9,10 +9,9 @@ export const POST = async (event) => {
 
 	try {
 		const formData = await event.request.formData();
-		const type = formData.get('type') as string;
-		const priceId = formData.get('priceId') as string;
 
-		console.log({ type, priceId });
+		const type = formData.get('type');
+		const priceId = formData.get('priceId');
 
 		// If we require the user to be logged before paying, we can redirect to signIn here
 		const session = await getSession();

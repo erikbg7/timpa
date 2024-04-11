@@ -1,21 +1,21 @@
 <script lang="ts">
-	import type { Plan } from '$lib/enums';
+	import config from '$lib/config';
+	import type { PricingPlan } from '$lib/enums';
 	import clsx from 'clsx';
 	// This component is used to create Stripe Checkout Sessions
 	// By default, user doesn't have to be logged in. You can change that in the API route
 
 	$: loading = false;
 
-	export let type: Plan;
-	export let priceId: string;
+	export let plan: PricingPlan;
 	export let size: 'sm' | 'md' | 'lg' = 'md';
 
 	const createCheckoutSession = async () => {
 		loading = true;
 
 		const formData = new FormData();
-		formData.append('type', type);
-		formData.append('priceId', priceId);
+		formData.append('type', plan);
+		formData.append('priceId', config.pricing.plans[plan].priceId);
 
 		const res = await fetch('/api/stripe-checkout', { method: 'POST', body: formData });
 		const data = await res.json();

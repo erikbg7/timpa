@@ -25,18 +25,23 @@ export const handle = async ({ event, resolve }) => {
 		},
 	});
 
+	/**
+	 * Unlike `supabase.auth.getSession`, which is unsafe on the server because it
+	 * doesn't validate the JWT, this function validates the JWT by first calling
+	 * `getUser` and aborts early if the JWT signature is invalid.
+	 */
 	event.locals.getSession = async () => {
-		let {
-			data: { session },
-		} = await event.locals.supabase?.auth?.getSession();
-
-		// solving the case if the user was deleted from the database but the browser still has a cookie/loggedin user
-		// +layout.server.js will delete the cookie if the session is null
-		const { data: getUserData } = await event.locals.supabase.auth.getUser();
-
-		if (getUserData.user == null) {
-			session = null;
+		const {
+			data: { user },
+			error,
+		} = await event.locals.supabase.auth.getUser();
+		if (error) {
+			return null;
 		}
+
+		const {
+			data: { session },
+		} = await event.locals.supabase.auth.getSession();
 		return session;
 	};
 

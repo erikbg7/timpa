@@ -13,7 +13,7 @@
 		<div
 			class="relative flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch"
 		>
-			{#each config.pricing.plans as plan}
+			{#each Object.values(config.pricing.plans) as plan}
 				<div class="relative w-full max-w-lg">
 					{#if plan.isFeatured}
 						<div class="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-1/2">
@@ -83,7 +83,7 @@
 							</ul>
 						{/if}
 						<div class="relative z-30 space-y-2">
-							<ButtonCheckout type={plan.type} priceId={plan.priceId} />
+							<ButtonCheckout plan={plan.type} />
 
 							<p
 								class="relative flex items-center justify-center gap-2 text-center text-sm font-medium text-base-content/80"

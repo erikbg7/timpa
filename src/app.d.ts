@@ -16,6 +16,7 @@ declare global {
 			getSession: () => Promise<Session | null>;
 		}
 		interface PageData {
+			// UserContext || CustomerContext || LeadContext
 			session: Session | null;
 			props?: {
 				session: Session;

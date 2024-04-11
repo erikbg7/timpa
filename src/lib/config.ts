@@ -11,20 +11,19 @@ import {
 	PUBLIC_GITHUB_PAGE,
 	PUBLIC_LINKEDIN_PROFILE,
 } from '$env/static/public';
+import { Plan, type PricingPlan } from './enums';
 
 export type AuthMode = 'signin' | 'signup' | 'magiclink';
 export type AuthConfig = Record<AuthMode, { title: string; subtitle: string; seoTitle: string }>;
 export type AuthProviders = 'github' | 'google';
 export type AuthProviderConfig = { id: AuthProviders; title: string; primary: boolean };
 
-export type PlanMode = 'STANDARD' | 'PRO';
-export type Plan = {
-	type: PlanMode;
-	priceId: string;
+export type PlanConfig = {
+	type: PricingPlan;
+	priceId: string; // Create the plans in your Stripe dashboard and add here the priceId
 	name: string;
-	description: string;
-	isFeatured?: boolean;
-	isPro?: boolean;
+	description: string; // Tip: explain why this plan and not others
+	isFeatured?: boolean; // Featured plan will be highlighted
 	price: number;
 	priceAnchor?: number;
 	features: { name: string }[];
@@ -43,7 +42,10 @@ type Config = {
 	pricing: {
 		title: string;
 		description: string;
-		plans: Plan[];
+		plans: {
+			[Plan.STANDARD]: PlanConfig;
+			[Plan.PRO]: PlanConfig;
+		};
 	};
 	navbar: {
 		list: { label: string; href: string }[];
@@ -104,45 +106,33 @@ const config: Config = {
 	pricing: {
 		title: 'Pick the perfect plan for your team',
 		description: 'We offer a 14-day free trial. No credit card required.',
-		// Create multiple plans in your Stripe dashboard, then add them here. You can add as many plans as you want, just make sure to add the priceId
-		plans: [
-			{
-				type: 'STANDARD',
-				// REQUIRED — we use this to find the plan in the webhook (for instance if you want to update the user's credits based on the plan)
+		plans: {
+			[Plan.STANDARD]: {
+				type: Plan.STANDARD,
 				priceId:
 					process.env.NODE_ENV === 'development' ? 'price_1OsV3LCwovyfOAFP1u90AION' : 'price_456',
-				//  REQUIRED - Name of the plan, displayed on the pricing page
-				name: 'Starter',
-				// A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
+				name: Plan.STANDARD,
 				description: 'Perfect for small projects',
-				// The price you want to display, the one user will be charged on Stripe.
 				price: 79,
-				// If you have an anchor price (i.e. $29) that you want to display crossed out, put it here. Otherwise, leave it empty
 				priceAnchor: 99,
 				features: [
-					{
-						name: 'NextJS boilerplate',
-					},
+					{ name: 'NextJS boilerplate' },
 					{ name: 'User oauth' },
 					{ name: 'Database' },
 					{ name: 'Emails' },
 				],
 			},
-			{
-				// This plan will look different on the pricing page, it will be highlighted. You can only have one plan with isFeatured: true
-				type: 'PRO',
+			[Plan.PRO]: {
+				type: Plan.PRO,
 				isFeatured: true,
-				isPro: true,
 				priceId:
 					process.env.NODE_ENV === 'development' ? 'price_1OsV3LCwovyfOAFP1u90AION' : 'price_456',
-				name: 'Advanced',
+				name: Plan.PRO,
 				description: 'You need more power',
 				price: 99,
 				priceAnchor: 149,
 				features: [
-					{
-						name: 'NextJS boilerplate',
-					},
+					{ name: 'NextJS boilerplate' },
 					{ name: 'User oauth' },
 					{ name: 'Database' },
 					{ name: 'Emails' },
@@ -150,7 +140,7 @@ const config: Config = {
 					{ name: '24/7 support' },
 				],
 			},
-		],
+		},
 	},
 	testimonials: {
 		title: 'Join the Community',
