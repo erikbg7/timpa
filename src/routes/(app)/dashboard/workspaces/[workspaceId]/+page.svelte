@@ -62,8 +62,14 @@
 			.join(':');
 	};
 
-	const handleEnhancedForm = () => {
+	const handleEnhancedForm = (event: any) => {
 		updating = true;
+
+		const eventType = event.formData.get('flowSessionEvent')?.split(',')?.[0];
+		if (eventType && eventType !== EventType.ACTIVE) {
+			clearInterval(interval);
+		}
+		// clearInterval(interval);
 		return ({ update }: { update: any }) => {
 			// Set invalidateAll to false if you don't want to reload page data when updating
 			update({ invalidateAll: true }).finally(async () => {
