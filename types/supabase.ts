@@ -30,57 +30,34 @@ export type Database = {
         }
         Relationships: []
       }
-      Event: {
+      ReferenceScreenshot: {
         Row: {
-          createdAt: string
-          description: string | null
-          eventType: Database["public"]["Enums"]["EventType"]
-          flowSessionId: number
-          id: number
+          approvedOn: string | null
+          content: string
+          id: string
+          name: string
+          runId: string | null
+          workspaceId: string | null
         }
         Insert: {
-          createdAt?: string
-          description?: string | null
-          eventType: Database["public"]["Enums"]["EventType"]
-          flowSessionId: number
-          id?: number
+          approvedOn?: string | null
+          content: string
+          id: string
+          name: string
+          runId?: string | null
+          workspaceId?: string | null
         }
         Update: {
-          createdAt?: string
-          description?: string | null
-          eventType?: Database["public"]["Enums"]["EventType"]
-          flowSessionId?: number
-          id?: number
+          approvedOn?: string | null
+          content?: string
+          id?: string
+          name?: string
+          runId?: string | null
+          workspaceId?: string | null
         }
         Relationships: [
           {
-            foreignKeyName: "Event_flowSessionId_fkey"
-            columns: ["flowSessionId"]
-            isOneToOne: false
-            referencedRelation: "FlowSession"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      FlowSession: {
-        Row: {
-          createdAt: string
-          id: number
-          workspaceId: number
-        }
-        Insert: {
-          createdAt?: string
-          id?: number
-          workspaceId: number
-        }
-        Update: {
-          createdAt?: string
-          id?: number
-          workspaceId?: number
-        }
-        Relationships: [
-          {
-            foreignKeyName: "FlowSession_workspaceId_fkey"
+            foreignKeyName: "ReferenceScreenshot_workspaceId_fkey"
             columns: ["workspaceId"]
             isOneToOne: false
             referencedRelation: "Workspace"
@@ -88,30 +65,79 @@ export type Database = {
           },
         ]
       }
-      Workspace: {
+      Run: {
         Row: {
-          activeFlowSessionId: number | null
-          created_at: string
-          customerId: number
-          description: string | null
-          id: number
-          name: string
+          id: string
+          workspaceId: string
         }
         Insert: {
-          activeFlowSessionId?: number | null
-          created_at?: string
-          customerId: number
-          description?: string | null
-          id?: number
-          name: string
+          id: string
+          workspaceId: string
         }
         Update: {
-          activeFlowSessionId?: number | null
-          created_at?: string
-          customerId?: number
-          description?: string | null
-          id?: number
+          id?: string
+          workspaceId?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "Run_workspaceId_fkey"
+            columns: ["workspaceId"]
+            isOneToOne: false
+            referencedRelation: "Workspace"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      Screenshot: {
+        Row: {
+          content: string
+          id: string
+          name: string
+          runId: string
+        }
+        Insert: {
+          content: string
+          id: string
+          name: string
+          runId: string
+        }
+        Update: {
+          content?: string
+          id?: string
           name?: string
+          runId?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "Screenshot_runId_fkey"
+            columns: ["runId"]
+            isOneToOne: false
+            referencedRelation: "Run"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      Workspace: {
+        Row: {
+          createdAt: string
+          customerId: number | null
+          id: string
+          name: string
+          updatedAt: string
+        }
+        Insert: {
+          createdAt?: string
+          customerId?: number | null
+          id: string
+          name: string
+          updatedAt: string
+        }
+        Update: {
+          createdAt?: string
+          customerId?: number | null
+          id?: string
+          name?: string
+          updatedAt?: string
         }
         Relationships: [
           {
@@ -131,13 +157,6 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      EventType:
-        | "CREATE"
-        | "ACTIVE"
-        | "BREAK"
-        | "INTERRUPTION"
-        | "LONG_BREAK"
-        | "END"
       Plan: "FREE" | "STANDARD" | "PRO"
     }
     CompositeTypes: {

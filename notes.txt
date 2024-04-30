@@ -60,3 +60,19 @@ https://squoosh.app/
 
 Tips on SEO
 https://www.seoptimer.com/svelte-saas-template.vercel.app
+
+
+
+02:26
+https://www.youtube.com/watch?v=a4I_RGFdwvc
+
+autoGrantPermissions: true,
+
+
+- change screenshot for snapshot
+- change reference for baseline
+
+
+FIX PRISMA ISSUE
+run command from /lib
+npx prisma db push --schema=./prisma/schema.prisma

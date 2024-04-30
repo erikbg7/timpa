@@ -4,6 +4,7 @@ import type { Session } from '@supabase/supabase-js';
 import type { Database } from '../types/supabase';
 import type { Stripe } from 'stripe';
 import type { ICustomer } from '$lib/types';
+import type { PrismaClient } from '@prisma/client';
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 
@@ -18,11 +19,11 @@ declare global {
 		interface PageData {
 			// UserContext || CustomerContext || LeadContext
 			session: Session | null;
-			props?: {
-				session: Session;
-				customer: ICustomer | null;
-				isCustomer: boolean;
-			};
+			// props?: {
+			// 	session: Session;
+			// 	customer: ICustomer | null;
+			// 	isCustomer: boolean;
+			// };
 		}
 
 		// https://kit.svelte.dev/docs/errors#type-safety

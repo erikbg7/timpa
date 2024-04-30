@@ -20,7 +20,6 @@
 			body: JSON.stringify({ name: 'John' }),
 		});
 		const data = await res.json();
-		console.log(data);
 	};
 </script>
 

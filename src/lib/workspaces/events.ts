@@ -70,7 +70,6 @@ export class FlowEvents {
 	}
 
 	getAverageEventDuration(eventType: EventType) {
-		console.log({ e: this.events });
 		return this.events.reduce((acc, curr, index) => {
 			if (curr.eventType !== eventType) return acc;
 			const nextEvent = this.events[index + 1];

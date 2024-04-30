@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import { goto } from '$app/navigation';
 	import TrashIcon from '$lib/icons/TrashIcon.svelte';
-	import type { FlowSession, Workspace } from '@prisma/client';
+	import type { Workspace } from '@prisma/client';
 
-	export let wp: Workspace & { flowSessions: FlowSession[] };
+	export let wp: Workspace;
 	let submitting: boolean = false;
 </script>
 
@@ -40,14 +39,7 @@
 	<!-- </div> -->
 
 	<h4><strong>{wp.name}</strong></h4>
-	{#if wp.description}
-		<p class="text-neutral-400">{wp.description}</p>
-	{/if}
 	<div class="flex flex-col">
 		<p class="flex justify-between"><b>Flow Time:</b> <span>45min</span></p>
-		<p class="flex justify-between"><b>Total Sessions:</b> <span>{wp.flowSessions.length}</span></p>
-		{#if wp.activeFlowSessionId}
-			<p class="flex justify-between"><b>1 session active</b></p>
-		{/if}
 	</div>
 </a>

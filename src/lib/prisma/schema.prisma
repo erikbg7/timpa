@@ -1,68 +1,60 @@
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider  = "postgresql"
-    url       = env("DATABASE_URL")
-    directUrl = env("DIRECT_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model Customer {
-    id         Int      @id @default(autoincrement())
-    created_at DateTime @default(now()) @db.Timestamptz(6)
-    email      String   @unique
-
-    plan Plan @default(FREE)
-
-    workspaces Workspace[]
+  id         Int         @id @default(autoincrement())
+  created_at DateTime    @default(now()) @db.Timestamptz(6)
+  email      String      @unique
+  plan       Plan        @default(FREE)
+  workspaces Workspace[]
 }
 
 model Workspace {
-    id         Int      @id @default(autoincrement())
-    created_at DateTime @default(now()) @db.Timestamptz(6)
-
-    name        String
-    description String?
-
-    customer   Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
-    customerId Int
-
-    flowSessions        FlowSession[]
-    activeFlowSessionId Int?
+  id                   String                @id @default(cuid())
+  createdAt            DateTime              @default(now())
+  updatedAt            DateTime              @updatedAt
+  name                 String                @unique
+  customerId           Int?
+  referenceScreenshots ReferenceScreenshot[]
+  runs                 Run[]
+  Customer             Customer?             @relation(fields: [customerId], references: [id])
 }
 
-model FlowSession {
-    id        Int      @id @default(autoincrement())
-    createdAt DateTime @default(now()) @db.Timestamptz(6)
-
-    workspace   Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
-    workspaceId Int
-
-    events Event[]
+model Run {
+  id          String       @id @default(cuid())
+  workspaceId String
+  workspace   Workspace    @relation(fields: [workspaceId], references: [id])
+  screenshots Screenshot[]
 }
 
-model Event {
-    id        Int      @id @default(autoincrement())
-    createdAt DateTime @default(now()) @db.Timestamptz(6)
-
-    eventType   EventType
-    description String?
-
-    flowSession   FlowSession @relation(fields: [flowSessionId], references: [id], onDelete: Cascade)
-    flowSessionId Int
+model Screenshot {
+  id      String @id @default(cuid())
+  name    String @unique
+  content String
+  runId   String
+  diff    Int[]  @default([])
+  run     Run    @relation(fields: [runId], references: [id])
 }
 
-enum EventType {
-    CREATE
-    ACTIVE
-    BREAK
-    INTERRUPTION
-    END
+model ReferenceScreenshot {
+  id          String     @id @default(cuid())
+  name        String     @unique
+  content     String
+  approvedOn  DateTime?
+  runId       String?
+  workspaceId String?
+  workspace   Workspace? @relation(fields: [workspaceId], references: [id])
 }
 
 enum Plan {
-    FREE
-    STANDARD
-    PRO
+  FREE
+  STANDARD
+  PRO
 }

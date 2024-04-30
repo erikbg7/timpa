@@ -1,4 +1,4 @@
-import type { Customer, FlowSession, Workspace, Event } from '@prisma/client';
+import type { Customer, FlowSession, Workspace, Event, Run } from '@prisma/client';
 import type { Session } from '@supabase/supabase-js';
 
 export interface IFlowSession extends FlowSession {
@@ -23,4 +23,8 @@ export interface UserContext {
 export interface CustomerContext extends Omit<UserContext, 'isCustomer'> {
 	customer: ICustomer;
 	isCustomer: true;
+}
+
+export interface RunWithScreenshots extends Run {
+	screenshots: string[];
 }

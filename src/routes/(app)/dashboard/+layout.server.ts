@@ -18,24 +18,20 @@ export async function load(event) {
 				select: {
 					id: true,
 					name: true,
-					flowSessions: {
+					referenceScreenshots: {
 						select: {
 							id: true,
-							createdAt: true,
 							workspaceId: true,
-							events: {
-								select: {
-									id: true,
-									eventType: true,
-									createdAt: true,
-								},
-							},
+							name: true,
+							content: true,
 						},
 					},
 				},
 			},
 		},
 	});
+
+	console.log({ customer: JSON.stringify(customer) });
 
 	return {
 		props: {

@@ -1,140 +1,19 @@
-import { EventType } from '$lib/enums';
+import type { Run, Workspace } from '@prisma/client';
+import type { PageServerLoad } from './$types.js';
 
-export async function load(event) {
-	event.depends('flowSession:events');
+type Props = {
+	workspace: Workspace;
+	runs: Run[];
+};
 
+export const load: PageServerLoad<Props> = async (event) => {
 	const workspaceId = event.params.workspaceId;
 
-	const workspace = await event.locals.prisma.workspace.findFirst({
-		where: {
-			id: Number(workspaceId),
-		},
-		include: {
-			flowSessions: {
-				include: {
-					events: true,
-				},
-			},
-		},
-	});
-
-	if (!workspace) {
-		return {
-			status: 404,
-			redirect: '/404',
-		};
-	}
-
-	const currentFlowSession = workspace.flowSessions.find(
-		(session) => session.id === workspace.activeFlowSessionId,
-	);
+	const workspaceData = await event.fetch(`/api/workspaces/${workspaceId}`, { method: 'GET' });
+	const runsData = await event.fetch(`/api/workspaces/${workspaceId}/runs`, { method: 'GET' });
 
 	return {
-		props: {
-			flowSessions: workspace.flowSessions,
-			activeFlowSessionId: currentFlowSession?.id,
-			events: currentFlowSession?.events.sort(
-				(a, b) => a.createdAt.getTime() - b.createdAt.getTime(),
-			),
-		},
+		workspace: await workspaceData.json(),
+		runs: await runsData.json(),
 	};
-}
-export const actions = {
-	createFlow: async (event) => {
-		const formData = await event.request.formData();
-		const eventType = formData.get('eventType') as EventType;
-		const params = event.params as { workspaceId: string };
-		const workspaceId = params.workspaceId;
-
-		Array.from(formData.keys()).forEach((key) => {
-			console.log({ key });
-		});
-
-		console.log({ formData: formData.keys(), eventType, workspaceId });
-
-		if (eventType !== EventType.CREATE) return;
-
-		const flowSession = await event.locals.prisma.flowSession.create({
-			data: {
-				workspaceId: Number(workspaceId),
-				events: {
-					createMany: {
-						data: [{ eventType: EventType.CREATE }, { eventType: EventType.ACTIVE }],
-					},
-				},
-			},
-			include: {
-				events: true,
-			},
-		});
-
-		await event.locals.prisma.workspace.update({
-			where: {
-				id: Number(workspaceId),
-			},
-			data: {
-				activeFlowSessionId: flowSession.id,
-			},
-		});
-	},
-	updateFlow: async (event) => {
-		const params = event.params as { workspaceId: string };
-		const workspaceId = params.workspaceId;
-
-		const formData = await event.request.formData();
-		const flowSessionEvent = formData.get('flowSessionEvent') as string;
-
-		const [eventType, _flowSessionId] = flowSessionEvent.split(',');
-		const flowSessionId = Number(_flowSessionId);
-
-		if (!eventType) {
-			return { error: 'Event type missing' };
-		}
-
-		if (!flowSessionId) {
-			return { error: 'There is no active session in this workspace' };
-		}
-
-		switch (eventType) {
-			case EventType.ACTIVE:
-			case EventType.BREAK:
-			case EventType.INTERRUPTION:
-				await event.locals.prisma.event.create({
-					data: {
-						eventType,
-						flowSessionId,
-					},
-				});
-
-				return { success: true };
-
-			case EventType.END:
-				await event.locals.prisma.workspace.update({
-					where: {
-						id: Number(workspaceId),
-					},
-					data: {
-						activeFlowSessionId: null,
-						flowSessions: {
-							update: {
-								where: {
-									id: flowSessionId,
-								},
-								data: {
-									events: {
-										create: {
-											eventType,
-										},
-									},
-								},
-							},
-						},
-					},
-				});
-				return { success: true };
-
-			default:
-				break;
-		}
-	},
 };

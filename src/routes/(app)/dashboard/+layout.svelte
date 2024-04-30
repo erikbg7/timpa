@@ -27,9 +27,9 @@
 			href: '#',
 		},
 		{
-			title: 'Tips',
+			title: 'Test',
 			icon: SparklesIcon,
-			href: '#',
+			href: '/dashboard/test',
 		},
 	];
 

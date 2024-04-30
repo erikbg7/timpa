@@ -57,7 +57,6 @@ export const actions = {
 			const workspace = await event.locals.prisma.workspace.create({
 				data: {
 					name,
-					description,
 					customerId: customer!.id,
 				},
 			});
@@ -73,6 +72,8 @@ export const actions = {
 		const formData = await event.request.formData();
 		const workspaceId = formData.get('workspaceId') as string;
 
+		console.log({ workspaceId });
+
 		const session = await event.locals.getSession();
 		const customer = await event.locals.prisma.customer.findUnique({
 			where: {
@@ -83,7 +84,7 @@ export const actions = {
 		try {
 			const workspace = await event.locals.prisma.workspace.delete({
 				where: {
-					id: BigInt(workspaceId),
+					id: workspaceId,
 					customerId: customer!.id,
 				},
 			});
