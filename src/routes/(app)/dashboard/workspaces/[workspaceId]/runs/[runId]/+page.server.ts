@@ -1,4 +1,3 @@
-import type { Run } from '@prisma/client';
 import type { PageServerLoad } from './$types';
 
 type Output = {

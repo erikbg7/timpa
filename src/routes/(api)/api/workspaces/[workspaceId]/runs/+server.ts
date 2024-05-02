@@ -67,8 +67,6 @@ export async function POST(event: RequestEvent) {
 
 		const { screenshotBase64, screenshotName } = await event.request.json();
 
-		console.log({ screenshotBase64, screenshotName });
-
 		const runs = await prisma.run.create({
 			data: {
 				screenshots: {

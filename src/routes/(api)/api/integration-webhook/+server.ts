@@ -4,7 +4,39 @@ import { isValidEmail } from '$lib/validations/index.js';
 import type { Plan } from '$lib/enums';
 import prisma from '$lib/prisma';
 import Jimp from 'jimp';
-import { calculateScreenshotDiff } from '$lib/screenshot';
+
+async function calculateSnapshotDiff(a: string, b: string) {
+	const imageBaselineData = a.split(',').pop();
+	const imageBaseline = await Jimp.read(Buffer.from(imageBaselineData, 'base64'));
+	const imageCurrentData = b.split(',').pop();
+	const imageCurrent = await Jimp.read(Buffer.from(imageCurrentData, 'base64'));
+	return calculateScreenshotDiff(imageBaseline.bitmap, imageCurrent.bitmap);
+}
+
+function calculateScreenshotDiff(a: ImageData | any, b: ImageData | any) {
+	let diff = [];
+	if (a.data.length !== b.data.length) {
+		throw new Error('Images are not the same size');
+	}
+
+	for (let i = 0; i < a.data.length; i += 4) {
+		const r1 = a.data[i];
+		const g1 = a.data[i + 1];
+		const b1 = a.data[i + 2];
+		const a1 = a.data[i + 3];
+
+		const r2 = b.data[i];
+		const g2 = b.data[i + 1];
+		const b2 = b.data[i + 2];
+		const a2 = b.data[i + 3];
+
+		if (r1 !== r2 || g1 !== g2 || b1 !== b2 || a1 !== a2) {
+			diff.push(Math.round(i / 4));
+		}
+	}
+
+	return diff;
+}
 
 /** @type {import('./$types').RequestHandler} */
 export const POST = async (event) => {
@@ -66,7 +98,7 @@ export const POST = async (event) => {
 					});
 				} else {
 					console.log('create new snapshot');
-					const diff = await calculateScreenshotDiff(referenceSnapshot.content, data.content);
+					const diff = await calculateSnapshotDiff(referenceSnapshot.content, data.content);
 
 					const snapshot = await prisma.screenshot.create({
 						data: {
@@ -91,8 +123,6 @@ export const POST = async (event) => {
 						content,
 					},
 				});
-
-				console.log({ referenceScreenshot });
 
 				// const checkoutSession = data.object!;
 

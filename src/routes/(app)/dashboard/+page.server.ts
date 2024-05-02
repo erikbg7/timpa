@@ -44,8 +44,6 @@ export const actions = {
 		const name = formData.get('name') as string;
 		const description = formData.get('description') as string;
 
-		console.log({ name, description });
-
 		const session = await event.locals.getSession();
 		const customer = await event.locals.prisma.customer.findUnique({
 			where: {

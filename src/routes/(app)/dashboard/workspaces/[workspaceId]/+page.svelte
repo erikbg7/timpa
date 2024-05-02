@@ -16,8 +16,6 @@
 	export let data: PageServerData;
 	const workspaceId = $page.params.workspaceId;
 
-	console.log({ data22: data, page });
-
 	$: {
 		// events = new FlowEvents(data?.props?.events);
 		// flowSessionId = data?.props?.activeFlowSessionId?.toString();

@@ -31,8 +31,6 @@ export async function load(event) {
 		},
 	});
 
-	console.log({ customer: JSON.stringify(customer) });
-
 	return {
 		props: {
 			session: session,
