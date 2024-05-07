@@ -76,3 +76,32 @@ autoGrantPermissions: true,
 FIX PRISMA ISSUE
 run command from /lib
 npx prisma db push --schema=./prisma/schema.prisma
+
+IMPROVEMENTS
+Convert project to mono-repo with "app" and "packages"
+Move to "packages" the following "blog", "ui-components" (content, markdown, etc), "icons"
+
+
+Try to practice composition over inheritance. This is a design principle that suggests that you should prefer to compose objects from multiple classes rather than inheriting from a single class. This can help you avoid the tight coupling that comes with inheritance and make your code more flexible and easier to maintain.
+Just as primeagen does, check github
+
+
+
+class Minesweeper {
+    chat Chat
+    position Number
+    lifetime Number
+    ... you can keep adding things here to compose utilities
+}
+
+
+class Person {
+	constructor(
+		public name: string,
+		public age: number,
+	) {}
+
+	logger() {
+		console.log(`Name: ${this.name}, Age: ${this.age}`);
+	}
+}
