@@ -9,6 +9,39 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      _prisma_migrations: {
+        Row: {
+          applied_steps_count: number
+          checksum: string
+          finished_at: string | null
+          id: string
+          logs: string | null
+          migration_name: string
+          rolled_back_at: string | null
+          started_at: string
+        }
+        Insert: {
+          applied_steps_count?: number
+          checksum: string
+          finished_at?: string | null
+          id: string
+          logs?: string | null
+          migration_name: string
+          rolled_back_at?: string | null
+          started_at?: string
+        }
+        Update: {
+          applied_steps_count?: number
+          checksum?: string
+          finished_at?: string | null
+          id?: string
+          logs?: string | null
+          migration_name?: string
+          rolled_back_at?: string | null
+          started_at?: string
+        }
+        Relationships: []
+      }
       Customer: {
         Row: {
           created_at: string
@@ -30,121 +63,104 @@ export type Database = {
         }
         Relationships: []
       }
-      ReferenceScreenshot: {
+      File: {
         Row: {
-          approvedOn: string | null
-          content: string
-          id: string
-          name: string
-          runId: string | null
-          workspaceId: string | null
-        }
-        Insert: {
-          approvedOn?: string | null
-          content: string
-          id: string
-          name: string
-          runId?: string | null
-          workspaceId?: string | null
-        }
-        Update: {
-          approvedOn?: string | null
-          content?: string
-          id?: string
-          name?: string
-          runId?: string | null
-          workspaceId?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "ReferenceScreenshot_workspaceId_fkey"
-            columns: ["workspaceId"]
-            isOneToOne: false
-            referencedRelation: "Workspace"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      Run: {
-        Row: {
-          id: string
-          workspaceId: string
-        }
-        Insert: {
-          id: string
-          workspaceId: string
-        }
-        Update: {
-          id?: string
-          workspaceId?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "Run_workspaceId_fkey"
-            columns: ["workspaceId"]
-            isOneToOne: false
-            referencedRelation: "Workspace"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      Screenshot: {
-        Row: {
-          content: string
-          id: string
-          name: string
-          runId: string
-        }
-        Insert: {
-          content: string
-          id: string
-          name: string
-          runId: string
-        }
-        Update: {
-          content?: string
-          id?: string
-          name?: string
-          runId?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "Screenshot_runId_fkey"
-            columns: ["runId"]
-            isOneToOne: false
-            referencedRelation: "Run"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      Workspace: {
-        Row: {
-          createdAt: string
           customerId: number | null
+          extension: string
           id: string
+          language: Database["public"]["Enums"]["Languages"]
           name: string
-          updatedAt: string
+          url: string
         }
         Insert: {
-          createdAt?: string
           customerId?: number | null
+          extension: string
           id: string
+          language: Database["public"]["Enums"]["Languages"]
           name: string
-          updatedAt: string
+          url: string
         }
         Update: {
-          createdAt?: string
           customerId?: number | null
+          extension?: string
           id?: string
+          language?: Database["public"]["Enums"]["Languages"]
           name?: string
-          updatedAt?: string
+          url?: string
         }
         Relationships: [
           {
-            foreignKeyName: "Workspace_customerId_fkey"
+            foreignKeyName: "File_customerId_fkey"
             columns: ["customerId"]
             isOneToOne: false
             referencedRelation: "Customer"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      Segment: {
+        Row: {
+          end: number
+          id: number
+          language: Database["public"]["Enums"]["Languages"]
+          segmentId: string
+          start: number
+          text: string
+          transcriptionId: string
+        }
+        Insert: {
+          end: number
+          id: number
+          language: Database["public"]["Enums"]["Languages"]
+          segmentId: string
+          start: number
+          text: string
+          transcriptionId: string
+        }
+        Update: {
+          end?: number
+          id?: number
+          language?: Database["public"]["Enums"]["Languages"]
+          segmentId?: string
+          start?: number
+          text?: string
+          transcriptionId?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "Segment_transcriptionId_fkey"
+            columns: ["transcriptionId"]
+            isOneToOne: false
+            referencedRelation: "Transcription"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      Transcription: {
+        Row: {
+          createdAt: string
+          fileId: string
+          id: string
+          language: Database["public"]["Enums"]["Languages"]
+        }
+        Insert: {
+          createdAt?: string
+          fileId: string
+          id: string
+          language: Database["public"]["Enums"]["Languages"]
+        }
+        Update: {
+          createdAt?: string
+          fileId?: string
+          id?: string
+          language?: Database["public"]["Enums"]["Languages"]
+        }
+        Relationships: [
+          {
+            foreignKeyName: "Transcription_fileId_fkey"
+            columns: ["fileId"]
+            isOneToOne: false
+            referencedRelation: "File"
             referencedColumns: ["id"]
           },
         ]
@@ -157,6 +173,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
+      Languages: "CA" | "ES" | "EN" | "FR" | "IT"
       Plan: "FREE" | "STANDARD" | "PRO"
     }
     CompositeTypes: {

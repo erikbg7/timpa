@@ -38,58 +38,58 @@ import { redirect } from '@sveltejs/kit';
 // 	};
 // }
 
-export const actions = {
-	createWorkspace: async (event) => {
-		const formData = await event.request.formData();
-		const name = formData.get('name') as string;
-		const description = formData.get('description') as string;
+// export const actions = {
+// 	createWorkspace: async (event) => {
+// 		const formData = await event.request.formData();
+// 		const name = formData.get('name') as string;
+// 		const description = formData.get('description') as string;
 
-		const session = await event.locals.getSession();
-		const customer = await event.locals.prisma.customer.findUnique({
-			where: {
-				email: session!.user.email!,
-			},
-		});
+// 		const session = await event.locals.getSession();
+// 		const customer = await event.locals.prisma.customer.findUnique({
+// 			where: {
+// 				email: session!.user.email!,
+// 			},
+// 		});
 
-		try {
-			const workspace = await event.locals.prisma.workspace.create({
-				data: {
-					name,
-					customerId: customer!.id,
-				},
-			});
+// 		try {
+// 			const workspace = await event.locals.prisma.workspace.create({
+// 				data: {
+// 					name,
+// 					customerId: customer!.id,
+// 				},
+// 			});
 
-			console.log({ workspace });
+// 			console.log({ workspace });
 
-			return { success: true };
-		} catch (error) {
-			console.log({ error });
-		}
-	},
-	deleteWorkspace: async (event) => {
-		const formData = await event.request.formData();
-		const workspaceId = formData.get('workspaceId') as string;
+// 			return { success: true };
+// 		} catch (error) {
+// 			console.log({ error });
+// 		}
+// 	},
+// 	deleteWorkspace: async (event) => {
+// 		const formData = await event.request.formData();
+// 		const workspaceId = formData.get('workspaceId') as string;
 
-		console.log({ workspaceId });
+// 		console.log({ workspaceId });
 
-		const session = await event.locals.getSession();
-		const customer = await event.locals.prisma.customer.findUnique({
-			where: {
-				email: session!.user.email!,
-			},
-		});
+// 		const session = await event.locals.getSession();
+// 		const customer = await event.locals.prisma.customer.findUnique({
+// 			where: {
+// 				email: session!.user.email!,
+// 			},
+// 		});
 
-		try {
-			const workspace = await event.locals.prisma.workspace.delete({
-				where: {
-					id: workspaceId,
-					customerId: customer!.id,
-				},
-			});
+// 		try {
+// 			const workspace = await event.locals.prisma.workspace.delete({
+// 				where: {
+// 					id: workspaceId,
+// 					customerId: customer!.id,
+// 				},
+// 			});
 
-			console.log({ workspace });
-		} catch (error) {
-			console.log({ error });
-		}
-	},
-};
+// 			console.log({ workspace });
+// 		} catch (error) {
+// 			console.log({ error });
+// 		}
+// 	},
+// };

@@ -73,6 +73,10 @@ autoGrantPermissions: true,
 - change reference for baseline
 
 
+SECURE IMAGE CONSUMPTION FROM BROWSER
+https://github.com/orgs/supabase/discussions/13742
+
+
 FIX PRISMA ISSUE
 run command from /lib
 npx prisma db push --schema=./prisma/schema.prisma

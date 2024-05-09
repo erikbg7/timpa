@@ -11,8 +11,8 @@
 // Re-exporting the original type with the original name
 // export type Plan = PlanEnum;
 
-import type { EventType as EventTypeEnum } from '@prisma/client';
-import { Plan as PlanEnum } from '@prisma/client';
+import type { Plan as PlanEnum } from '@prisma/client';
+import type { Language as LanguageEnum } from '@prisma/client';
 
 export type Plan = PlanEnum;
 export const Plan: { [k in PlanEnum]: k } = {
@@ -23,11 +23,11 @@ export const Plan: { [k in PlanEnum]: k } = {
 
 export type PricingPlan = Extract<PlanEnum, 'PRO' | 'STANDARD'>;
 
-export type EventType = EventTypeEnum;
-export const EventType: { [k in EventTypeEnum]: k } = {
-	ACTIVE: 'ACTIVE',
-	BREAK: 'BREAK',
-	INTERRUPTION: 'INTERRUPTION',
-	END: 'END',
-	CREATE: 'CREATE',
+export type Language = LanguageEnum;
+export const Language: { [k in LanguageEnum]: k } = {
+	CA: 'CA',
+	EN: 'EN',
+	ES: 'ES',
+	FR: 'FR',
+	IT: 'IT',
 } as const;

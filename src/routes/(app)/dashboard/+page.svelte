@@ -9,6 +9,7 @@
 	$: isCustomer = !!data?.customer || false;
 
 	let dialog: HTMLDialogElement;
+	let accessToken: string = data.session.access_token!;
 </script>
 
 <Dialog bind:dialog>
@@ -18,12 +19,12 @@
 {#if isCustomer}
 	<DashboardSection title="Your workspaces">
 		<button slot="action" class="btn btn-primary btn-sm" on:click={() => dialog.showModal()}>
-			+ Add workspace
+			+ Add file
 		</button>
 		<div slot="content">
 			<div class="grid grid-cols-3 gap-6">
-				{#each data.workspaces as wp}
-					<WorkspaceCard {wp} />
+				{#each data.files as wp}
+					<WorkspaceCard {wp} {accessToken} />
 				{/each}
 			</div>
 		</div>
