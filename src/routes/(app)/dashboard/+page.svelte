@@ -4,12 +4,14 @@
 	import DashboardSection from '$lib/components/DashboardSection.svelte';
 	import WorkspaceCard from '$lib/components/WorkspaceCard.svelte';
 	import WorkspaceCreationForm from '$lib/components/WorkspaceCreationForm.svelte';
+	import { trpc } from '$lib/trpc/index.js';
 
 	export let data;
-	$: isCustomer = !!data?.customer || false;
+	$: isCustomer = !!data?.customer || true;
 
 	let dialog: HTMLDialogElement;
 	let accessToken: string = data.session.access_token!;
+	const files = trpc.files.list.query();
 </script>
 
 <Dialog bind:dialog>
@@ -23,7 +25,7 @@
 		</button>
 		<div slot="content">
 			<div class="grid grid-cols-3 gap-6">
-				{#each data.files as wp}
+				{#each $files.data || [] as wp}
 					<WorkspaceCard {wp} {accessToken} />
 				{/each}
 			</div>

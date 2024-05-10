@@ -109,3 +109,9 @@ class Person {
 		console.log(`Name: ${this.name}, Age: ${this.age}`);
 	}
 }
+
+
+// TODO:
+
+Use trpc to organize better into services instead of using endpoints, 
+which is a bit messy and has a worse CSR experience

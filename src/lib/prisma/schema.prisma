@@ -9,7 +9,7 @@ datasource db {
 }
 
 model Customer {
-  id         Int      @id @default(autoincrement())
+  id         String   @id @unique
   created_at DateTime @default(now()) @db.Timestamptz(6)
   email      String   @unique
   plan       Plan     @default(FREE)
@@ -26,8 +26,8 @@ model File {
   transcriptions Transcription[]
   status         FileTranscriptionStatus @default(IN_PROGESS)
 
-  customerId Int?
-  customer   Customer? @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  customerId String
+  customer   Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
 }
 
 model Transcription {

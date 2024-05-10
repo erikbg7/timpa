@@ -131,6 +131,7 @@ export const POST = async (event) => {
 
 				const plan = checkoutSession.metadata?.type as Plan;
 				const email = sessionEmail || (checkoutEmail as string);
+				const id = session.user.id!;
 				if (!isValidEmail(email)) {
 					fail(500, { message: 'No email found' });
 				}
@@ -138,7 +139,7 @@ export const POST = async (event) => {
 				const customer = await prisma.customer.upsert({
 					where: { email },
 					update: {},
-					create: { email, plan },
+					create: { id, email, plan },
 				});
 
 				if (!customer) fail(500, { message: 'Error creating user' });
