@@ -1,5 +1,5 @@
 import { getAllPosts, type Post } from '$lib/content/utils/index.js';
-import config from '$lib/config';
+import config from '$config';
 import { error } from '@sveltejs/kit';
 
 export const prerender = true;

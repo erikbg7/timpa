@@ -1,6 +1,6 @@
 <script lang="ts">
 	import clsx from 'clsx';
-	import config from '$lib/config';
+	import config from '$config';
 	import DecorationRight from '$lib/decorations/DecorationRight.svelte';
 	import ButtonCheckout from './ButtonCheckout.svelte';
 	import SectionHeader from './SectionHeader.svelte';

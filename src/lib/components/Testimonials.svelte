@@ -1,5 +1,5 @@
 <script>
-	import config from '$lib/config';
+	import config from '$config';
 
 	import TestimonialCard from '$lib/components/TestimonialCard.svelte';
 	import DecorationRight from '$lib/decorations/DecorationRight.svelte';

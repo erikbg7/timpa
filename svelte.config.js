@@ -24,6 +24,7 @@ const config = {
 		alias: {
 			$auth: './src/features/auth',
 			$lib: './src/lib',
+			$config: './src/config',
 			$content: './src/content',
 		},
 	},

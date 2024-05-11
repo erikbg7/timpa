@@ -1,6 +1,6 @@
 <script lang="ts">
 	import clsx from 'clsx';
-	import config, { type AuthMode } from '$lib/config';
+	import config, { type AuthMode } from '$config';
 	import { page } from '$app/stores';
 	import { enhance } from '$app/forms';
 	import type { ActionData } from './$types';

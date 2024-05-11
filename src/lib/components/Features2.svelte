@@ -1,6 +1,6 @@
 <script lang="ts">
 	import clsx from 'clsx';
-	import config from '$lib/config';
+	import config from '$config';
 	import Link from '../atoms/Link.svelte';
 	import Paragraph from '../atoms/Paragraph.svelte';
 

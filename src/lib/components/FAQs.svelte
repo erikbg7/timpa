@@ -1,5 +1,5 @@
 <script lang="ts">
-	import config from '$lib/config';
+	import config from '$config';
 	import SectionHeader from './SectionHeader.svelte';
 
 	const faqs = config.faqs.list;

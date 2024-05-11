@@ -1,5 +1,5 @@
 <script lang="ts">
-	import config from '$lib/config';
+	import config from '$config';
 	import type { PricingPlan } from '$lib/enums';
 	import clsx from 'clsx';
 	// This component is used to create Stripe Checkout Sessions

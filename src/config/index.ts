@@ -1,56 +1,18 @@
-import FAQs from './faqs';
-import testimonials from './testimonials';
+import FAQs from '$config/faqs';
+import testimonials from '$config/testimonials';
+import type { Config, AuthConfig, AuthMode } from '$config/types';
 
+import { Plan } from '$lib/enums';
 import SparklesIcon from '$lib/icons/SparklesIcon.svelte';
 import SearchIcon from '$lib/icons/SearchIcon.svelte';
-import ServerIcon from './icons/ServerIcon.svelte';
-import WorldIcon from './icons/WorldIcon.svelte';
+import ServerIcon from '$lib/icons/ServerIcon.svelte';
+import WorldIcon from '$lib/icons/WorldIcon.svelte';
 import {
 	PUBLIC_BASE_URL,
 	PUBLIC_CONTACT_EMAIL,
 	PUBLIC_GITHUB_PAGE,
 	PUBLIC_LINKEDIN_PROFILE,
 } from '$env/static/public';
-import { Plan, type PricingPlan } from './enums';
-
-export type AuthMode = 'signin' | 'signup' | 'magiclink';
-export type AuthConfig = Record<AuthMode, { title: string; subtitle: string; seoTitle: string }>;
-export type AuthProviders = 'github' | 'google';
-export type AuthProviderConfig = { id: AuthProviders; title: string; primary: boolean };
-
-export type PlanConfig = {
-	type: PricingPlan;
-	priceId: string; // Create the plans in your Stripe dashboard and add here the priceId
-	name: string;
-	description: string; // Tip: explain why this plan and not others
-	isFeatured?: boolean; // Featured plan will be highlighted
-	price: number;
-	priceAnchor?: number;
-	features: { name: string }[];
-};
-
-type Config = {
-	appName: string;
-	auth: {
-		texts: AuthConfig;
-		providers: AuthProviderConfig[];
-	};
-	footer: {
-		socials: { icon: string; ariaLabel: string; link: string }[];
-	};
-
-	pricing: {
-		title: string;
-		description: string;
-		plans: {
-			[Plan.STANDARD]: PlanConfig;
-			[Plan.PRO]: PlanConfig;
-		};
-	};
-	navbar: {
-		list: { label: string; href: string }[];
-	};
-};
 
 const appName = 'Calendly';
 
@@ -224,3 +186,4 @@ const config: Config = {
 };
 
 export default config;
+export { AuthConfig, AuthMode };

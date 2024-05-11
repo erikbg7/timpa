@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { PUBLIC_BASE_URL } from '$env/static/public';
-	import config from '$lib/config';
+	import config from '$config';
 	// import jost from "@fontsource-variable/jost/files/jost-latin-wght-normal.woff2"
 	// import atomic from "/fonts/atomic.woff2"
 

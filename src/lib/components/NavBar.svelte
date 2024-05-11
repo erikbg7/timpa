@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import config from '$lib/config';
+	import config from '$config';
 	import MenuIcon from '$lib/icons/MenuIcon.svelte';
 	import SaasIcon from '$lib/icons/SaasIcon.svelte';
 	import clsx from 'clsx';

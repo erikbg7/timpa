@@ -1,5 +1,5 @@
 <script lang="ts">
-	import config from '$lib/config';
+	import config from '$config';
 	// import Link from '$lib/atoms/Link.svelte';
 	import DecorationLeft from '$lib/decorations/DecorationLeft.svelte';
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import config from '$lib/config';
+	import config from '$config';
 
 	import TwitterIcon from '$lib/icons/TwitterIcon.svelte';
 	import InstagramIcon from '$lib/icons/InstagramIcon.svelte';
