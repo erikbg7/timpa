@@ -186,4 +186,4 @@ const config: Config = {
 };
 
 export default config;
-export { AuthConfig, AuthMode };
+export type { AuthConfig, AuthMode };

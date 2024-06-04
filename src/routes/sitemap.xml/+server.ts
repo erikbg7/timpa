@@ -59,6 +59,6 @@ export async function GET({ setHeaders }) {
 		return new Response(render(pages, posts));
 	} catch (err) {
 		console.error(`Error in sitemap.xml: ${err}`);
-		throw error(500, err);
+		throw error(500, 'err');
 	}
 }

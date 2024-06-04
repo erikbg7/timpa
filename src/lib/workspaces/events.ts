@@ -1,5 +1,14 @@
-import { EventType } from '$lib/enums';
-import type { Event } from '@prisma/client';
+enum EventType {
+	ACTIVE = 'ACTIVE',
+	BREAK = 'BREAK',
+	INTERRUPTION = 'INTERRUPTION',
+	END = 'END',
+}
+type Event = {
+	id: number;
+	createdAt: Date;
+	eventType: EventType;
+};
 
 export class FlowEvents {
 	events: Event[];

@@ -37,5 +37,8 @@ export type Config = {
 	navbar: {
 		list: { label: string; href: string }[];
 	};
+	features1: any;
+	testimonials: any;
+	faqs: any;
 	website: Record<string, string>;
 };

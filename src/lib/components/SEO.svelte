@@ -96,7 +96,7 @@
 	<link rel="icon" href="/favicon.ico" sizes="32x32" />
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<!-- TODO: missing icon below -->
-	<link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png" />
+	<!-- <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png" /> -->
 	<link rel="manifest" href="/manifest.webmanifest" />
 
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
