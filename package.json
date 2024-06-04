@@ -50,9 +50,6 @@
 		"@vercel/analytics": "^1.2.2",
 		"clsx": "^2.1.0",
 		"devalue": "^5.0.0",
-		"html2canvas": "^1.4.1",
-		"html2canvas-pro": "^1.4.3",
-		"jimp": "^0.22.12",
 		"stripe": "^14.19.0",
 		"trpc-svelte-query": "^2.1.0",
 		"zod": "^3.22.4"

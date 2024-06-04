@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Seo from '$lib/components/SEO.svelte';
-	import ArrowLeft from '$lib/icons/ArrowLeft.svelte';
-	import SaasIcon from '$lib/icons/SaasIcon.svelte';
+	import Seo from '$ui/components/SEO.svelte';
+	import ArrowLeft from '$ui/icons/ArrowLeft.svelte';
+	import SaasIcon from '$ui/icons/SaasIcon.svelte';
 
 	const handleOnBack = () => window?.history?.back?.();
 

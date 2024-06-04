@@ -115,3 +115,6 @@ class Person {
 
 Use trpc to organize better into services instead of using endpoints, 
 which is a bit messy and has a worse CSR experience
+
+
+Fix smooth scroll in landing page

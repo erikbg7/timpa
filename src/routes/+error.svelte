@@ -1,6 +1,6 @@
 <script>
 	// Aka 404 error page
-	import Seo from '$lib/components/SEO.svelte';
+	import Seo from '$ui/components/SEO.svelte';
 </script>
 
 <Seo />

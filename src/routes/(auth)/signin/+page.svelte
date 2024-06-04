@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 	import { enhance } from '$app/forms';
 	import type { ActionData } from './$types';
-	import Seo from '$lib/components/SEO.svelte';
+	import Seo from '$ui/components/SEO.svelte';
 
 	export let form: ActionData;
 

@@ -3,10 +3,10 @@ import testimonials from '$config/testimonials';
 import type { Config, AuthConfig, AuthMode } from '$config/types';
 
 import { Plan } from '$lib/enums';
-import SparklesIcon from '$lib/icons/SparklesIcon.svelte';
-import SearchIcon from '$lib/icons/SearchIcon.svelte';
-import ServerIcon from '$lib/icons/ServerIcon.svelte';
-import WorldIcon from '$lib/icons/WorldIcon.svelte';
+import SparklesIcon from '$ui/icons/SparklesIcon.svelte';
+import SearchIcon from '$ui/icons/SearchIcon.svelte';
+import ServerIcon from '$ui/icons/ServerIcon.svelte';
+import WorldIcon from '$ui/icons/WorldIcon.svelte';
 import {
 	PUBLIC_BASE_URL,
 	PUBLIC_CONTACT_EMAIL,

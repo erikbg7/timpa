@@ -1,3 +1,13 @@
+
+# What is this?
+- A SvelteKit template for SaaS projects
+- Tech stack: SvelteKit, TailwindCSS, Supabase, Vercel, DaisyUI, Stripe
+
+- Home page is statically generated
+- Login page can be statically generated
+- After login, all Dashboard pages should use TRPC or api routes to fetch data
+
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).

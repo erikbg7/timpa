@@ -1,14 +1,14 @@
 <script lang="ts">
-	import H1 from '$lib/atoms/H1.svelte';
-	import SectionSeparator from '$lib/decorations/SectionSeparator.svelte';
-	import HeroGradient from '$lib/decorations/HeroGradient.svelte';
-	import DecorationHero from '$lib/decorations/DecorationHero.svelte';
-	import Testimonials from '$lib/components/Testimonials.svelte';
-	import Features1 from '$lib/components/Features1.svelte';
-	import Pricing from '$lib/components/Pricing.svelte';
-	import FAQs from '$lib/components/FAQs.svelte';
-	import Banner from '$lib/components/Banner.svelte';
-	import Seo from '$lib/components/SEO.svelte';
+	import H1 from '$ui/atoms/H1.svelte';
+	import SectionSeparator from '$ui/decorations/SectionSeparator.svelte';
+	import HeroGradient from '$ui/decorations/HeroGradient.svelte';
+	import DecorationHero from '$ui/decorations/DecorationHero.svelte';
+	import Testimonials from '$ui/components/Testimonials.svelte';
+	import Features1 from '$ui/components/Features1.svelte';
+	import Pricing from '$ui/components/Pricing.svelte';
+	import FAQs from '$ui/components/FAQs.svelte';
+	import Banner from '$ui/components/Banner.svelte';
+	import Seo from '$ui/components/SEO.svelte';
 	import { PUBLIC_BASE_URL } from '$env/static/public';
 
 	const handlePost = async () => {
@@ -29,7 +29,7 @@
 
 <Seo preconnectLinks={['https://xata.io']} />
 
-<main>
+<main class="scroll-smooth">
 	<section class="relative mt-6 min-h-screen">
 		<HeroGradient />
 		<DecorationHero />
