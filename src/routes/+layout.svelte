@@ -4,6 +4,7 @@
 	import '../app.css';
 	import Footer from '$ui/components/Footer.svelte';
 	import NavBar from '$ui/components/NavBar.svelte';
+	import { Toaster } from 'svelte-sonner';
 	// import { Toaster } from 'svelte-french-toast';
 
 	$: route = $page.route;
@@ -33,8 +34,8 @@
 	// });
 </script>
 
-<!-- <Toaster /> -->
-{#if route?.id?.includes('(auth)') || route?.id?.includes('(legal)') || route?.id?.includes('app')}
+{#if route?.id?.includes('(auth)') || route?.id?.includes('(legal)') || route?.id?.includes('app') || route?.id?.includes('onboarding')}
+	<Toaster position="top-right" richColors theme="dark" />
 	<slot />
 {:else}
 	<NavBar />

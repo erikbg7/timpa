@@ -6,17 +6,17 @@ export const createCustomerService = () =>
 			try {
 				const customer = await ctx.event.locals.prisma.customer.findUnique({
 					where: {
-						id: ctx.session.user.id
-					}
+						id: ctx.session.user.id,
+					},
 				});
 
-				// if (!customer) {
-				// 	throw new Error('Customer not found');
-				// }
+				if (!customer) {
+					throw new Error('Customer not found');
+				}
 
 				return customer;
 			} catch (e) {
 				console.log({ ERROR: e });
 			}
-		})
+		}),
 	});

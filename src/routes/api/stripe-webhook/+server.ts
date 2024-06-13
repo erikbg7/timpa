@@ -4,6 +4,9 @@ import { isValidEmail } from '$lib/validations/index.js';
 import type { Plan } from '$lib/enums';
 import { PUBLIC_BASE_URL } from '$env/static/public';
 
+// Nice stripe subscription handling
+// https://github.com/statmuse/statmuse.com/blob/main/packages/core/src/stripe.ts
+
 const mockedData = {
 	object: {
 		id: 'cs_test_a1M6AV84Faxoxl3zQXLVg4VIp9bdVogWocTN81mldW2j5v80ZcBb50CxdA',

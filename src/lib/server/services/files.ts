@@ -8,26 +8,33 @@ export const createFilesService = () =>
 	router({
 		list: protectedProcedure.query(async ({ ctx }) => {
 			try {
+				console.log({ ctx: ctx.session.user.id });
 				const files = await ctx.event.locals.prisma.file.findMany({
 					where: {
 						customerId: ctx.session.user.id,
 					},
 				});
 
-				const signedFiles = await Promise.all(
-					files.map(async (file) => {
-						const filePath = `${ctx.session.user.id}/${file.url.split('/').pop()}`;
-						const data = await ctx.event.locals.supabase.storage
-							.from('files')
-							.createSignedUrl(filePath, 10);
-						return {
-							...file,
-							url: data.data?.signedUrl,
-						};
-					}),
-				);
+				// const files = await ctx.event.locals.prisma.file.findMany({
+				// 	where: {
+				// 		customerId: ctx.session.user.id,
+				// 	},
+				// });
 
-				return signedFiles;
+				// const signedFiles = await Promise.all(
+				// 	files.map(async (file) => {
+				// 		const filePath = `${ctx.session.user.id}/${file.url.split('/').pop()}`;
+				// 		const data = await ctx.event.locals.supabase.storage
+				// 			.from('files')
+				// 			.createSignedUrl(filePath, 10);
+				// 		return {
+				// 			...file,
+				// 			url: data.data?.signedUrl,
+				// 		};
+				// 	}),
+				// );
+
+				return files;
 			} catch (e) {
 				console.log({ ERROR: e });
 			}
@@ -81,8 +88,6 @@ export const createFilesService = () =>
 				// 		message: 'Error uploading file',
 				// 	});
 				// }
-
-				console.log({ ffff2: data });
 
 				return { n: 'nice' };
 				// db.set(crypto.randomUUID(), input.data);
