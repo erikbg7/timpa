@@ -17,40 +17,46 @@ model Customer {
 }
 
 model File {
-  id        String @id @default(cuid())
-  name      String
-  url       String
-  extension String
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
 
-  language       Language?
-  transcriptions Transcription[]
-  status         FileTranscriptionStatus @default(IN_PROGESS)
+  url       String
+  name      String
+  duration  Int // seconds
+  size      Int // bytes
+  extension String // mp3, wav, etc
+
+  predictionId String?
+  prediction   Prediction?      @relation(fields: [predictionId], references: [id])
+  status       PredictionStatus @default(IN_PROGRESS)
 
   customerId String
   customer   Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
 }
 
-model Transcription {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now()) @db.Timestamptz(6)
-  language  Language
+model Prediction {
+  id          String    @id @default(cuid())
+  createdAt   DateTime  @default(now()) @db.Timestamptz(6)
+  completedAt DateTime?
 
-  fileId   String
-  file     File      @relation(fields: [fileId], references: [id], onDelete: Cascade)
-  segments Segment[]
+  language      Language
+  segments      Segment[]
+  transcription String
+
+  fileId String
+  File   File[]
 }
 
 model Segment {
   segmentId String @id @default(cuid())
 
-  id       Int
-  start    Float
-  end      Float
-  text     String
-  language Language
+  id    Int
+  start Float
+  end   Float
+  text  String
 
-  transcriptionId String
-  transcription   Transcription @relation(fields: [transcriptionId], references: [id], onDelete: Cascade)
+  predictionId  String
+  transcription Prediction @relation(fields: [predictionId], references: [id], onDelete: Cascade)
 }
 
 enum Plan {
@@ -67,8 +73,8 @@ enum Language {
   IT
 }
 
-enum FileTranscriptionStatus {
-  IN_PROGESS
+enum PredictionStatus {
+  IN_PROGRESS
   COMPLETED
   FAILED
 }
