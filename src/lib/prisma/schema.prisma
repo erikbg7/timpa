@@ -27,7 +27,7 @@ model File {
   extension String // mp3, wav, etc
 
   predictionId String?
-  prediction   Prediction?      @relation(fields: [predictionId], references: [id])
+  prediction   Prediction?      @relation(fields: [predictionId], references: [id], onDelete: Cascade)
   status       PredictionStatus @default(IN_PROGRESS)
 
   customerId String
@@ -50,7 +50,7 @@ model Prediction {
 model Segment {
   segmentId String @id @default(cuid())
 
-  id    Int
+  id    String
   start Float
   end   Float
   text  String

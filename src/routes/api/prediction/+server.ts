@@ -1,10 +1,8 @@
-import { error, json } from '@sveltejs/kit';
-
-import { REPLICATE_CALL_MOCKED, SUPABASE_STORGE_BUCKET } from '$env/static/private';
 import logger from '$lib/logger';
-import { createAudioTranscription, handleWebhookEvent } from '$lib/transcriptor';
-import { PredictionStatus } from '@prisma/client';
-import { predictionWebHookData } from '$lib/transcriptor.mocks.js';
+import { error, json } from '@sveltejs/kit';
+import { getTranscriptor } from '$lib/transcriptor/index.js';
+import { TRANSCRIPTION_CALLS_MOCKED, SUPABASE_STORGE_BUCKET } from '$env/static/private';
+import { PredictionStatus } from './../../../lib/enums';
 
 const MAX_FILE_SIZE = 200000000; // 200MB
 const EXPIRATION_TIME = 600; // 10 minutes
@@ -59,19 +57,15 @@ export async function POST(event) {
 	}
 
 	// RUN PREDICTION FROM FILE URL
-	const transcription = await createAudioTranscription(signedUrl.data.signedUrl);
+	const transcriptor = getTranscriptor('AssemblyAi');
+	const transcription = await transcriptor.createAudioTranscription(signedUrl.data.signedUrl);
 
 	if (transcription.error || !transcription.prediction) {
 		logger.error('Error creating transcription - ' + JSON.stringify(transcription.error));
 		return error(400, { message: 'Error creating transcription' });
 	}
-
-	let predictionStatus: PredictionStatus;
-	predictionStatus = PredictionStatus.IN_PROGRESS;
-
-	if (transcription.prediction.status !== 'starting') {
-		logger.error('prediction creation failed');
-		predictionStatus = PredictionStatus.FAILED;
+	if (transcription.prediction.status !== PredictionStatus.IN_PROGRESS) {
+		logger.error('Prediction creation failed');
 		await supabase.storage.from(SUPABASE_STORGE_BUCKET).remove([fileUrl]);
 	}
 
@@ -79,21 +73,20 @@ export async function POST(event) {
 	try {
 		await prisma.file.create({
 			data: {
-				id: transcription.prediction.id,
+				...transcription.prediction,
 				url: fileUrl,
 				name: fileName,
 				duration: parseFloat(duration),
 				size: file.size,
 				extension: fileExtension,
 				customerId: session.user.id,
-				status: predictionStatus,
 			},
 		});
 
-		if (REPLICATE_CALL_MOCKED) {
+		if (TRANSCRIPTION_CALLS_MOCKED === 'true') {
 			logger.info('Mocked Webhook event handling');
 			setTimeout(() => {
-				handleWebhookEvent(predictionWebHookData);
+				transcriptor.handleWebhookEvent(transcriptor.predictionWebHookData);
 			}, 10000);
 		}
 
@@ -101,6 +94,12 @@ export async function POST(event) {
 	} catch (e) {
 		logger.error(new Error('Error creating prediction', { cause: e }));
 		await supabase.storage.from(SUPABASE_STORGE_BUCKET).remove([fileUrl]);
+		await prisma.file.update({
+			where: { id: transcription.prediction.id },
+			data: {
+				status: PredictionStatus.FAILED,
+			},
+		});
 		return error(400, { message: 'Error creating prediction' });
 	}
 }

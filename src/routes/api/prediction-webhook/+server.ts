@@ -1,14 +1,16 @@
 // The Replicate webhook is a POST request where the request body is a prediction object.
 // Identical webhooks can be sent multiple times, so this handler must be idempotent.
 
-import { REPLICATE_WEBHOOK_SIGNING_KEY } from '$env/static/private';
-import { validateWebhook, type Prediction } from 'replicate';
 import { json } from '@sveltejs/kit';
-import { handleWebhookEvent } from '$lib/transcriptor.js';
 import logger from '$lib/logger';
+import { getTranscriptor } from '$lib/transcriptor/index.js';
 
 export async function POST(event) {
-	const isValid = await validateWebhook(event.request.clone(), REPLICATE_WEBHOOK_SIGNING_KEY);
+	const request = await event.request.clone();
+	const body = await event.request.json();
+
+	const transcriptor = getTranscriptor('AssemblyAi');
+	const isValid = await transcriptor.validateWebhook(request);
 
 	if (!isValid) {
 		// TODO: validation failed, set prediction as failed
@@ -17,7 +19,6 @@ export async function POST(event) {
 		return json(200);
 	}
 
-	const predictionData: Prediction = await event.request.json();
-	await handleWebhookEvent(predictionData);
+	await transcriptor.handleWebhookEvent(body);
 	return json(200);
 }

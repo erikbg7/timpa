@@ -1,11 +1,40 @@
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 import { protectedProcedure, publicProcedure, router } from '../trpc';
+import logger from '$lib/logger';
+import { AssemblyAI } from 'assemblyai';
+import { ASSEMBLY_API_KEY } from '$env/static/private';
 
 const db = new Map<string, string>();
 
+const getFileSchema = z.object({
+	id: z.string(),
+});
+
 export const createFilesService = () =>
 	router({
+		getUrl: protectedProcedure.input(getFileSchema).query(async ({ ctx, input }) => {
+			const prisma = ctx.event.locals.prisma;
+			const file = await prisma.file.findUnique({
+				where: { id: input.id },
+				select: { url: true },
+			});
+
+			if (!file) {
+				throw new TRPCError({
+					code: 'NOT_FOUND',
+					message: 'File not found',
+				});
+			}
+
+			const EXPIRES_IN = 10 * 60; // 10 minutes
+
+			const data = await ctx.event.locals.supabase.storage
+				.from('files')
+				.createSignedUrl(file.url.split('files/').pop()!, EXPIRES_IN);
+
+			return { ...file, url: data.data?.signedUrl };
+		}),
 		list: protectedProcedure.query(async ({ ctx }) => {
 			try {
 				console.log({ ctx: ctx.session.user.id });
@@ -51,11 +80,9 @@ export const createFilesService = () =>
 					.remove([`${ctx.session.user.id}/${input.id}`]);
 
 				if (error) {
-					throw new TRPCError({
-						code: 'INTERNAL_SERVER_ERROR',
-						message: 'Error deleting file',
-					});
+					logger.error('Could not delete file from storage', { error });
 				}
+
 				await ctx.event.locals.prisma.file.delete({
 					where: {
 						id: input.id,
@@ -92,22 +119,36 @@ export const createFilesService = () =>
 				return { n: 'nice' };
 				// db.set(crypto.randomUUID(), input.data);
 			}),
-		get: publicProcedure
+		get: protectedProcedure
 			.input(
 				z.object({
 					id: z.string(),
 				}),
 			)
-			.query(async ({ input }) => {
-				await new Promise((r) => setTimeout(r, 100));
+			.query(async ({ input, ctx }) => {
+				try {
+					const file = await ctx.event.locals.prisma.file.findUniqueOrThrow({
+						where: {
+							id: input.id,
+						},
+						include: {
+							prediction: {
+								include: {
+									segments: true,
+								},
+							},
+						},
+					});
 
-				if (!db.has(input.id)) {
+					console.log({ file });
+
+					return file;
+				} catch (e) {
 					throw new TRPCError({
 						code: 'NOT_FOUND',
 						message: 'Todo not found',
 					});
 				}
-				return db.get(input.id)!;
 			}),
 
 		update: publicProcedure

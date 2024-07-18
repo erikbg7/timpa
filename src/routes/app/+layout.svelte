@@ -9,8 +9,11 @@
 	import SettingsIcon from '$ui/icons/SettingsIcon.svelte';
 	import AnalyticsIcon from '$ui/icons/AnalyticsIcon.svelte';
 	import DashboardProfile from '$ui/components/DashboardProfile.svelte';
+	import { page } from '$app/stores';
 
 	export let data;
+
+	$: routeId = $page.route.id || '';
 
 	const SIDE_BAR_APP = [
 		{
@@ -50,6 +53,7 @@
 </script>
 
 <QueryClientProvider client={trpc.queryClient}>
+	<!-- <slot/> -->
 	<main class="relative inset-0 h-screen w-screen overflow-hidden">
 		<nav class="absolute left-0 right-0 top-0 h-12 border-b border-white/10">
 			<div class="flex h-full items-center justify-between px-4">
@@ -66,32 +70,38 @@
 			</div>
 		</nav>
 
-		<aside
-			class="absolute bottom-0 left-0 top-12 flex h-full w-56 flex-col justify-between gap-4 border-r border-white/10 p-4"
-		>
-			<ul class="mt-4 flex flex-col gap-6">
-				{#each SIDE_BAR_APP as item}
-					<li>
-						<a class="flex gap-4" href={item.href}
-							><svelte:component this={item.icon} size={'sm'} />
-							<span class="text-sm">{item.title}</span></a
-						>
-					</li>
-				{/each}
-				<hr class="my-2 border-white/10" />
-				{#each SIDE_BAR_SETTINGS as item}
-					<li>
-						<a class="flex gap-4" href={item.href}
-							><svelte:component this={item.icon} size={'sm'} /> <span>{item.title}</span></a
-						>
-					</li>
-				{/each}
-				<hr class="my-2 border-white/10" />
-			</ul>
-		</aside>
+		{#if routeId.includes('upload') || routeId.includes('results')}
+			<div class="absolute bottom-0 left-0 right-0 top-12 overflow-y-scroll p-12">
+				<slot />
+			</div>
+		{:else}
+			<aside
+				class="absolute bottom-0 left-0 top-12 flex h-full w-56 flex-col justify-between gap-4 border-r border-white/10 p-4"
+			>
+				<ul class="mt-4 flex flex-col gap-6">
+					{#each SIDE_BAR_APP as item}
+						<li>
+							<a class="flex gap-4" href={item.href}
+								><svelte:component this={item.icon} size={'sm'} />
+								<span class="text-sm">{item.title}</span></a
+							>
+						</li>
+					{/each}
+					<hr class="my-2 border-white/10" />
+					{#each SIDE_BAR_SETTINGS as item}
+						<li>
+							<a class="flex gap-4" href={item.href}
+								><svelte:component this={item.icon} size={'sm'} /> <span>{item.title}</span></a
+							>
+						</li>
+					{/each}
+					<hr class="my-2 border-white/10" />
+				</ul>
+			</aside>
 
-		<div class=" absolute bottom-0 left-56 right-0 top-12 overflow-y-scroll p-12">
-			<slot />
-		</div>
+			<div class="absolute bottom-0 left-56 right-0 top-12 overflow-y-scroll p-12">
+				<slot />
+			</div>
+		{/if}
 	</main>
 </QueryClientProvider>

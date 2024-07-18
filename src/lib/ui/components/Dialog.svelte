@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let dialog;
+	export let dialog: HTMLDialogElement;
 </script>
 
 <dialog bind:this={dialog} on:close class="modal">

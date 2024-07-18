@@ -55,12 +55,15 @@
 		"@trpc/client": "^10.45.2",
 		"@trpc/server": "^10.45.2",
 		"@vercel/analytics": "^1.2.2",
+		"assemblyai": "^4.6.1",
 		"clsx": "^2.1.0",
 		"devalue": "^5.0.0",
 		"pino": "^9.2.0",
 		"replicate": "^0.30.1",
 		"stripe": "^14.19.0",
 		"svelte-sonner": "^0.3.24",
+		"tailwind-merge": "^2.3.0",
+		"tailwind-variants": "^0.2.1",
 		"trpc-svelte-query": "^2.1.0",
 		"zod": "^3.22.4"
 	}
